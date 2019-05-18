@@ -13,13 +13,12 @@ reg scl;
 
 
 i2c_master i2c(
-	.clock_state(1'b1),
 	.clock_freq(1'b1),
 	.dev_id(7'b0000000),
 	.addr(8'b11111111),
 	.input_data(8'b11111111),
 	.read_write(1'b1),
-	.enable(ena),
+//	.enable(ena),
 	.output_data(out),
 	.sdl(sdl_a),
 	.scl(scl_a)

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CRPK_ADC_Project
-Sat May 18 14:25:14 2019
+Sat May 18 16:38:08 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -22,6 +22,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  14. Post-Synthesis Netlist Statistics for Top Partition
  15. Elapsed Time Per Partition
  16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -47,7 +48,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat May 18 14:25:14 2019       ;
+; Analysis & Synthesis Status     ; Successful - Sat May 18 16:38:08 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CRPK_ADC_Project                            ;
 ; Top-level Entity Name           ; CRPK_ADC_Project                            ;
@@ -241,6 +242,10 @@ Encoding Type:  One-Hot
 +------------------------------------------+--------------------------------------+
 ; Register name                            ; Reason for Removal                   ;
 +------------------------------------------+--------------------------------------+
+; i2c_master:i2c|sdl_o                     ; Stuck at VCC due to stuck port clock ;
+; i2c_master:i2c|scl_o                     ; Stuck at VCC due to stuck port clock ;
+; i2c_master:i2c|sdl_c                     ; Stuck at VCC due to stuck port clock ;
+; i2c_master:i2c|scl_c                     ; Stuck at VCC due to stuck port clock ;
 ; i2c_master:i2c|current_state~2           ; Lost fanout                          ;
 ; i2c_master:i2c|current_state~3           ; Lost fanout                          ;
 ; i2c_master:i2c|current_state~4           ; Lost fanout                          ;
@@ -255,7 +260,7 @@ Encoding Type:  One-Hot
 ; i2c_master:i2c|current_state.slv_ack_1   ; Stuck at GND due to stuck port clock ;
 ; i2c_master:i2c|current_state.read        ; Stuck at GND due to stuck port clock ;
 ; i2c_master:i2c|current_state.write       ; Stuck at GND due to stuck port clock ;
-; Total Number of Removed Registers = 14   ;                                      ;
+; Total Number of Removed Registers = 18   ;                                      ;
 +------------------------------------------+--------------------------------------+
 
 
@@ -264,11 +269,9 @@ Encoding Type:  One-Hot
 +------------------------------------------+-------------------------+---------------------------------------------------------------------------------+
 ; Register name                            ; Reason for Removal      ; Registers Removed due to This Register                                          ;
 +------------------------------------------+-------------------------+---------------------------------------------------------------------------------+
+; i2c_master:i2c|current_state.begin_state ; Stuck at GND            ; i2c_master:i2c|current_state.ready, i2c_master:i2c|current_state.stop,          ;
+;                                          ; due to stuck port clock ; i2c_master:i2c|current_state.start, i2c_master:i2c|current_state.command        ;
 ; i2c_master:i2c|current_state~2           ; Lost Fanouts            ; i2c_master:i2c|current_state.master_ack, i2c_master:i2c|current_state.slv_ack_2 ;
-; i2c_master:i2c|current_state.begin_state ; Stuck at GND            ; i2c_master:i2c|current_state.ready, i2c_master:i2c|current_state.stop           ;
-;                                          ; due to stuck port clock ;                                                                                 ;
-; i2c_master:i2c|current_state.start       ; Stuck at GND            ; i2c_master:i2c|current_state.command                                            ;
-;                                          ; due to stuck port clock ;                                                                                 ;
 ; i2c_master:i2c|current_state.slv_ack_1   ; Stuck at GND            ; i2c_master:i2c|current_state.read                                               ;
 ;                                          ; due to stuck port clock ;                                                                                 ;
 +------------------------------------------+-------------------------+---------------------------------------------------------------------------------+
@@ -311,18 +314,17 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------+
-; Port Connectivity Checks: "i2c_master:i2c"    ;
-+-------------+-------+----------+--------------+
-; Port        ; Type  ; Severity ; Details      ;
-+-------------+-------+----------+--------------+
-; clock_state ; Input ; Info     ; Stuck at VCC ;
-; clock_freq  ; Input ; Info     ; Stuck at VCC ;
-; dev_id      ; Input ; Info     ; Stuck at GND ;
-; addr        ; Input ; Info     ; Stuck at VCC ;
-; input_data  ; Input ; Info     ; Stuck at VCC ;
-; read_write  ; Input ; Info     ; Stuck at VCC ;
-+-------------+-------+----------+--------------+
++----------------------------------------------+
+; Port Connectivity Checks: "i2c_master:i2c"   ;
++------------+-------+----------+--------------+
+; Port       ; Type  ; Severity ; Details      ;
++------------+-------+----------+--------------+
+; clock_freq ; Input ; Info     ; Stuck at VCC ;
+; dev_id     ; Input ; Info     ; Stuck at GND ;
+; addr       ; Input ; Info     ; Stuck at VCC ;
+; input_data ; Input ; Info     ; Stuck at VCC ;
+; read_write ; Input ; Info     ; Stuck at VCC ;
++------------+-------+----------+--------------+
 
 
 +-----------------------------------------------------+
@@ -330,9 +332,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
+; arriav_lcell_comb     ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 2                           ;
 ; boundary_port         ; 11                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 0.00                        ;
@@ -355,7 +357,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sat May 18 14:24:57 2019
+    Info: Processing started: Sat May 18 16:37:51 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CRPK_ADC_Project -c CRPK_ADC_Project
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -363,18 +365,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file i2c_mas
     Info (12023): Found entity 1: i2c_master File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file CRPK_ADC_Project.v
     Info (12023): Found entity 1: CRPK_ADC_Project File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at CRPK_ADC_Project.v(28): created implicit net for "test" File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at CRPK_ADC_Project.v(27): created implicit net for "test" File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 27
 Info (12127): Elaborating entity "CRPK_ADC_Project" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at CRPK_ADC_Project.v(28): object "test" assigned a value but never read File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 28
-Info (12128): Elaborating entity "i2c_master" for hierarchy "i2c_master:i2c" File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 26
-Warning (10036): Verilog HDL or VHDL warning at i2c_master.v(43): object "default_count" assigned a value but never read File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master.v Line: 43
-Warning (10034): Output port "output_data" at i2c_master.v(17) has no driver File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master.v Line: 17
-Warning (10034): Output port "enable" at i2c_master.v(16) has no driver File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master.v Line: 16
-Warning (10034): Output port "sdl" at i2c_master.v(18) has no driver File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master.v Line: 18
-Warning (10034): Output port "scl" at i2c_master.v(19) has no driver File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master.v Line: 19
+Warning (10036): Verilog HDL or VHDL warning at CRPK_ADC_Project.v(27): object "test" assigned a value but never read File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 27
+Warning (10034): Output port "ena" at CRPK_ADC_Project.v(5) has no driver File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 5
+Info (12128): Elaborating entity "i2c_master" for hierarchy "i2c_master:i2c" File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 25
+Warning (10036): Verilog HDL or VHDL warning at i2c_master.v(45): object "default_count" assigned a value but never read File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master.v Line: 45
+Warning (10036): Verilog HDL or VHDL warning at i2c_master.v(48): object "device_id" assigned a value but never read File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master.v Line: 48
+Warning (10036): Verilog HDL or VHDL warning at i2c_master.v(49): object "reg_addr" assigned a value but never read File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master.v Line: 49
+Warning (10036): Verilog HDL or VHDL warning at i2c_master.v(50): object "data_send" assigned a value but never read File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master.v Line: 50
+Info (10264): Verilog HDL Case Statement information at i2c_master.v(189): all case item expressions in this case statement are onehot File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master.v Line: 189
+Warning (10240): Verilog HDL Always Construct warning at i2c_master.v(187): inferring latch(es) for variable "en", which holds its previous value in one or more paths through the always construct File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master.v Line: 187
+Warning (10034): Output port "output_data" at i2c_master.v(19) has no driver File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master.v Line: 19
+Info (10041): Inferred latch for "en" at i2c_master.v(187) File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master.v Line: 187
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sdl_a" is stuck at GND File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 3
-    Warning (13410): Pin "scl_a" is stuck at GND File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 4
+    Warning (13410): Pin "sdl_a" is stuck at VCC File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 3
+    Warning (13410): Pin "scl_a" is stuck at VCC File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 4
     Warning (13410): Pin "ena" is stuck at GND File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 5
     Warning (13410): Pin "out[0]" is stuck at GND File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 7
     Warning (13410): Pin "out[1]" is stuck at GND File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 7
@@ -385,15 +391,22 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "out[6]" is stuck at GND File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 7
     Warning (13410): Pin "out[7]" is stuck at GND File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/CRPK_ADC_Project.v Line: 7
 Info (17049): 7 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/output_files/CRPK_ADC_Project.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 11 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 0 input pins
     Info (21059): Implemented 11 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 997 megabytes
-    Info: Processing ended: Sat May 18 14:25:14 2019
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 1000 megabytes
+    Info: Processing ended: Sat May 18 16:38:08 2019
     Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:44
+    Info: Total CPU time (on all processors): 00:00:43
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/output_files/CRPK_ADC_Project.map.smsg.
 
 
