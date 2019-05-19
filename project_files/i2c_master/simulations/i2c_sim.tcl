@@ -1,10 +1,13 @@
 proc runSim {} {
     restart -force -nowave
 
-    add wave clk
-    add wave reset
+
     add wave i2c_sda
     add wave i2c_scl
+    add wave clk
+    add wave reset
+
+    add wave state
     
     property wave -radix hex *
 

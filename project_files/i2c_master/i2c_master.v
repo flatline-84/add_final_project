@@ -2,7 +2,7 @@ module i2c_master(
 	input wire clk,
 	input wire reset,
 	output reg i2c_sda,
-	output reg i2c_scl
+	output wire i2c_scl
 );
 
 localparam STATE_IDLE = 0;
@@ -19,12 +19,33 @@ reg [6:0] addr;
 reg [7:0] count;
 reg [7:0] data;
 
+reg i2c_scl_enable = 0;
+
+assign i2c_scl = (i2c_scl_enable == 0) ? 1 : clk;
+
+// SCL Logic
+always @(negedge(clk)) begin
+	if (reset == 1) begin
+		i2c_scl_enable <= 0;
+	end
+	
+	else begin
+		if((state == STATE_IDLE) || (state == STATE_START) || (state == STATE_STOP)) begin
+			i2c_scl_enable <= 0;
+		end
+		else begin
+			i2c_scl_enable <= 1;
+		end
+	end
+end
+
+// SDA Logic
 always @(posedge(clk)) begin
 	
 	if (reset == 1) begin
 		state <= 0;
 		i2c_sda <= 1;
-		i2c_scl <= 1;
+//		i2c_scl <= 1;
 
 		addr <= 7'h50;
 		count <= 8'd0;
@@ -40,7 +61,7 @@ always @(posedge(clk)) begin
 			end
 
 			STATE_START: begin
-				i2c_sda <= 1;
+				i2c_sda <= 0;
 				state <= STATE_ADDR;
 				count <= 6;
 			end
@@ -79,7 +100,7 @@ always @(posedge(clk)) begin
 
 			default: begin
 				i2c_sda <= 1;
-				i2c_scl <= 1;
+//				i2c_scl <= 1;
 				state <= STATE_START;
 			end
 		endcase

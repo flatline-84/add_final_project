@@ -1,37 +1,25 @@
 # reading modelsim.ini
 # Loading project i2c_master
 # Compile of i2c_master.v was successful.
-source i2c_sim.tcl
-runSim()
-# invalid command name "runSim()"
-runSim
-# No Design Loaded!
-runSim()
-# invalid command name "runSim()"
-source i2c_sim.tcl
-runSim
-# No Design Loaded!
-# Compile of i2c_master.v was successful.
-runSim
-# No Design Loaded!
-vsim work.i2c_master
-# vsim work.i2c_master 
-# Start time: 13:24:32 on May 19,2019
-# Loading work.i2c_master
-runSim
-# ** Error (suppressible): (vsim-4008) Object 'clock' not found.
-# 
-source i2c_sim.tcl
-runSim
-# ** Error (suppressible): (vsim-4008) Object 'clock' not found.
-# 
-source i2c_sim.tcl
-runSim
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 source i2c_sim
 # couldn't read file "i2c_sim": no such file or directory
 source i2c_sim.tcl
 runSim
+# No Design Loaded!
+vsim work.i2c_master
+# vsim work.i2c_master 
+# Start time: 14:07:50 on May 19,2019
+# Loading work.i2c_master
+runSim
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# .main_pane.wave.interior.cs.body.pw.wf
+source i2c_sim.tcl
+runSim
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# .main_pane.wave.interior.cs.body.pw.wf
+# Compile of i2c_master.v was successful.
+runSim
+# Loading work.i2c_master
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # .main_pane.wave.interior.cs.body.pw.wf
 source i2c_sim.tcl
@@ -42,41 +30,15 @@ source i2c_sim.tcl
 runSim
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # .main_pane.wave.interior.cs.body.pw.wf
-source i2c_sim.tcl
+# Compile of i2c_master.v was successful.
 runSim
+# Loading work.i2c_master
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # .main_pane.wave.interior.cs.body.pw.wf
+# Compile of i2c_master.v failed with 2 errors.
+# Compile of i2c_master.v was successful.
 source i2c_sim.tcl
-runSim
+runSim 
+# Loading work.i2c_master
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # .main_pane.wave.interior.cs.body.pw.wf
-source i2c_sim.tcl
-runSim
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-source i2c_sim.tcl
-runSim
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-force -freeze sim:/i2c_master/clk 1 0, 0 {50 ps} -r 100
-force -deposit /clk 1 0, 0 {10 ns} -repeat 20
-# ** Error: (vsim-3464) Period of -repeat must not be less than the waveform length.
-# 
-source i2c_sim.tcl
-runSim
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-source i2c_sim.tcl
-runSim
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-source i2c_sim.tcl
-runSim
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-source i2c_sim.tcl
-runSim
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# End time: 13:44:37 on May 19,2019, Elapsed time: 0:20:05
-# Errors: 4, Warnings: 12
