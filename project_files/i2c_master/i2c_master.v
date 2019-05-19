@@ -21,7 +21,7 @@ reg [7:0] data;
 
 reg i2c_scl_enable = 0;
 
-assign i2c_scl = (i2c_scl_enable == 0) ? 1 : clk;
+assign i2c_scl = (i2c_scl_enable == 0) ? 1 : ~clk;
 
 // SCL Logic
 always @(negedge(clk)) begin

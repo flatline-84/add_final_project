@@ -42,3 +42,11 @@ runSim
 # Loading work.i2c_master
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # .main_pane.wave.interior.cs.body.pw.wf
+runSim
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# .main_pane.wave.interior.cs.body.pw.wf
+# Compile of i2c_master.v was successful.
+runSim
+# Loading work.i2c_master
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# .main_pane.wave.interior.cs.body.pw.wf
