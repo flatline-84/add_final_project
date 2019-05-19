@@ -1,0 +1,23 @@
+module i2c_controller(
+    input wire clk_in, //50Mhz
+    input wire reset_in,
+    input wire start,
+    input wire [6:0] addr,
+    input wire [7:0] data,
+    
+    inout wire i2c_sda,
+    inout wire i2c_scl,
+    output wire ready_out
+);
+
+wire clk_100hz;
+
+i2c_clk_divider clk_divider
+@(.DELAY(250)) // 200KHz -> 100kHz full period
+(
+    .reset(reset_in),
+    .ref_clk(clk_in),
+    .i2c_clk(clk_100hz)
+)
+
+endmodule

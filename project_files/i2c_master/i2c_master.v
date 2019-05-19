@@ -1,8 +1,14 @@
+//`default net_type none
+
 module i2c_master(
 	input wire clk,
 	input wire reset,
+	input wire start,
+	input wire [6:0] addr,
+	input wire [7:0] data,
 	output reg i2c_sda,
-	output wire i2c_scl
+	output wire i2c_scl,
+	output wire ready
 );
 
 localparam STATE_IDLE = 0;
@@ -15,13 +21,15 @@ localparam STATE_STOP = 6;
 localparam STATE_WACK2 = 7;
 
 reg [7:0] state;
-reg [6:0] addr;
 reg [7:0] count;
-reg [7:0] data;
+
+reg [6:0] saved_addr;
+reg [7:0] saved_data;
 
 reg i2c_scl_enable = 0;
 
 assign i2c_scl = (i2c_scl_enable == 0) ? 1 : ~clk;
+assign ready = ((reset == 0) && (state == STATE_IDLE)) ? 1 : 0;
 
 // SCL Logic
 always @(negedge(clk)) begin
@@ -47,9 +55,9 @@ always @(posedge(clk)) begin
 		i2c_sda <= 1;
 //		i2c_scl <= 1;
 
-		addr <= 7'h50;
+		// addr <= 7'h50;
 		count <= 8'd0;
-		data <= 8'haa; //test send aa?
+		// data <= 8'haa; //test send aa?
 	end
 
 	else begin
@@ -57,7 +65,12 @@ always @(posedge(clk)) begin
 
 			STATE_IDLE: begin
 				i2c_sda <= 1;
-				state <= STATE_START;
+				if (start) begin
+					state <= STATE_START;
+					saved_addr <= addr;
+					saved_data <= data;
+				end
+				else state <= STATE_IDLE;
 			end
 
 			STATE_START: begin
@@ -67,7 +80,7 @@ always @(posedge(clk)) begin
 			end
 
 			STATE_ADDR: begin
-				i2c_sda <= addr[count];
+				i2c_sda <= saved_addr[count];
 				
 				if (count == 0) state <= STATE_RW;
 				else count <= count - 1;
@@ -84,7 +97,7 @@ always @(posedge(clk)) begin
 			end
 
 			STATE_DATA: begin
-				i2c_sda <= data[count];
+				i2c_sda <= saved_data[count];
 				if (count == 0) state <= STATE_WACK2;
 				else count <= count - 1;
 			end

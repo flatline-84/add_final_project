@@ -1,52 +1,21 @@
 # reading modelsim.ini
 # Loading project i2c_master
 # Compile of i2c_master.v was successful.
-source i2c_sim
-# couldn't read file "i2c_sim": no such file or directory
-source i2c_sim.tcl
-runSim
-# No Design Loaded!
-vsim work.i2c_master
-# vsim work.i2c_master 
-# Start time: 14:07:50 on May 19,2019
-# Loading work.i2c_master
-runSim
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-source i2c_sim.tcl
+# Compile of i2c_clk_divider.v was successful.
+# Compile of i2c_controller.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.i2c_clk_divider
+# vsim work.i2c_clk_divider 
+# Start time: 20:24:23 on May 19,2019
+# Loading work.i2c_clk_divider
+# WARNING: No extended dataflow license exists
+source i2c_clock_divider_sim.tcl
 runSim
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # .main_pane.wave.interior.cs.body.pw.wf
-# Compile of i2c_master.v was successful.
-runSim
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-source i2c_sim.tcl
+source i2c_clock_divider_sim.tcl
 runSim
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # .main_pane.wave.interior.cs.body.pw.wf
-source i2c_sim.tcl
-runSim
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of i2c_master.v was successful.
-runSim
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of i2c_master.v failed with 2 errors.
-# Compile of i2c_master.v was successful.
-source i2c_sim.tcl
-runSim 
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-runSim
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of i2c_master.v was successful.
-runSim
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
+# End time: 20:27:21 on May 19,2019, Elapsed time: 0:02:58
+# Errors: 0, Warnings: 3
