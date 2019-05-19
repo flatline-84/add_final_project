@@ -5,12 +5,14 @@
  * Last modified: 18/04/19
 \*************************/
 
-module i2c_master
+module i2c_master_old
 (
 	// input clock_state, // internal clock used for changing states
     // Transmission freq:   100kHz
     // Clock_freq:          200kHz
 	input clock_freq,  // 
+    input enable,
+    input reset_n,
     input [6:0] dev_id, // address of i2c device (7-bits)
     input [7:0] addr,   // address of register to r/w to
     input [7:0] input_data,
@@ -48,7 +50,7 @@ reg [3:0] bit_count     =   4'b0111;//default_count; //count down from 7->0 (i.e
 wire [6:0] device_id    =   dev_id;
 wire [7:0] reg_addr     =   addr;
 wire [7:0] data_send    =   input_data;
-reg rw                  =   read_write;
+// reg rw                  =   read_write;
 
 reg sdl_c               =   1'b1;
 reg scl_c               =   1'b1;
@@ -66,17 +68,17 @@ assign scl              =   scl_o;
 
 
 /*** Clock Transitions ***/
-always @(posedge(clock_freq))
-    begin: sdl_line
-        sdl_c <= !sdl_c;
-        sdl_o = sdl_c & sdl_v;
-    end
+// always @(posedge(clock_freq))
+//     begin: sdl_line
+//         sdl_c <= !sdl_c;
+//         sdl_o = sdl_c & sdl_v;
+//     end
 
-always @(negedge(clock_freq))
-    begin: scl_line
-        scl_c <= !scl_c;
-        scl_o = scl_c & scl_v;
-    end
+// always @(negedge(clock_freq))
+//     begin: scl_line
+//         scl_c <= !scl_c;
+//         scl_o = scl_c & scl_v;
+//     end
 
 
 /*** STATE MEMORY AND TRANSITION ***/
@@ -87,7 +89,7 @@ always @(posedge(clock_freq))
 
 
 /*** NEXT STATE LOGIC ***/
-always @(current_state or en or bit_count or read_write) //or any other inputs?
+always @(current_state or enable or bit_count or read_write) //or any other inputs?
 	begin: next_state_logic
         case (current_state)
 			begin_state:
@@ -97,7 +99,7 @@ always @(current_state or en or bit_count or read_write) //or any other inputs?
 			
 			ready:
 				begin
-					if (en == 1'b1)
+					if (enable == 1'b1)
 						begin
 							next_state = start;
 						end
@@ -190,17 +192,18 @@ always @(current_state)
 		case (current_state)
             begin_state:
                 begin
-                    en = 1'b1;
+                    // en = 1'b0;
                 end
             
             ready:
                 begin
-                    // do nothing as well?
+                    // Wait for enable to activate
                 end
 
             start:
                 begin
-                    // Send start value
+                    // Reset bit counter
+                    bit_count = 4'd7; // Count down from 7 -> 0 (8 values)
                 end
 
             command:
