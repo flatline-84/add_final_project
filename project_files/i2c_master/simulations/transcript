@@ -170,3 +170,5 @@ runSim
 # Loading work.i2c_master
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # .main_pane.wave.interior.cs.body.pw.wf
+# End time: 15:38:25 on May 22,2019, Elapsed time: 3:01:38
+# Errors: 0, Warnings: 18
