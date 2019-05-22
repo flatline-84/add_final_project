@@ -2,11 +2,14 @@ module i2c_controller(
     input wire clk_in, //50Mhz
     input wire reset_in,
     input wire start,
-    input wire [6:0] addr,
+    input wire [6:0] dev_addr,
+    input wire [7:0] reg_addr,
     input wire [7:0] data,
+
+    output wire[7:0] states,
     
     inout wire i2c_sda,
-    inout wire i2c_scl,
+    output wire i2c_scl,
     output wire ready_out
 );
 
@@ -28,11 +31,13 @@ i2c_master master (
     .clk(clk_100hz),
     .reset(reset_in),
     .start(start),
-    .addr(addr),
+    .dev_id(dev_addr),
+    .reg_id(reg_addr),
     .data(data),
     .i2c_sda(i2c_sda),
     .i2c_scl(i2c_scl),
-    .ready(ready_out)
+    .ready(ready_out),
+    .states(states)
 );
 
 
