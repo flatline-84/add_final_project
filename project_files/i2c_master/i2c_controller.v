@@ -2,11 +2,11 @@ module i2c_controller(
     input wire clk_in, //50Mhz
     input wire reset_in,
     input wire start,
-    input wire [6:0] dev_addr,
+    input wire [7:0] dev_addr,
     input wire [7:0] reg_addr,
     input wire [7:0] data,
 
-    output wire[7:0] states,
+    output wire[7:0] states, //not necessary
     
     inout wire i2c_sda,
     output wire i2c_scl,

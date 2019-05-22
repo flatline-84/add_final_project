@@ -4,7 +4,7 @@ module i2c_master(
 	input wire clk,
 	input wire reset,
 	input wire start,
-	input wire [6:0] dev_id,
+	input wire [7:0] dev_id,
 	input wire [7:0] reg_id,
 	input wire [7:0] data,
 	inout wire i2c_sda,
@@ -98,7 +98,9 @@ always @(posedge(clk)) begin
 				i2c_sda_val <= saved_dev_id[count];
 				
 				if (count == 0) begin
-					state <= STATE_RW;
+					// state <= STATE_RW;
+					state <= STATE_WACK;
+					ack_check <= 1;
 					// ack_check <= 1;
 				end
 				else count <= count - 1;
