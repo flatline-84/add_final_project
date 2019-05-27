@@ -1,0 +1,157 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/simulations
+vhdmi_init
+Z0 !s110 1558949701
+!i10b 1
+!s100 <>;?THzWNo6kdd0dWn8NO1
+Io?XcB0fKOcNGI8k9dXT]m3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation
+w1558949152
+8/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/hdmi_init.v
+F/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/hdmi_init.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1558949701.000000
+!s107 /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/hdmi_init.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/hdmi_init.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vi2c_clk_divider
+R0
+!i10b 1
+!s100 [>PVkEXeFZol2BMi`P71_3
+IDXf55K_d0SmNmGg2;oFFS0
+R1
+R2
+w1558947985
+8/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_clk_divider.v
+F/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_clk_divider.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_clk_divider.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_clk_divider.v|
+!i113 1
+R5
+R6
+vi2c_controller
+R0
+!i10b 1
+!s100 H=[2bjon7[SnNC[WL9RA?2
+IZKIC]nWgD@Ukj2gok87dC2
+R1
+R2
+w1558947963
+8/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_controller.v
+F/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_controller.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_controller.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_controller.v|
+!i113 1
+R5
+R6
+vi2c_master
+R0
+!i10b 1
+!s100 :Y=__PeKzAT<09dWa_5YA3
+I5VUNE71N[NhTAElmK_3?W2
+R1
+R2
+w1558948410
+8/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_master.v
+F/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_master.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_master.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_master.v|
+!i113 1
+R5
+R6
+vrom_hdmi
+R0
+!i10b 1
+!s100 2Vzh60DC3D8@H]aJAeon13
+I?z]7aPQoJE`G]WHhJUNl;0
+R1
+R2
+w1558504119
+8/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v
+F/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v
+L0 39
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v|
+!i113 1
+R5
+R6
+vrom_hdmi_altsyncram
+!s110 1558949529
+!i10b 1
+!s100 SCF7NI2SWhCD?G4d_3UZ52
+IWAfM[SZC<4UW2?Q>R0]hY0
+R1
+R2
+w1558504123
+8/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+F/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+L0 47
+R3
+r1
+!s85 0
+31
+!s108 1558949529.000000
+!s107 /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v|
+!i113 1
+R5
+R6
+vsr_latch
+R0
+!i10b 1
+!s100 z;A?mz;lkFChBO9<gaKS83
+IYG>8AIcJ7ZVYSjo>VmR0X3
+R1
+R2
+w1554259462
+8/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/sr_latch_n/sr_latch.v
+F/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/sr_latch_n/sr_latch.v
+L0 7
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/sr_latch_n/sr_latch.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/sr_latch_n/sr_latch.v|
+!i113 1
+R5
+R6

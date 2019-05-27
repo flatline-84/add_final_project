@@ -2,7 +2,7 @@
 
 module i2c_master(
 	input wire clk,
-	input wire reset,
+	input wire reset_n,
 	input wire start,
 	input wire [7:0] dev_id,
 	input wire [7:0] reg_id,
@@ -42,11 +42,11 @@ assign i2c_sda = i2c_sda_val; //PERFORM ACK HERE
 
 // assign i2c_sda = ack_check ? 1'bz : i2c_sda_val; //PERFORM ACK HERE
 assign i2c_scl = (i2c_scl_enable == 0) ? 1 : ~clk;
-assign ready = ((reset == 0) && (state == STATE_IDLE)) ? 1 : 0;
+assign ready = ((reset_n == 1) && (state == STATE_IDLE)) ? 1 : 0;
 
 // SCL Logic
 always @(negedge(clk)) begin
-	if (reset == 1) begin
+	if (reset_n == 1) begin
 		i2c_scl_enable <= 0;
 	end
 	
@@ -63,7 +63,7 @@ end
 // SDA Logic
 always @(posedge(clk)) begin
 	
-	if (reset == 1) begin
+	if (reset_n == 1'b0) begin
 		state <= STATE_IDLE;
 		i2c_sda_val <= 1;
 		ack_check <= 0;
@@ -101,7 +101,6 @@ always @(posedge(clk)) begin
 					// state <= STATE_RW;
 					state <= STATE_WACK;
 					ack_check <= 1;
-					// ack_check <= 1;
 				end
 				else count <= count - 1;
 			end
@@ -120,7 +119,7 @@ always @(posedge(clk)) begin
 					ack_check <= 0;
 				// end
 				// else begin
-				// 	state <= STATE_STOP;
+				// 	state <= STATE_PRE_STOP;
 				// end
 				
 			end
@@ -142,7 +141,7 @@ always @(posedge(clk)) begin
 					ack_check <= 0;
 				// end
 				// else begin
-				// 	state <= STATE_STOP;
+				// 	state <= STATE_PRE_STOP;
 				// end
 			end
 

@@ -1,174 +1,239 @@
 # reading modelsim.ini
 # Loading project i2c_master
-# Compile of i2c_master.v was successful.
+# reading modelsim.ini
+# reading /data/Programs/Quartus/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project hdmi_init_sim
+# Compile of hdmi_init.v was successful.
+# Compile of sr_latch.v was successful.
 # Compile of i2c_clk_divider.v was successful.
 # Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-vsim work.i2c_controller
-# vsim work.i2c_controller 
-# Start time: 12:36:47 on May 22,2019
-# Loading work.i2c_controller
-# Loading work.i2c_clk_divider
-# Loading work.i2c_master
-# WARNING: No extended dataflow license exists
-source i2c_controller.tcl
-runSim
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
 # Compile of i2c_master.v was successful.
+# Compile of rom_hdmi.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim work.hdmi_init
+# vsim work.hdmi_init 
+# Start time: 19:31:27 on May 27,2019
+# Loading work.hdmi_init
+# Loading work.sr_latch
+# Loading work.i2c_clk_divider
+# Loading work.rom_hdmi
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v(58): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# Loading work.i2c_controller
+# Loading work.i2c_master
+# Error loading design
+# End time: 19:31:28 on May 27,2019, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Compile of hdmi_init.v was successful.
+# Compile of sr_latch.v was successful.
 # Compile of i2c_clk_divider.v was successful.
 # Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-runSim
-# Loading work.i2c_controller
-# Loading work.i2c_clk_divider
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
 # Compile of i2c_master.v was successful.
+# Compile of rom_hdmi.v was successful.
+# Compile of rom_hdmi_bb.v was successful.
+# Compile of rom_hdmi_syn.v was successful.
+# 8 compiles, 0 failed with no errors.
+vsim work.hdmi_init
+# vsim work.hdmi_init 
+# Start time: 19:32:19 on May 27,2019
+# Loading work.hdmi_init
+# Loading work.sr_latch
+# Loading work.i2c_clk_divider
+# Loading work.rom_hdmi
+# Loading work.rom_hdmi_altsyncram
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v(73): Instantiation of 'cyclonev_ram_block' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom/rom_hdmi_altsyncram_component File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v(135): Instantiation of 'cyclonev_ram_block' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom/rom_hdmi_altsyncram_component File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v(197): Instantiation of 'cyclonev_ram_block' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom/rom_hdmi_altsyncram_component File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v(259): Instantiation of 'cyclonev_ram_block' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom/rom_hdmi_altsyncram_component File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v(321): Instantiation of 'cyclonev_ram_block' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom/rom_hdmi_altsyncram_component File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v(383): Instantiation of 'cyclonev_ram_block' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom/rom_hdmi_altsyncram_component File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v(445): Instantiation of 'cyclonev_ram_block' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom/rom_hdmi_altsyncram_component File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v(507): Instantiation of 'cyclonev_ram_block' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom/rom_hdmi_altsyncram_component File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# Loading work.i2c_controller
+# Loading work.i2c_master
+# Error loading design
+# End time: 19:32:19 on May 27,2019, Elapsed time: 0:00:00
+# Errors: 8, Warnings: 0
+vsim work.hdmi_init
+# vsim work.hdmi_init 
+# Start time: 19:32:51 on May 27,2019
+# Loading work.hdmi_init
+# Loading work.sr_latch
+# Loading work.i2c_clk_divider
+# Loading work.rom_hdmi
+# Loading work.rom_hdmi_altsyncram
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v(73): Instantiation of 'cyclonev_ram_block' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom/rom_hdmi_altsyncram_component File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v(135): Instantiation of 'cyclonev_ram_block' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom/rom_hdmi_altsyncram_component File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v(197): Instantiation of 'cyclonev_ram_block' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom/rom_hdmi_altsyncram_component File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v(259): Instantiation of 'cyclonev_ram_block' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom/rom_hdmi_altsyncram_component File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v(321): Instantiation of 'cyclonev_ram_block' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom/rom_hdmi_altsyncram_component File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v(383): Instantiation of 'cyclonev_ram_block' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom/rom_hdmi_altsyncram_component File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v(445): Instantiation of 'cyclonev_ram_block' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom/rom_hdmi_altsyncram_component File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v(507): Instantiation of 'cyclonev_ram_block' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom/rom_hdmi_altsyncram_component File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi_syn.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# Loading work.i2c_controller
+# Loading work.i2c_master
+# Error loading design
+# End time: 19:32:51 on May 27,2019, Elapsed time: 0:00:00
+# Errors: 8, Warnings: 0
+# Compile of hdmi_init.v was successful.
+# Compile of sr_latch.v was successful.
 # Compile of i2c_clk_divider.v was successful.
 # Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-runSim
-# Loading work.i2c_controller
-# Loading work.i2c_clk_divider
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
 # Compile of i2c_master.v was successful.
+# Compile of rom_hdmi.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim work.hdmi_init
+# vsim work.hdmi_init 
+# Start time: 19:33:07 on May 27,2019
+# Loading work.hdmi_init
+# Loading work.sr_latch
+# Loading work.i2c_clk_divider
+# Loading work.rom_hdmi
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v(58): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# Loading work.i2c_controller
+# Loading work.i2c_master
+# Error loading design
+# End time: 19:33:08 on May 27,2019, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vsim work.hdmi_init
+# vsim work.hdmi_init 
+# Start time: 19:34:02 on May 27,2019
+# Loading work.hdmi_init
+# Loading work.sr_latch
+# Loading work.i2c_clk_divider
+# Loading work.rom_hdmi
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v(58): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# Loading work.i2c_controller
+# Loading work.i2c_master
+# Error loading design
+# End time: 19:34:02 on May 27,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim work.hdmi_init
+# vsim work.hdmi_init 
+# Start time: 19:34:25 on May 27,2019
+# Loading work.hdmi_init
+# Loading work.sr_latch
+# Loading work.i2c_clk_divider
+# Loading work.rom_hdmi
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v(58): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# Loading work.i2c_controller
+# Loading work.i2c_master
+# Error loading design
+# End time: 19:34:25 on May 27,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# Compile of hdmi_init.v was successful.
+# Compile of sr_latch.v was successful.
 # Compile of i2c_clk_divider.v was successful.
 # Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-runSim
-# Loading work.i2c_controller
-# Loading work.i2c_clk_divider
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
 # Compile of i2c_master.v was successful.
+# Compile of rom_hdmi.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim work.hdmi_init
+# vsim work.hdmi_init 
+# Start time: 19:34:35 on May 27,2019
+# Loading work.hdmi_init
+# Loading work.sr_latch
+# Loading work.i2c_clk_divider
+# Loading work.rom_hdmi
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v(58): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# Loading work.i2c_controller
+# Loading work.i2c_master
+# Error loading design
+# End time: 19:34:35 on May 27,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim work.rom_hdmi
+# vsim work.rom_hdmi 
+# Start time: 19:34:42 on May 27,2019
+# Loading work.rom_hdmi
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v(58): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /rom_hdmi File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# Error loading design
+# End time: 19:34:42 on May 27,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# Compile of hdmi_init.v was successful.
+# Compile of sr_latch.v was successful.
 # Compile of i2c_clk_divider.v was successful.
 # Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-runSim
-# Loading work.i2c_controller
-# Loading work.i2c_clk_divider
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
 # Compile of i2c_master.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-runSim
-# Loading work.i2c_controller
+# Compile of rom_hdmi.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim work.hdmi_init
+# vsim work.hdmi_init 
+# Start time: 19:35:07 on May 27,2019
+# Loading work.hdmi_init
+# Loading work.sr_latch
 # Loading work.i2c_clk_divider
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of i2c_master.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-runSim
+# Loading work.rom_hdmi
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v(58): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/rom File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
 # Loading work.i2c_controller
-# Loading work.i2c_clk_divider
 # Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of i2c_master.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-runSim
-# Loading work.i2c_controller
-# Loading work.i2c_clk_divider
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of i2c_master.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-runSim
-# Loading work.i2c_controller
-# Loading work.i2c_clk_divider
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of i2c_master.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-runSim
-# Loading work.i2c_controller
-# Loading work.i2c_clk_divider
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of i2c_master.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-runSim
-# Loading work.i2c_controller
-# Loading work.i2c_clk_divider
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-source i2c_controller.tcl
-runSim
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of i2c_master.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-runSim
-# Loading work.i2c_controller
-# Loading work.i2c_clk_divider
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of i2c_master.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-runSim
-# Loading work.i2c_controller
-# Loading work.i2c_clk_divider
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of i2c_master.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-runSim
-# Loading work.i2c_controller
-# Loading work.i2c_clk_divider
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of i2c_master.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-source i2c_controller.tcl
-runSim
-# Loading work.i2c_controller
-# Loading work.i2c_clk_divider
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of i2c_master.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-runSim
-# Loading work.i2c_controller
-# Loading work.i2c_clk_divider
-# Loading work.i2c_master
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# End time: 15:38:25 on May 22,2019, Elapsed time: 3:01:38
-# Errors: 0, Warnings: 18
+# Error loading design
+# End time: 19:35:07 on May 27,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
