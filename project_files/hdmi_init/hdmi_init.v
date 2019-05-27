@@ -3,9 +3,21 @@ module hdmi_init(
 	input wire select, //KEY0 -> AH17
 	// input wire reset,
 	output wire [7:0] current_value,
+//	output wire led,
 	inout wire i2c_sda, //PINOUT -> AA4 (HDMI_SDA)
 	output wire i2c_scl //PINOUT -> U10 (HDMI_SCL)
 );
+
+/*
+LED0 -> W15
+LED1 -> AA24
+LED2 -> V16
+LED3 -> V15
+LED4 -> AF26
+LED5 -> AE26
+LED6 -> Y16
+LED7 -> AA23
+*/
 
 wire clk_100hz;
 
@@ -27,6 +39,8 @@ reg initialized = 0;
 
 wire [7:0] states;
 wire ready;
+
+//assign led = ready;
 
 assign current_value = current_value_r;
 
@@ -61,7 +75,7 @@ rom_hdmi rom (
 );
 
 i2c_controller i2c(
-	.clk_in(clk_100hz),
+	.clk_in(clk_ref),
 	.reset_n(reset_n),
 	.start(start),
 	.dev_addr(current_dev_id),
@@ -148,10 +162,19 @@ always @(current_state or reset_n or ready) begin: next_state_logic
 			end
 
 			STATE_STOP: begin
-				start <= 0;
-				// if (count < limit) begin
+				
+				if (count >= limit) begin
+					start <= 0;
+					initialized <= 1;
+				end
+				else if (ready == 1'b0) begin
+					next_state <= STATE_STOP;
+				end
+				
+				else begin
 					next_state <= STATE_IDLE;
-				// end
+				end
+				
 			end
 
 		endcase

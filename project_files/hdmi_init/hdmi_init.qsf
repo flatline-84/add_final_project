@@ -61,9 +61,17 @@ set_global_assignment -name VERILOG_FILE ../i2c_master/i2c_clk_divider.v
 set_global_assignment -name VERILOG_FILE hdmi_init.v
 set_global_assignment -name HEX_FILE ../rom_hdmi/hdmi_commands.hex
 set_global_assignment -name VERILOG_FILE ../rom_hdmi/rom_hdmi.v
-set_location_assignment PIN_E11 -to clk_ref
+set_location_assignment PIN_V11 -to clk_ref
 set_location_assignment PIN_U10 -to i2c_scl
 set_location_assignment PIN_AA4 -to i2c_sda
 set_location_assignment PIN_AH17 -to select
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE simulation/Waveform.vwf
+set_location_assignment PIN_W15 -to current_value[0]
+set_location_assignment PIN_AA24 -to current_value[1]
+set_location_assignment PIN_V16 -to current_value[2]
+set_location_assignment PIN_V15 -to current_value[3]
+set_location_assignment PIN_AF26 -to current_value[4]
+set_location_assignment PIN_AE26 -to current_value[5]
+set_location_assignment PIN_Y16 -to current_value[6]
+set_location_assignment PIN_AA23 -to current_value[7]
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
