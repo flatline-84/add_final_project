@@ -46,7 +46,7 @@ assign ready = ((reset_n == 1) && (state == STATE_IDLE)) ? 1 : 0;
 
 // SCL Logic
 always @(negedge(clk)) begin
-	if (reset_n == 1) begin
+	if (reset_n == 0) begin
 		i2c_scl_enable <= 0;
 	end
 	

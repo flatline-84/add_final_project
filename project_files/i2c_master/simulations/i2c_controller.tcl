@@ -10,9 +10,9 @@ proc runSim {} {
     #50MHZ (working!)
 
     force -freeze start 0
-    force -freeze reset_in 1
+    force -freeze reset_n 0
     run 1000
-    force -freeze reset_in 0
+    force -freeze reset_n 1
 
 
     force -freeze dev_addr X"72"

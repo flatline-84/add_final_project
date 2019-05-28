@@ -1,50 +1,3 @@
-/*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off hdmi_init -c hdmi_init --vector_source="/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/Waveform.vwf" --testbench_file="/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/qsim/Waveform.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off hdmi_init -c hdmi_init --vector_source="/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/Waveform.vwf" --testbench_file="/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/qsim/Waveform.vwf.vt"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/qsim/" hdmi_init -c hdmi_init</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/qsim/" hdmi_init -c hdmi_init</tnetlist_cmd>
-<modelsim_script>onerror {exit -code 1}
-vlib work
-vlog -work work hdmi_init.vo
-vlog -work work Waveform.vwf.vt
-vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.hdmi_init_vlg_vec_tst
-vcd file -direction hdmi_init.msim.vcd
-vcd add -internal hdmi_init_vlg_vec_tst/*
-vcd add -internal hdmi_init_vlg_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-
-
-</modelsim_script>
-<modelsim_script_timing>onerror {exit -code 1}
-vlib work
-vlog -work work hdmi_init.vo
-vlog -work work Waveform.vwf.vt
-vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.hdmi_init_vlg_vec_tst
-vcd file -direction hdmi_init.msim.vcd
-vcd add -internal hdmi_init_vlg_vec_tst/*
-vcd add -internal hdmi_init_vlg_vec_tst/i1/*
-proc simTimestamp {} {
-    echo "Simulation time: $::now ps"
-    if { [string equal running [runStatus]] } {
-        after 2500 simTimestamp
-    }
-}
-after 2500 simTimestamp
-run -all
-quit -f
-
-
-</modelsim_script_timing>
-<hdl_lang>verilog</hdl_lang>
-</simulation_settings>*/
 /*
 WARNING: Do NOT edit the input and output ports in this file in a text
 editor if you plan to continue editing the block that represents it in
@@ -72,7 +25,7 @@ HEADER
 	VERSION = 1;
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
-	DATA_DURATION = 30000.0;
+	DATA_DURATION = 29.9;
 	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 30.0;
@@ -296,9 +249,10 @@ TRANSITION_LIST("clk_ref")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 1500;
+			REPEAT = 1;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
+			LEVEL 0 FOR 9.9;
 		}
 	}
 }
@@ -308,8 +262,11 @@ TRANSITION_LIST("current_value[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 29.9;
+		}
 	}
 }
 
@@ -318,8 +275,11 @@ TRANSITION_LIST("current_value[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 29.9;
+		}
 	}
 }
 
@@ -328,8 +288,11 @@ TRANSITION_LIST("current_value[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 29.9;
+		}
 	}
 }
 
@@ -338,8 +301,11 @@ TRANSITION_LIST("current_value[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 29.9;
+		}
 	}
 }
 
@@ -348,8 +314,11 @@ TRANSITION_LIST("current_value[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 29.9;
+		}
 	}
 }
 
@@ -358,8 +327,11 @@ TRANSITION_LIST("current_value[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 29.9;
+		}
 	}
 }
 
@@ -368,8 +340,11 @@ TRANSITION_LIST("current_value[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 29.9;
+		}
 	}
 }
 
@@ -378,8 +353,11 @@ TRANSITION_LIST("current_value[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 29.9;
+		}
 	}
 }
 
@@ -388,8 +366,11 @@ TRANSITION_LIST("i2c_scl")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 29.9;
+		}
 	}
 }
 
@@ -398,8 +379,11 @@ TRANSITION_LIST("i2c_sda")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL Z FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 29.9;
+		}
 	}
 }
 
@@ -408,7 +392,11 @@ TRANSITION_LIST("select")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 30000.0;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 29.9;
+		}
 	}
 }
 
@@ -417,8 +405,11 @@ TRANSITION_LIST("state[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 29.9;
+		}
 	}
 }
 
@@ -427,8 +418,11 @@ TRANSITION_LIST("state[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 29.9;
+		}
 	}
 }
 
@@ -437,8 +431,11 @@ TRANSITION_LIST("state[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 29.9;
+		}
 	}
 }
 
@@ -447,8 +444,11 @@ TRANSITION_LIST("state[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 29.9;
+		}
 	}
 }
 
@@ -457,8 +457,12 @@ TRANSITION_LIST("state[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 19.9;
+		}
 	}
 }
 
@@ -467,8 +471,11 @@ TRANSITION_LIST("ready_out")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 1 FOR 29.9;
+		}
 	}
 }
 
@@ -477,8 +484,11 @@ TRANSITION_LIST("initialized_out")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 28.9;
-		LEVEL 0 FOR 29971.1;
+		NODE
+		{
+			REPEAT = 1;
+			LEVEL 0 FOR 29.9;
+		}
 	}
 }
 

@@ -6,11 +6,14 @@
 # 3 compiles, 0 failed with no errors.
 vsim work.i2c_controller
 # vsim work.i2c_controller 
-# Start time: 15:23:34 on May 28,2019
+# Start time: 15:31:06 on May 28,2019
 # Loading work.i2c_controller
 # Loading work.i2c_clk_divider
 # Loading work.i2c_master
 # WARNING: No extended dataflow license exists
+
+
+
 source i2c_controller.tcl
 runSim
 # ** Error (suppressible): (vsim-4008) Object 'reset_in' not found.
@@ -20,6 +23,12 @@ run
 run
 run
 run
-run
-# End time: 15:24:48 on May 28,2019, Elapsed time: 0:01:14
-# Errors: 1, Warnings: 2
+source i2c_controller.tcl
+runSim
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# .main_pane.wave.interior.cs.body.pw.wf
+runSim
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# .main_pane.wave.interior.cs.body.pw.wf
+# End time: 15:34:24 on May 28,2019, Elapsed time: 0:03:18
+# Errors: 1, Warnings: 4

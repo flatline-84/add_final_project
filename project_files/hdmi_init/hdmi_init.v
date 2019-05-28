@@ -57,9 +57,14 @@ localparam STATE_IDLE		= 1;
 localparam STATE_READ		= 2;
 localparam STATE_WRITE		= 3;
 localparam STATE_STOP		= 4;
+localparam STATE_WAIT_1		= 5;
+localparam STATE_WAIT_2		= 6;
+localparam STATE_WAIT_3		= 7;
 
-reg [4:0] current_state		= STATE_START;
-reg [4:0] next_state		= STATE_START;
+
+
+reg [5:0] current_state		= STATE_START;
+reg [5:0] next_state		= STATE_START;
 
 assign state = current_state;
 
@@ -100,7 +105,7 @@ always @(posedge(clk_ref)) begin: state_memory
 	reset_toggle = ~reset_toggle;
 end
 
-always @(current_state or reset_n or ready) begin: next_state_logic
+always @(negedge(clk_ref)) begin: next_state_logic
 	if (reset_n == 1'b0) begin
 		next_state <= STATE_START;
 	end
@@ -170,10 +175,13 @@ always @(current_state or reset_n or ready) begin: next_state_logic
 			end
 
 			STATE_STOP: begin
+
+				start <= 0;
 				
 				if (count > limit) begin
-					start <= 0;
+					// start <= 0;
 					initialized <= 1;
+					next_state <= STATE_IDLE;
 				end
 				else if (ready == 1'b0) begin
 					next_state <= STATE_STOP;

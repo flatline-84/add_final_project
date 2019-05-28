@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "05/28/2019 15:16:17"
+// DATE "05/28/2019 16:12:06"
 
 // 
 // Device: Altera 5CSEBA6U23I7DK Package UFBGA672
@@ -59,7 +59,7 @@ tri1 devpor;
 tri1 devoe;
 wire \i2c_sda~input_o ;
 wire \clk_ref~input_o ;
-wire \i2c|clk_divider|Add0~5_sumout ;
+wire \i2c|clk_divider|Add0~33_sumout ;
 wire \reset_toggle~0_combout ;
 wire \reset_toggle~q ;
 wire \select~input_o ;
@@ -67,26 +67,27 @@ wire \sr_latch_n|comb~0_combout ;
 wire \sr_latch_n|always0~0_combout ;
 wire \sr_latch_n|output_Q~combout ;
 wire \i2c|clk_divider|Add0~2 ;
-wire \i2c|clk_divider|Add0~33_sumout ;
-wire \i2c|clk_divider|Add0~34 ;
-wire \i2c|clk_divider|Add0~29_sumout ;
-wire \i2c|clk_divider|Equal0~0_combout ;
-wire \i2c|clk_divider|count[5]~0_combout ;
+wire \i2c|clk_divider|Add0~5_sumout ;
 wire \i2c|clk_divider|Add0~6 ;
 wire \i2c|clk_divider|Add0~9_sumout ;
-wire \i2c|clk_divider|Add0~10 ;
-wire \i2c|clk_divider|Add0~13_sumout ;
-wire \i2c|clk_divider|Add0~14 ;
+wire \i2c|clk_divider|Equal0~0_combout ;
+wire \i2c|clk_divider|count[4]~0_combout ;
+wire \i2c|clk_divider|Add0~34 ;
+wire \i2c|clk_divider|Add0~29_sumout ;
+wire \i2c|clk_divider|Add0~30 ;
 wire \i2c|clk_divider|Add0~25_sumout ;
 wire \i2c|clk_divider|Add0~26 ;
 wire \i2c|clk_divider|Add0~21_sumout ;
 wire \i2c|clk_divider|Add0~22 ;
 wire \i2c|clk_divider|Add0~17_sumout ;
 wire \i2c|clk_divider|Add0~18 ;
+wire \i2c|clk_divider|Add0~13_sumout ;
+wire \i2c|clk_divider|Add0~14 ;
 wire \i2c|clk_divider|Add0~1_sumout ;
 wire \i2c|clk_divider|i2c_clk~0_combout ;
 wire \i2c|clk_divider|i2c_clk~q ;
 wire \Selector2~0_combout ;
+wire \Selector7~0_combout ;
 wire \Add0~2 ;
 wire \Add0~5_sumout ;
 wire \Selector27~0_combout ;
@@ -108,16 +109,18 @@ wire \Selector32~0_combout ;
 wire \Add0~26 ;
 wire \Add0~29_sumout ;
 wire \Selector33~0_combout ;
-wire \Selector5~0_combout ;
+wire \Selector3~0_combout ;
+wire \Selector3~1_combout ;
+wire \next_state.STATE_STOP_450~combout ;
+wire \current_state.STATE_STOP~q ;
 wire \comb~0_combout ;
-wire \next_state.STATE_START_488~combout ;
+wire \next_state.STATE_START_483~combout ;
 wire \current_state.STATE_START~0_combout ;
 wire \current_state.STATE_START~q ;
 wire \three_count[1]~0_combout ;
 wire \Selector1~0_combout ;
 wire \Selector9~0_combout ;
-wire \Selector5~1_combout ;
-wire \next_state.STATE_WRITE_463~combout ;
+wire \next_state.STATE_WRITE_458~combout ;
 wire \current_state.STATE_WRITE~q ;
 wire \i2c|master|Add0~2 ;
 wire \i2c|master|Add0~5_sumout ;
@@ -134,10 +137,10 @@ wire \i2c|master|state.STATE_REG_ADDR~q ;
 wire \i2c|master|state~27_combout ;
 wire \i2c|master|state.STATE_WACK2~q ;
 wire \i2c|master|WideOr5~0_combout ;
-wire \i2c|master|count[2]~0_combout ;
+wire \i2c|master|count[1]~0_combout ;
 wire \i2c|master|Selector18~3_combout ;
 wire \i2c|master|Selector18~1_combout ;
-wire \i2c|master|count[2]~1_combout ;
+wire \i2c|master|count[1]~1_combout ;
 wire \i2c|master|Add0~6 ;
 wire \i2c|master|Add0~9_sumout ;
 wire \i2c|master|Add0~10 ;
@@ -166,16 +169,13 @@ wire \i2c|master|state~22_combout ;
 wire \i2c|master|state.STATE_STOP~q ;
 wire \i2c|master|state~21_combout ;
 wire \i2c|master|state.STATE_IDLE~q ;
-wire \Selector7~0_combout ;
-wire \next_state.STATE_STOP_455~combout ;
-wire \current_state.STATE_STOP~q ;
 wire \initialized~0_combout ;
 wire \initialized~combout ;
 wire \Selector13~0_combout ;
-wire \next_state.STATE_IDLE_479~combout ;
+wire \next_state.STATE_IDLE_474~combout ;
 wire \current_state.STATE_IDLE~q ;
 wire \Selector11~0_combout ;
-wire \next_state.STATE_READ_471~combout ;
+wire \next_state.STATE_READ_466~combout ;
 wire \current_state.STATE_READ~q ;
 wire \Add0~1_sumout ;
 wire \Selector26~0_combout ;
@@ -509,10 +509,10 @@ defparam \clk_ref~input .bus_hold = "false";
 defparam \clk_ref~input .simulate_z_as = "z";
 // synopsys translate_on
 
-cyclonev_lcell_comb \i2c|clk_divider|Add0~5 (
+cyclonev_lcell_comb \i2c|clk_divider|Add0~33 (
 // Equation(s):
-// \i2c|clk_divider|Add0~5_sumout  = SUM(( \i2c|clk_divider|count [0] ) + ( VCC ) + ( !VCC ))
-// \i2c|clk_divider|Add0~6  = CARRY(( \i2c|clk_divider|count [0] ) + ( VCC ) + ( !VCC ))
+// \i2c|clk_divider|Add0~33_sumout  = SUM(( \i2c|clk_divider|count [0] ) + ( VCC ) + ( !VCC ))
+// \i2c|clk_divider|Add0~34  = CARRY(( \i2c|clk_divider|count [0] ) + ( VCC ) + ( !VCC ))
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -524,13 +524,13 @@ cyclonev_lcell_comb \i2c|clk_divider|Add0~5 (
 	.cin(gnd),
 	.sharein(gnd),
 	.combout(),
-	.sumout(\i2c|clk_divider|Add0~5_sumout ),
-	.cout(\i2c|clk_divider|Add0~6 ),
+	.sumout(\i2c|clk_divider|Add0~33_sumout ),
+	.cout(\i2c|clk_divider|Add0~34 ),
 	.shareout());
 // synopsys translate_off
-defparam \i2c|clk_divider|Add0~5 .extended_lut = "off";
-defparam \i2c|clk_divider|Add0~5 .lut_mask = 64'h00000000000000FF;
-defparam \i2c|clk_divider|Add0~5 .shared_arith = "off";
+defparam \i2c|clk_divider|Add0~33 .extended_lut = "off";
+defparam \i2c|clk_divider|Add0~33 .lut_mask = 64'h00000000000000FF;
+defparam \i2c|clk_divider|Add0~33 .shared_arith = "off";
 // synopsys translate_on
 
 cyclonev_lcell_comb \reset_toggle~0 (
@@ -655,8 +655,8 @@ defparam \sr_latch_n|output_Q .shared_arith = "off";
 
 cyclonev_lcell_comb \i2c|clk_divider|Add0~1 (
 // Equation(s):
-// \i2c|clk_divider|Add0~1_sumout  = SUM(( \i2c|clk_divider|count [6] ) + ( GND ) + ( \i2c|clk_divider|Add0~18  ))
-// \i2c|clk_divider|Add0~2  = CARRY(( \i2c|clk_divider|count [6] ) + ( GND ) + ( \i2c|clk_divider|Add0~18  ))
+// \i2c|clk_divider|Add0~1_sumout  = SUM(( \i2c|clk_divider|count [6] ) + ( GND ) + ( \i2c|clk_divider|Add0~14  ))
+// \i2c|clk_divider|Add0~2  = CARRY(( \i2c|clk_divider|count [6] ) + ( GND ) + ( \i2c|clk_divider|Add0~14  ))
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -665,7 +665,7 @@ cyclonev_lcell_comb \i2c|clk_divider|Add0~1 (
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
-	.cin(\i2c|clk_divider|Add0~18 ),
+	.cin(\i2c|clk_divider|Add0~14 ),
 	.sharein(gnd),
 	.combout(),
 	.sumout(\i2c|clk_divider|Add0~1_sumout ),
@@ -677,10 +677,10 @@ defparam \i2c|clk_divider|Add0~1 .lut_mask = 64'h0000FFFF000000FF;
 defparam \i2c|clk_divider|Add0~1 .shared_arith = "off";
 // synopsys translate_on
 
-cyclonev_lcell_comb \i2c|clk_divider|Add0~33 (
+cyclonev_lcell_comb \i2c|clk_divider|Add0~5 (
 // Equation(s):
-// \i2c|clk_divider|Add0~33_sumout  = SUM(( \i2c|clk_divider|count [7] ) + ( GND ) + ( \i2c|clk_divider|Add0~2  ))
-// \i2c|clk_divider|Add0~34  = CARRY(( \i2c|clk_divider|count [7] ) + ( GND ) + ( \i2c|clk_divider|Add0~2  ))
+// \i2c|clk_divider|Add0~5_sumout  = SUM(( \i2c|clk_divider|count [7] ) + ( GND ) + ( \i2c|clk_divider|Add0~2  ))
+// \i2c|clk_divider|Add0~6  = CARRY(( \i2c|clk_divider|count [7] ) + ( GND ) + ( \i2c|clk_divider|Add0~2  ))
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -692,22 +692,22 @@ cyclonev_lcell_comb \i2c|clk_divider|Add0~33 (
 	.cin(\i2c|clk_divider|Add0~2 ),
 	.sharein(gnd),
 	.combout(),
-	.sumout(\i2c|clk_divider|Add0~33_sumout ),
-	.cout(\i2c|clk_divider|Add0~34 ),
+	.sumout(\i2c|clk_divider|Add0~5_sumout ),
+	.cout(\i2c|clk_divider|Add0~6 ),
 	.shareout());
 // synopsys translate_off
-defparam \i2c|clk_divider|Add0~33 .extended_lut = "off";
-defparam \i2c|clk_divider|Add0~33 .lut_mask = 64'h0000FFFF000000FF;
-defparam \i2c|clk_divider|Add0~33 .shared_arith = "off";
+defparam \i2c|clk_divider|Add0~5 .extended_lut = "off";
+defparam \i2c|clk_divider|Add0~5 .lut_mask = 64'h0000FFFF000000FF;
+defparam \i2c|clk_divider|Add0~5 .shared_arith = "off";
 // synopsys translate_on
 
 dffeas \i2c|clk_divider|count[7] (
 	.clk(\clk_ref~input_o ),
-	.d(\i2c|clk_divider|Add0~33_sumout ),
+	.d(\i2c|clk_divider|Add0~5_sumout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\i2c|clk_divider|count[5]~0_combout ),
+	.sclr(\i2c|clk_divider|count[4]~0_combout ),
 	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
@@ -719,9 +719,9 @@ defparam \i2c|clk_divider|count[7] .is_wysiwyg = "true";
 defparam \i2c|clk_divider|count[7] .power_up = "low";
 // synopsys translate_on
 
-cyclonev_lcell_comb \i2c|clk_divider|Add0~29 (
+cyclonev_lcell_comb \i2c|clk_divider|Add0~9 (
 // Equation(s):
-// \i2c|clk_divider|Add0~29_sumout  = SUM(( \i2c|clk_divider|count [8] ) + ( GND ) + ( \i2c|clk_divider|Add0~34  ))
+// \i2c|clk_divider|Add0~9_sumout  = SUM(( \i2c|clk_divider|count [8] ) + ( GND ) + ( \i2c|clk_divider|Add0~6  ))
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -730,25 +730,25 @@ cyclonev_lcell_comb \i2c|clk_divider|Add0~29 (
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
-	.cin(\i2c|clk_divider|Add0~34 ),
+	.cin(\i2c|clk_divider|Add0~6 ),
 	.sharein(gnd),
 	.combout(),
-	.sumout(\i2c|clk_divider|Add0~29_sumout ),
+	.sumout(\i2c|clk_divider|Add0~9_sumout ),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \i2c|clk_divider|Add0~29 .extended_lut = "off";
-defparam \i2c|clk_divider|Add0~29 .lut_mask = 64'h0000FFFF000000FF;
-defparam \i2c|clk_divider|Add0~29 .shared_arith = "off";
+defparam \i2c|clk_divider|Add0~9 .extended_lut = "off";
+defparam \i2c|clk_divider|Add0~9 .lut_mask = 64'h0000FFFF000000FF;
+defparam \i2c|clk_divider|Add0~9 .shared_arith = "off";
 // synopsys translate_on
 
 dffeas \i2c|clk_divider|count[8] (
 	.clk(\clk_ref~input_o ),
-	.d(\i2c|clk_divider|Add0~29_sumout ),
+	.d(\i2c|clk_divider|Add0~9_sumout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\i2c|clk_divider|count[5]~0_combout ),
+	.sclr(\i2c|clk_divider|count[4]~0_combout ),
 	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
@@ -762,13 +762,13 @@ defparam \i2c|clk_divider|count[8] .power_up = "low";
 
 cyclonev_lcell_comb \i2c|clk_divider|Equal0~0 (
 // Equation(s):
-// \i2c|clk_divider|Equal0~0_combout  = ( \i2c|clk_divider|count [7] & ( (\i2c|clk_divider|count [5] & (\i2c|clk_divider|count [4] & (\i2c|clk_divider|count [3] & !\i2c|clk_divider|count [8]))) ) )
+// \i2c|clk_divider|Equal0~0_combout  = ( \i2c|clk_divider|count [0] & ( (\i2c|clk_divider|count [4] & (\i2c|clk_divider|count [3] & (!\i2c|clk_divider|count [2] & !\i2c|clk_divider|count [1]))) ) )
 
-	.dataa(!\i2c|clk_divider|count [5]),
-	.datab(!\i2c|clk_divider|count [4]),
-	.datac(!\i2c|clk_divider|count [3]),
-	.datad(!\i2c|clk_divider|count [8]),
-	.datae(!\i2c|clk_divider|count [7]),
+	.dataa(!\i2c|clk_divider|count [4]),
+	.datab(!\i2c|clk_divider|count [3]),
+	.datac(!\i2c|clk_divider|count [2]),
+	.datad(!\i2c|clk_divider|count [1]),
+	.datae(!\i2c|clk_divider|count [0]),
 	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
@@ -779,42 +779,42 @@ cyclonev_lcell_comb \i2c|clk_divider|Equal0~0 (
 	.shareout());
 // synopsys translate_off
 defparam \i2c|clk_divider|Equal0~0 .extended_lut = "off";
-defparam \i2c|clk_divider|Equal0~0 .lut_mask = 64'h0000010000000100;
+defparam \i2c|clk_divider|Equal0~0 .lut_mask = 64'h0000100000001000;
 defparam \i2c|clk_divider|Equal0~0 .shared_arith = "off";
 // synopsys translate_on
 
-cyclonev_lcell_comb \i2c|clk_divider|count[5]~0 (
+cyclonev_lcell_comb \i2c|clk_divider|count[4]~0 (
 // Equation(s):
-// \i2c|clk_divider|count[5]~0_combout  = ( \i2c|clk_divider|count [2] & ( \i2c|clk_divider|Equal0~0_combout  & ( !\sr_latch_n|output_Q~combout  ) ) ) # ( !\i2c|clk_divider|count [2] & ( \i2c|clk_divider|Equal0~0_combout  & ( (!\sr_latch_n|output_Q~combout ) 
-// # ((\i2c|clk_divider|count [6] & (\i2c|clk_divider|count [0] & !\i2c|clk_divider|count [1]))) ) ) ) # ( \i2c|clk_divider|count [2] & ( !\i2c|clk_divider|Equal0~0_combout  & ( !\sr_latch_n|output_Q~combout  ) ) ) # ( !\i2c|clk_divider|count [2] & ( 
+// \i2c|clk_divider|count[4]~0_combout  = ( \i2c|clk_divider|count [5] & ( \i2c|clk_divider|Equal0~0_combout  & ( (!\sr_latch_n|output_Q~combout ) # ((\i2c|clk_divider|count [6] & (\i2c|clk_divider|count [7] & !\i2c|clk_divider|count [8]))) ) ) ) # ( 
+// !\i2c|clk_divider|count [5] & ( \i2c|clk_divider|Equal0~0_combout  & ( !\sr_latch_n|output_Q~combout  ) ) ) # ( \i2c|clk_divider|count [5] & ( !\i2c|clk_divider|Equal0~0_combout  & ( !\sr_latch_n|output_Q~combout  ) ) ) # ( !\i2c|clk_divider|count [5] & ( 
 // !\i2c|clk_divider|Equal0~0_combout  & ( !\sr_latch_n|output_Q~combout  ) ) )
 
 	.dataa(!\sr_latch_n|output_Q~combout ),
 	.datab(!\i2c|clk_divider|count [6]),
-	.datac(!\i2c|clk_divider|count [0]),
-	.datad(!\i2c|clk_divider|count [1]),
-	.datae(!\i2c|clk_divider|count [2]),
+	.datac(!\i2c|clk_divider|count [7]),
+	.datad(!\i2c|clk_divider|count [8]),
+	.datae(!\i2c|clk_divider|count [5]),
 	.dataf(!\i2c|clk_divider|Equal0~0_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\i2c|clk_divider|count[5]~0_combout ),
+	.combout(\i2c|clk_divider|count[4]~0_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \i2c|clk_divider|count[5]~0 .extended_lut = "off";
-defparam \i2c|clk_divider|count[5]~0 .lut_mask = 64'hAAAAAAAAABAAAAAA;
-defparam \i2c|clk_divider|count[5]~0 .shared_arith = "off";
+defparam \i2c|clk_divider|count[4]~0 .extended_lut = "off";
+defparam \i2c|clk_divider|count[4]~0 .lut_mask = 64'hAAAAAAAAAAAAABAA;
+defparam \i2c|clk_divider|count[4]~0 .shared_arith = "off";
 // synopsys translate_on
 
 dffeas \i2c|clk_divider|count[0] (
 	.clk(\clk_ref~input_o ),
-	.d(\i2c|clk_divider|Add0~5_sumout ),
+	.d(\i2c|clk_divider|Add0~33_sumout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\i2c|clk_divider|count[5]~0_combout ),
+	.sclr(\i2c|clk_divider|count[4]~0_combout ),
 	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
@@ -826,10 +826,10 @@ defparam \i2c|clk_divider|count[0] .is_wysiwyg = "true";
 defparam \i2c|clk_divider|count[0] .power_up = "low";
 // synopsys translate_on
 
-cyclonev_lcell_comb \i2c|clk_divider|Add0~9 (
+cyclonev_lcell_comb \i2c|clk_divider|Add0~29 (
 // Equation(s):
-// \i2c|clk_divider|Add0~9_sumout  = SUM(( \i2c|clk_divider|count [1] ) + ( GND ) + ( \i2c|clk_divider|Add0~6  ))
-// \i2c|clk_divider|Add0~10  = CARRY(( \i2c|clk_divider|count [1] ) + ( GND ) + ( \i2c|clk_divider|Add0~6  ))
+// \i2c|clk_divider|Add0~29_sumout  = SUM(( \i2c|clk_divider|count [1] ) + ( GND ) + ( \i2c|clk_divider|Add0~34  ))
+// \i2c|clk_divider|Add0~30  = CARRY(( \i2c|clk_divider|count [1] ) + ( GND ) + ( \i2c|clk_divider|Add0~34  ))
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -838,25 +838,25 @@ cyclonev_lcell_comb \i2c|clk_divider|Add0~9 (
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
-	.cin(\i2c|clk_divider|Add0~6 ),
+	.cin(\i2c|clk_divider|Add0~34 ),
 	.sharein(gnd),
 	.combout(),
-	.sumout(\i2c|clk_divider|Add0~9_sumout ),
-	.cout(\i2c|clk_divider|Add0~10 ),
+	.sumout(\i2c|clk_divider|Add0~29_sumout ),
+	.cout(\i2c|clk_divider|Add0~30 ),
 	.shareout());
 // synopsys translate_off
-defparam \i2c|clk_divider|Add0~9 .extended_lut = "off";
-defparam \i2c|clk_divider|Add0~9 .lut_mask = 64'h0000FFFF000000FF;
-defparam \i2c|clk_divider|Add0~9 .shared_arith = "off";
+defparam \i2c|clk_divider|Add0~29 .extended_lut = "off";
+defparam \i2c|clk_divider|Add0~29 .lut_mask = 64'h0000FFFF000000FF;
+defparam \i2c|clk_divider|Add0~29 .shared_arith = "off";
 // synopsys translate_on
 
 dffeas \i2c|clk_divider|count[1] (
 	.clk(\clk_ref~input_o ),
-	.d(\i2c|clk_divider|Add0~9_sumout ),
+	.d(\i2c|clk_divider|Add0~29_sumout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\i2c|clk_divider|count[5]~0_combout ),
+	.sclr(\i2c|clk_divider|count[4]~0_combout ),
 	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
@@ -868,10 +868,10 @@ defparam \i2c|clk_divider|count[1] .is_wysiwyg = "true";
 defparam \i2c|clk_divider|count[1] .power_up = "low";
 // synopsys translate_on
 
-cyclonev_lcell_comb \i2c|clk_divider|Add0~13 (
+cyclonev_lcell_comb \i2c|clk_divider|Add0~25 (
 // Equation(s):
-// \i2c|clk_divider|Add0~13_sumout  = SUM(( \i2c|clk_divider|count [2] ) + ( GND ) + ( \i2c|clk_divider|Add0~10  ))
-// \i2c|clk_divider|Add0~14  = CARRY(( \i2c|clk_divider|count [2] ) + ( GND ) + ( \i2c|clk_divider|Add0~10  ))
+// \i2c|clk_divider|Add0~25_sumout  = SUM(( \i2c|clk_divider|count [2] ) + ( GND ) + ( \i2c|clk_divider|Add0~30  ))
+// \i2c|clk_divider|Add0~26  = CARRY(( \i2c|clk_divider|count [2] ) + ( GND ) + ( \i2c|clk_divider|Add0~30  ))
 
 	.dataa(gnd),
 	.datab(gnd),
@@ -880,49 +880,7 @@ cyclonev_lcell_comb \i2c|clk_divider|Add0~13 (
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
-	.cin(\i2c|clk_divider|Add0~10 ),
-	.sharein(gnd),
-	.combout(),
-	.sumout(\i2c|clk_divider|Add0~13_sumout ),
-	.cout(\i2c|clk_divider|Add0~14 ),
-	.shareout());
-// synopsys translate_off
-defparam \i2c|clk_divider|Add0~13 .extended_lut = "off";
-defparam \i2c|clk_divider|Add0~13 .lut_mask = 64'h0000FFFF000000FF;
-defparam \i2c|clk_divider|Add0~13 .shared_arith = "off";
-// synopsys translate_on
-
-dffeas \i2c|clk_divider|count[2] (
-	.clk(\clk_ref~input_o ),
-	.d(\i2c|clk_divider|Add0~13_sumout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(\i2c|clk_divider|count[5]~0_combout ),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\i2c|clk_divider|count [2]),
-	.prn(vcc));
-// synopsys translate_off
-defparam \i2c|clk_divider|count[2] .is_wysiwyg = "true";
-defparam \i2c|clk_divider|count[2] .power_up = "low";
-// synopsys translate_on
-
-cyclonev_lcell_comb \i2c|clk_divider|Add0~25 (
-// Equation(s):
-// \i2c|clk_divider|Add0~25_sumout  = SUM(( \i2c|clk_divider|count [3] ) + ( GND ) + ( \i2c|clk_divider|Add0~14  ))
-// \i2c|clk_divider|Add0~26  = CARRY(( \i2c|clk_divider|count [3] ) + ( GND ) + ( \i2c|clk_divider|Add0~14  ))
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(gnd),
-	.datad(!\i2c|clk_divider|count [3]),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(\i2c|clk_divider|Add0~14 ),
+	.cin(\i2c|clk_divider|Add0~30 ),
 	.sharein(gnd),
 	.combout(),
 	.sumout(\i2c|clk_divider|Add0~25_sumout ),
@@ -934,33 +892,33 @@ defparam \i2c|clk_divider|Add0~25 .lut_mask = 64'h0000FFFF000000FF;
 defparam \i2c|clk_divider|Add0~25 .shared_arith = "off";
 // synopsys translate_on
 
-dffeas \i2c|clk_divider|count[3] (
+dffeas \i2c|clk_divider|count[2] (
 	.clk(\clk_ref~input_o ),
 	.d(\i2c|clk_divider|Add0~25_sumout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\i2c|clk_divider|count[5]~0_combout ),
+	.sclr(\i2c|clk_divider|count[4]~0_combout ),
 	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\i2c|clk_divider|count [3]),
+	.q(\i2c|clk_divider|count [2]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \i2c|clk_divider|count[3] .is_wysiwyg = "true";
-defparam \i2c|clk_divider|count[3] .power_up = "low";
+defparam \i2c|clk_divider|count[2] .is_wysiwyg = "true";
+defparam \i2c|clk_divider|count[2] .power_up = "low";
 // synopsys translate_on
 
 cyclonev_lcell_comb \i2c|clk_divider|Add0~21 (
 // Equation(s):
-// \i2c|clk_divider|Add0~21_sumout  = SUM(( \i2c|clk_divider|count [4] ) + ( GND ) + ( \i2c|clk_divider|Add0~26  ))
-// \i2c|clk_divider|Add0~22  = CARRY(( \i2c|clk_divider|count [4] ) + ( GND ) + ( \i2c|clk_divider|Add0~26  ))
+// \i2c|clk_divider|Add0~21_sumout  = SUM(( \i2c|clk_divider|count [3] ) + ( GND ) + ( \i2c|clk_divider|Add0~26  ))
+// \i2c|clk_divider|Add0~22  = CARRY(( \i2c|clk_divider|count [3] ) + ( GND ) + ( \i2c|clk_divider|Add0~26  ))
 
 	.dataa(gnd),
 	.datab(gnd),
 	.datac(gnd),
-	.datad(!\i2c|clk_divider|count [4]),
+	.datad(!\i2c|clk_divider|count [3]),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -976,33 +934,33 @@ defparam \i2c|clk_divider|Add0~21 .lut_mask = 64'h0000FFFF000000FF;
 defparam \i2c|clk_divider|Add0~21 .shared_arith = "off";
 // synopsys translate_on
 
-dffeas \i2c|clk_divider|count[4] (
+dffeas \i2c|clk_divider|count[3] (
 	.clk(\clk_ref~input_o ),
 	.d(\i2c|clk_divider|Add0~21_sumout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\i2c|clk_divider|count[5]~0_combout ),
+	.sclr(\i2c|clk_divider|count[4]~0_combout ),
 	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
 	.devpor(devpor),
-	.q(\i2c|clk_divider|count [4]),
+	.q(\i2c|clk_divider|count [3]),
 	.prn(vcc));
 // synopsys translate_off
-defparam \i2c|clk_divider|count[4] .is_wysiwyg = "true";
-defparam \i2c|clk_divider|count[4] .power_up = "low";
+defparam \i2c|clk_divider|count[3] .is_wysiwyg = "true";
+defparam \i2c|clk_divider|count[3] .power_up = "low";
 // synopsys translate_on
 
 cyclonev_lcell_comb \i2c|clk_divider|Add0~17 (
 // Equation(s):
-// \i2c|clk_divider|Add0~17_sumout  = SUM(( \i2c|clk_divider|count [5] ) + ( GND ) + ( \i2c|clk_divider|Add0~22  ))
-// \i2c|clk_divider|Add0~18  = CARRY(( \i2c|clk_divider|count [5] ) + ( GND ) + ( \i2c|clk_divider|Add0~22  ))
+// \i2c|clk_divider|Add0~17_sumout  = SUM(( \i2c|clk_divider|count [4] ) + ( GND ) + ( \i2c|clk_divider|Add0~22  ))
+// \i2c|clk_divider|Add0~18  = CARRY(( \i2c|clk_divider|count [4] ) + ( GND ) + ( \i2c|clk_divider|Add0~22  ))
 
 	.dataa(gnd),
 	.datab(gnd),
 	.datac(gnd),
-	.datad(!\i2c|clk_divider|count [5]),
+	.datad(!\i2c|clk_divider|count [4]),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -1018,13 +976,55 @@ defparam \i2c|clk_divider|Add0~17 .lut_mask = 64'h0000FFFF000000FF;
 defparam \i2c|clk_divider|Add0~17 .shared_arith = "off";
 // synopsys translate_on
 
-dffeas \i2c|clk_divider|count[5] (
+dffeas \i2c|clk_divider|count[4] (
 	.clk(\clk_ref~input_o ),
 	.d(\i2c|clk_divider|Add0~17_sumout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\i2c|clk_divider|count[5]~0_combout ),
+	.sclr(\i2c|clk_divider|count[4]~0_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\i2c|clk_divider|count [4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \i2c|clk_divider|count[4] .is_wysiwyg = "true";
+defparam \i2c|clk_divider|count[4] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \i2c|clk_divider|Add0~13 (
+// Equation(s):
+// \i2c|clk_divider|Add0~13_sumout  = SUM(( \i2c|clk_divider|count [5] ) + ( GND ) + ( \i2c|clk_divider|Add0~18  ))
+// \i2c|clk_divider|Add0~14  = CARRY(( \i2c|clk_divider|count [5] ) + ( GND ) + ( \i2c|clk_divider|Add0~18  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\i2c|clk_divider|count [5]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\i2c|clk_divider|Add0~18 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\i2c|clk_divider|Add0~13_sumout ),
+	.cout(\i2c|clk_divider|Add0~14 ),
+	.shareout());
+// synopsys translate_off
+defparam \i2c|clk_divider|Add0~13 .extended_lut = "off";
+defparam \i2c|clk_divider|Add0~13 .lut_mask = 64'h0000FFFF000000FF;
+defparam \i2c|clk_divider|Add0~13 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \i2c|clk_divider|count[5] (
+	.clk(\clk_ref~input_o ),
+	.d(\i2c|clk_divider|Add0~13_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\i2c|clk_divider|count[4]~0_combout ),
 	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
@@ -1042,7 +1042,7 @@ dffeas \i2c|clk_divider|count[6] (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\i2c|clk_divider|count[5]~0_combout ),
+	.sclr(\i2c|clk_divider|count[4]~0_combout ),
 	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
@@ -1056,15 +1056,15 @@ defparam \i2c|clk_divider|count[6] .power_up = "low";
 
 cyclonev_lcell_comb \i2c|clk_divider|i2c_clk~0 (
 // Equation(s):
-// \i2c|clk_divider|i2c_clk~0_combout  = ( \i2c|clk_divider|count [2] & ( \i2c|clk_divider|Equal0~0_combout  & ( \i2c|clk_divider|i2c_clk~q  ) ) ) # ( !\i2c|clk_divider|count [2] & ( \i2c|clk_divider|Equal0~0_combout  & ( !\i2c|clk_divider|i2c_clk~q  $ 
-// (((!\i2c|clk_divider|count [6]) # ((!\i2c|clk_divider|count [0]) # (\i2c|clk_divider|count [1])))) ) ) ) # ( \i2c|clk_divider|count [2] & ( !\i2c|clk_divider|Equal0~0_combout  & ( \i2c|clk_divider|i2c_clk~q  ) ) ) # ( !\i2c|clk_divider|count [2] & ( 
+// \i2c|clk_divider|i2c_clk~0_combout  = ( \i2c|clk_divider|count [5] & ( \i2c|clk_divider|Equal0~0_combout  & ( !\i2c|clk_divider|i2c_clk~q  $ (((!\i2c|clk_divider|count [6]) # ((!\i2c|clk_divider|count [7]) # (\i2c|clk_divider|count [8])))) ) ) ) # ( 
+// !\i2c|clk_divider|count [5] & ( \i2c|clk_divider|Equal0~0_combout  & ( \i2c|clk_divider|i2c_clk~q  ) ) ) # ( \i2c|clk_divider|count [5] & ( !\i2c|clk_divider|Equal0~0_combout  & ( \i2c|clk_divider|i2c_clk~q  ) ) ) # ( !\i2c|clk_divider|count [5] & ( 
 // !\i2c|clk_divider|Equal0~0_combout  & ( \i2c|clk_divider|i2c_clk~q  ) ) )
 
 	.dataa(!\i2c|clk_divider|i2c_clk~q ),
 	.datab(!\i2c|clk_divider|count [6]),
-	.datac(!\i2c|clk_divider|count [0]),
-	.datad(!\i2c|clk_divider|count [1]),
-	.datae(!\i2c|clk_divider|count [2]),
+	.datac(!\i2c|clk_divider|count [7]),
+	.datad(!\i2c|clk_divider|count [8]),
+	.datae(!\i2c|clk_divider|count [5]),
 	.dataf(!\i2c|clk_divider|Equal0~0_combout ),
 	.datag(gnd),
 	.cin(gnd),
@@ -1075,7 +1075,7 @@ cyclonev_lcell_comb \i2c|clk_divider|i2c_clk~0 (
 	.shareout());
 // synopsys translate_off
 defparam \i2c|clk_divider|i2c_clk~0 .extended_lut = "off";
-defparam \i2c|clk_divider|i2c_clk~0 .lut_mask = 64'h5555555556555555;
+defparam \i2c|clk_divider|i2c_clk~0 .lut_mask = 64'h5555555555555655;
 defparam \i2c|clk_divider|i2c_clk~0 .shared_arith = "off";
 // synopsys translate_on
 
@@ -1118,6 +1118,29 @@ cyclonev_lcell_comb \Selector2~0 (
 defparam \Selector2~0 .extended_lut = "off";
 defparam \Selector2~0 .lut_mask = 64'h4040404040404040;
 defparam \Selector2~0 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \Selector7~0 (
+// Equation(s):
+// \Selector7~0_combout  = ((\current_state.STATE_READ~q  & (three_count[1] & three_count[0]))) # (\current_state.STATE_WRITE~q )
+
+	.dataa(!\current_state.STATE_WRITE~q ),
+	.datab(!\current_state.STATE_READ~q ),
+	.datac(!three_count[1]),
+	.datad(!three_count[0]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Selector7~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Selector7~0 .extended_lut = "off";
+defparam \Selector7~0 .lut_mask = 64'h5557555755575557;
+defparam \Selector7~0 .shared_arith = "off";
 // synopsys translate_on
 
 cyclonev_lcell_comb \Add0~1 (
@@ -1633,9 +1656,9 @@ defparam \count[7] .lut_mask = 64'h0000FFFF00FF00FF;
 defparam \count[7] .shared_arith = "off";
 // synopsys translate_on
 
-cyclonev_lcell_comb \Selector5~0 (
+cyclonev_lcell_comb \Selector3~0 (
 // Equation(s):
-// \Selector5~0_combout  = ( count[6] & ( (((count[2] & count[3])) # (count[5])) # (count[4]) ) )
+// \Selector3~0_combout  = ( count[6] & ( (((count[2] & count[3])) # (count[5])) # (count[4]) ) )
 
 	.dataa(!count[2]),
 	.datab(!count[3]),
@@ -1646,24 +1669,88 @@ cyclonev_lcell_comb \Selector5~0 (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\Selector5~0_combout ),
+	.combout(\Selector3~0_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \Selector5~0 .extended_lut = "off";
-defparam \Selector5~0 .lut_mask = 64'h00001FFF00001FFF;
-defparam \Selector5~0 .shared_arith = "off";
+defparam \Selector3~0 .extended_lut = "off";
+defparam \Selector3~0 .lut_mask = 64'h00001FFF00001FFF;
+defparam \Selector3~0 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \Selector3~1 (
+// Equation(s):
+// \Selector3~1_combout  = (\current_state.STATE_STOP~q  & ((\Selector3~0_combout ) # (count[7])))
+
+	.dataa(!\current_state.STATE_STOP~q ),
+	.datab(!count[7]),
+	.datac(!\Selector3~0_combout ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\Selector3~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \Selector3~1 .extended_lut = "off";
+defparam \Selector3~1 .lut_mask = 64'h1515151515151515;
+defparam \Selector3~1 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \next_state.STATE_STOP_450 (
+// Equation(s):
+// \next_state.STATE_STOP_450~combout  = ( \Selector3~1_combout  & ( \sr_latch_n|output_Q~combout  & ( \next_state.STATE_STOP_450~combout  ) ) ) # ( !\Selector3~1_combout  & ( \sr_latch_n|output_Q~combout  & ( \Selector7~0_combout  ) ) )
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(!\Selector7~0_combout ),
+	.datad(!\next_state.STATE_STOP_450~combout ),
+	.datae(!\Selector3~1_combout ),
+	.dataf(!\sr_latch_n|output_Q~combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\next_state.STATE_STOP_450~combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \next_state.STATE_STOP_450 .extended_lut = "off";
+defparam \next_state.STATE_STOP_450 .lut_mask = 64'h000000000F0F00FF;
+defparam \next_state.STATE_STOP_450 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \current_state.STATE_STOP (
+	.clk(\clk_ref~input_o ),
+	.d(\next_state.STATE_STOP_450~combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\current_state.STATE_STOP~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \current_state.STATE_STOP .is_wysiwyg = "true";
+defparam \current_state.STATE_STOP .power_up = "low";
 // synopsys translate_on
 
 cyclonev_lcell_comb \comb~0 (
 // Equation(s):
-// \comb~0_combout  = (\sr_latch_n|output_Q~combout  & ((!\current_state.STATE_STOP~q ) # ((!count[7] & !\Selector5~0_combout ))))
+// \comb~0_combout  = (\sr_latch_n|output_Q~combout  & ((!\current_state.STATE_STOP~q ) # ((!count[7] & !\Selector3~0_combout ))))
 
 	.dataa(!\current_state.STATE_STOP~q ),
 	.datab(!\sr_latch_n|output_Q~combout ),
 	.datac(!count[7]),
-	.datad(!\Selector5~0_combout ),
+	.datad(!\Selector3~0_combout ),
 	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
@@ -1679,34 +1766,34 @@ defparam \comb~0 .lut_mask = 64'h3222322232223222;
 defparam \comb~0 .shared_arith = "off";
 // synopsys translate_on
 
-cyclonev_lcell_comb \next_state.STATE_START_488 (
+cyclonev_lcell_comb \next_state.STATE_START_483 (
 // Equation(s):
-// \next_state.STATE_START_488~combout  = ( \sr_latch_n|output_Q~combout  & ( !\comb~0_combout  & ( \next_state.STATE_START_488~combout  ) ) ) # ( !\sr_latch_n|output_Q~combout  & ( !\comb~0_combout  ) )
+// \next_state.STATE_START_483~combout  = ( \sr_latch_n|output_Q~combout  & ( !\comb~0_combout  & ( \next_state.STATE_START_483~combout  ) ) ) # ( !\sr_latch_n|output_Q~combout  & ( !\comb~0_combout  ) )
 
 	.dataa(gnd),
 	.datab(gnd),
 	.datac(gnd),
-	.datad(!\next_state.STATE_START_488~combout ),
+	.datad(!\next_state.STATE_START_483~combout ),
 	.datae(!\sr_latch_n|output_Q~combout ),
 	.dataf(!\comb~0_combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\next_state.STATE_START_488~combout ),
+	.combout(\next_state.STATE_START_483~combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \next_state.STATE_START_488 .extended_lut = "off";
-defparam \next_state.STATE_START_488 .lut_mask = 64'hFFFF00FF00000000;
-defparam \next_state.STATE_START_488 .shared_arith = "off";
+defparam \next_state.STATE_START_483 .extended_lut = "off";
+defparam \next_state.STATE_START_483 .lut_mask = 64'hFFFF00FF00000000;
+defparam \next_state.STATE_START_483 .shared_arith = "off";
 // synopsys translate_on
 
 cyclonev_lcell_comb \current_state.STATE_START~0 (
 // Equation(s):
-// \current_state.STATE_START~0_combout  = !\next_state.STATE_START_488~combout 
+// \current_state.STATE_START~0_combout  = !\next_state.STATE_START_483~combout 
 
-	.dataa(!\next_state.STATE_START_488~combout ),
+	.dataa(!\next_state.STATE_START_483~combout ),
 	.datab(gnd),
 	.datac(gnd),
 	.datad(gnd),
@@ -1859,55 +1946,32 @@ defparam \Selector9~0 .lut_mask = 64'h1010101010101010;
 defparam \Selector9~0 .shared_arith = "off";
 // synopsys translate_on
 
-cyclonev_lcell_comb \Selector5~1 (
+cyclonev_lcell_comb \next_state.STATE_WRITE_458 (
 // Equation(s):
-// \Selector5~1_combout  = (\current_state.STATE_STOP~q  & ((\Selector5~0_combout ) # (count[7])))
-
-	.dataa(!\current_state.STATE_STOP~q ),
-	.datab(!count[7]),
-	.datac(!\Selector5~0_combout ),
-	.datad(gnd),
-	.datae(gnd),
-	.dataf(gnd),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\Selector5~1_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \Selector5~1 .extended_lut = "off";
-defparam \Selector5~1 .lut_mask = 64'h1515151515151515;
-defparam \Selector5~1 .shared_arith = "off";
-// synopsys translate_on
-
-cyclonev_lcell_comb \next_state.STATE_WRITE_463 (
-// Equation(s):
-// \next_state.STATE_WRITE_463~combout  = ( \Selector5~1_combout  & ( \sr_latch_n|output_Q~combout  & ( \next_state.STATE_WRITE_463~combout  ) ) ) # ( !\Selector5~1_combout  & ( \sr_latch_n|output_Q~combout  & ( \Selector9~0_combout  ) ) )
+// \next_state.STATE_WRITE_458~combout  = ( \Selector3~1_combout  & ( \sr_latch_n|output_Q~combout  & ( \next_state.STATE_WRITE_458~combout  ) ) ) # ( !\Selector3~1_combout  & ( \sr_latch_n|output_Q~combout  & ( \Selector9~0_combout  ) ) )
 
 	.dataa(gnd),
 	.datab(gnd),
 	.datac(!\Selector9~0_combout ),
-	.datad(!\next_state.STATE_WRITE_463~combout ),
-	.datae(!\Selector5~1_combout ),
+	.datad(!\next_state.STATE_WRITE_458~combout ),
+	.datae(!\Selector3~1_combout ),
 	.dataf(!\sr_latch_n|output_Q~combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\next_state.STATE_WRITE_463~combout ),
+	.combout(\next_state.STATE_WRITE_458~combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \next_state.STATE_WRITE_463 .extended_lut = "off";
-defparam \next_state.STATE_WRITE_463 .lut_mask = 64'h000000000F0F00FF;
-defparam \next_state.STATE_WRITE_463 .shared_arith = "off";
+defparam \next_state.STATE_WRITE_458 .extended_lut = "off";
+defparam \next_state.STATE_WRITE_458 .lut_mask = 64'h000000000F0F00FF;
+defparam \next_state.STATE_WRITE_458 .shared_arith = "off";
 // synopsys translate_on
 
 dffeas \current_state.STATE_WRITE (
 	.clk(\clk_ref~input_o ),
-	.d(\next_state.STATE_WRITE_463~combout ),
+	.d(\next_state.STATE_WRITE_458~combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -1973,14 +2037,13 @@ defparam \i2c|master|Add0~5 .shared_arith = "off";
 
 cyclonev_lcell_comb \start~0 (
 // Equation(s):
-// \start~0_combout  = ( \Selector5~0_combout  & ( (\sr_latch_n|output_Q~combout  & ((\current_state.STATE_STOP~q ) # (\current_state.STATE_WRITE~q ))) ) ) # ( !\Selector5~0_combout  & ( (\sr_latch_n|output_Q~combout  & (((\current_state.STATE_STOP~q  & 
-// count[7])) # (\current_state.STATE_WRITE~q ))) ) )
+// \start~0_combout  = (\sr_latch_n|output_Q~combout  & ((\current_state.STATE_STOP~q ) # (\current_state.STATE_WRITE~q )))
 
 	.dataa(!\current_state.STATE_WRITE~q ),
 	.datab(!\current_state.STATE_STOP~q ),
 	.datac(!\sr_latch_n|output_Q~combout ),
-	.datad(!count[7]),
-	.datae(!\Selector5~0_combout ),
+	.datad(gnd),
+	.datae(gnd),
 	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
@@ -1991,7 +2054,7 @@ cyclonev_lcell_comb \start~0 (
 	.shareout());
 // synopsys translate_off
 defparam \start~0 .extended_lut = "off";
-defparam \start~0 .lut_mask = 64'h0507070705070707;
+defparam \start~0 .lut_mask = 64'h0707070707070707;
 defparam \start~0 .shared_arith = "off";
 // synopsys translate_on
 
@@ -2246,9 +2309,9 @@ defparam \i2c|master|WideOr5~0 .lut_mask = 64'h8888888888888888;
 defparam \i2c|master|WideOr5~0 .shared_arith = "off";
 // synopsys translate_on
 
-cyclonev_lcell_comb \i2c|master|count[2]~0 (
+cyclonev_lcell_comb \i2c|master|count[1]~0 (
 // Equation(s):
-// \i2c|master|count[2]~0_combout  = (!\sr_latch_n|output_Q~combout ) # ((!\i2c|master|WideOr5~0_combout ) # (\i2c|master|state.STATE_START~q ))
+// \i2c|master|count[1]~0_combout  = (!\sr_latch_n|output_Q~combout ) # ((!\i2c|master|WideOr5~0_combout ) # (\i2c|master|state.STATE_START~q ))
 
 	.dataa(!\sr_latch_n|output_Q~combout ),
 	.datab(!\i2c|master|state.STATE_START~q ),
@@ -2259,14 +2322,14 @@ cyclonev_lcell_comb \i2c|master|count[2]~0 (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\i2c|master|count[2]~0_combout ),
+	.combout(\i2c|master|count[1]~0_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \i2c|master|count[2]~0 .extended_lut = "off";
-defparam \i2c|master|count[2]~0 .lut_mask = 64'hFBFBFBFBFBFBFBFB;
-defparam \i2c|master|count[2]~0 .shared_arith = "off";
+defparam \i2c|master|count[1]~0 .extended_lut = "off";
+defparam \i2c|master|count[1]~0 .lut_mask = 64'hFBFBFBFBFBFBFBFB;
+defparam \i2c|master|count[1]~0 .shared_arith = "off";
 // synopsys translate_on
 
 cyclonev_lcell_comb \i2c|master|Selector18~3 (
@@ -2315,9 +2378,9 @@ defparam \i2c|master|Selector18~1 .lut_mask = 64'h8080808080808080;
 defparam \i2c|master|Selector18~1 .shared_arith = "off";
 // synopsys translate_on
 
-cyclonev_lcell_comb \i2c|master|count[2]~1 (
+cyclonev_lcell_comb \i2c|master|count[1]~1 (
 // Equation(s):
-// \i2c|master|count[2]~1_combout  = ( \i2c|master|Selector18~1_combout  & ( (!\sr_latch_n|output_Q~combout ) # (\i2c|master|Selector18~3_combout ) ) ) # ( !\i2c|master|Selector18~1_combout  & ( (!\sr_latch_n|output_Q~combout ) # 
+// \i2c|master|count[1]~1_combout  = ( \i2c|master|Selector18~1_combout  & ( (!\sr_latch_n|output_Q~combout ) # (\i2c|master|Selector18~3_combout ) ) ) # ( !\i2c|master|Selector18~1_combout  & ( (!\sr_latch_n|output_Q~combout ) # 
 // ((\i2c|master|Selector18~3_combout  & ((!\i2c|master|Equal0~0_combout ) # (!\i2c|master|Equal0~1_combout )))) ) )
 
 	.dataa(!\sr_latch_n|output_Q~combout ),
@@ -2329,14 +2392,14 @@ cyclonev_lcell_comb \i2c|master|count[2]~1 (
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\i2c|master|count[2]~1_combout ),
+	.combout(\i2c|master|count[1]~1_combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \i2c|master|count[2]~1 .extended_lut = "off";
-defparam \i2c|master|count[2]~1 .lut_mask = 64'hAAFEAAFFAAFEAAFF;
-defparam \i2c|master|count[2]~1 .shared_arith = "off";
+defparam \i2c|master|count[1]~1 .extended_lut = "off";
+defparam \i2c|master|count[1]~1 .lut_mask = 64'hAAFEAAFFAAFEAAFF;
+defparam \i2c|master|count[1]~1 .shared_arith = "off";
 // synopsys translate_on
 
 dffeas \i2c|master|count[1] (
@@ -2346,8 +2409,8 @@ dffeas \i2c|master|count[1] (
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(\i2c|master|count[2]~0_combout ),
-	.ena(\i2c|master|count[2]~1_combout ),
+	.sload(\i2c|master|count[1]~0_combout ),
+	.ena(\i2c|master|count[1]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\i2c|master|count [1]),
@@ -2388,8 +2451,8 @@ dffeas \i2c|master|count[2] (
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(\i2c|master|count[2]~0_combout ),
-	.ena(\i2c|master|count[2]~1_combout ),
+	.sload(\i2c|master|count[1]~0_combout ),
+	.ena(\i2c|master|count[1]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\i2c|master|count [2]),
@@ -2453,8 +2516,8 @@ dffeas \i2c|master|count[3] (
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(\i2c|master|count[2]~0_combout ),
-	.ena(\i2c|master|count[2]~1_combout ),
+	.sload(\i2c|master|count[1]~0_combout ),
+	.ena(\i2c|master|count[1]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\i2c|master|count [3]),
@@ -2495,8 +2558,8 @@ dffeas \i2c|master|count[4] (
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(\i2c|master|count[2]~0_combout ),
-	.ena(\i2c|master|count[2]~1_combout ),
+	.sload(\i2c|master|count[1]~0_combout ),
+	.ena(\i2c|master|count[1]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\i2c|master|count [4]),
@@ -2537,8 +2600,8 @@ dffeas \i2c|master|count[5] (
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(\i2c|master|count[2]~0_combout ),
-	.ena(\i2c|master|count[2]~1_combout ),
+	.sload(\i2c|master|count[1]~0_combout ),
+	.ena(\i2c|master|count[1]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\i2c|master|count [5]),
@@ -2579,8 +2642,8 @@ dffeas \i2c|master|count[6] (
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(\i2c|master|count[2]~0_combout ),
-	.ena(\i2c|master|count[2]~1_combout ),
+	.sload(\i2c|master|count[1]~0_combout ),
+	.ena(\i2c|master|count[1]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\i2c|master|count [6]),
@@ -2620,8 +2683,8 @@ dffeas \i2c|master|count[7] (
 	.clrn(vcc),
 	.aload(gnd),
 	.sclr(gnd),
-	.sload(\i2c|master|count[2]~0_combout ),
-	.ena(\i2c|master|count[2]~1_combout ),
+	.sload(\i2c|master|count[1]~0_combout ),
+	.ena(\i2c|master|count[1]~1_combout ),
 	.devclrn(devclrn),
 	.devpor(devpor),
 	.q(\i2c|master|count [7]),
@@ -2948,82 +3011,16 @@ defparam \i2c|master|state.STATE_IDLE .is_wysiwyg = "true";
 defparam \i2c|master|state.STATE_IDLE .power_up = "low";
 // synopsys translate_on
 
-cyclonev_lcell_comb \Selector7~0 (
-// Equation(s):
-// \Selector7~0_combout  = ( three_count[1] & ( three_count[0] & ( (((\current_state.STATE_STOP~q  & \i2c|master|state.STATE_IDLE~q )) # (\current_state.STATE_READ~q )) # (\current_state.STATE_WRITE~q ) ) ) ) # ( !three_count[1] & ( three_count[0] & ( 
-// ((\current_state.STATE_STOP~q  & \i2c|master|state.STATE_IDLE~q )) # (\current_state.STATE_WRITE~q ) ) ) ) # ( three_count[1] & ( !three_count[0] & ( ((\current_state.STATE_STOP~q  & \i2c|master|state.STATE_IDLE~q )) # (\current_state.STATE_WRITE~q ) ) ) 
-// ) # ( !three_count[1] & ( !three_count[0] & ( ((\current_state.STATE_STOP~q  & \i2c|master|state.STATE_IDLE~q )) # (\current_state.STATE_WRITE~q ) ) ) )
-
-	.dataa(!\current_state.STATE_WRITE~q ),
-	.datab(!\current_state.STATE_READ~q ),
-	.datac(!\current_state.STATE_STOP~q ),
-	.datad(!\i2c|master|state.STATE_IDLE~q ),
-	.datae(!three_count[1]),
-	.dataf(!three_count[0]),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\Selector7~0_combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \Selector7~0 .extended_lut = "off";
-defparam \Selector7~0 .lut_mask = 64'h555F555F555F777F;
-defparam \Selector7~0 .shared_arith = "off";
-// synopsys translate_on
-
-cyclonev_lcell_comb \next_state.STATE_STOP_455 (
-// Equation(s):
-// \next_state.STATE_STOP_455~combout  = ( \Selector5~1_combout  & ( \sr_latch_n|output_Q~combout  & ( \next_state.STATE_STOP_455~combout  ) ) ) # ( !\Selector5~1_combout  & ( \sr_latch_n|output_Q~combout  & ( \Selector7~0_combout  ) ) )
-
-	.dataa(gnd),
-	.datab(gnd),
-	.datac(!\Selector7~0_combout ),
-	.datad(!\next_state.STATE_STOP_455~combout ),
-	.datae(!\Selector5~1_combout ),
-	.dataf(!\sr_latch_n|output_Q~combout ),
-	.datag(gnd),
-	.cin(gnd),
-	.sharein(gnd),
-	.combout(\next_state.STATE_STOP_455~combout ),
-	.sumout(),
-	.cout(),
-	.shareout());
-// synopsys translate_off
-defparam \next_state.STATE_STOP_455 .extended_lut = "off";
-defparam \next_state.STATE_STOP_455 .lut_mask = 64'h000000000F0F00FF;
-defparam \next_state.STATE_STOP_455 .shared_arith = "off";
-// synopsys translate_on
-
-dffeas \current_state.STATE_STOP (
-	.clk(\clk_ref~input_o ),
-	.d(\next_state.STATE_STOP_455~combout ),
-	.asdata(vcc),
-	.clrn(vcc),
-	.aload(gnd),
-	.sclr(gnd),
-	.sload(gnd),
-	.ena(vcc),
-	.devclrn(devclrn),
-	.devpor(devpor),
-	.q(\current_state.STATE_STOP~q ),
-	.prn(vcc));
-// synopsys translate_off
-defparam \current_state.STATE_STOP .is_wysiwyg = "true";
-defparam \current_state.STATE_STOP .power_up = "low";
-// synopsys translate_on
-
 cyclonev_lcell_comb \initialized~0 (
 // Equation(s):
-// \initialized~0_combout  = ( \Selector5~0_combout  & ( (\sr_latch_n|output_Q~combout  & ((!\current_state.STATE_START~q ) # (\current_state.STATE_STOP~q ))) ) ) # ( !\Selector5~0_combout  & ( (\sr_latch_n|output_Q~combout  & ((!\current_state.STATE_START~q 
+// \initialized~0_combout  = ( \Selector3~0_combout  & ( (\sr_latch_n|output_Q~combout  & ((!\current_state.STATE_START~q ) # (\current_state.STATE_STOP~q ))) ) ) # ( !\Selector3~0_combout  & ( (\sr_latch_n|output_Q~combout  & ((!\current_state.STATE_START~q 
 // ) # ((\current_state.STATE_STOP~q  & count[7])))) ) )
 
 	.dataa(!\current_state.STATE_STOP~q ),
 	.datab(!\sr_latch_n|output_Q~combout ),
 	.datac(!\current_state.STATE_START~q ),
 	.datad(!count[7]),
-	.datae(!\Selector5~0_combout ),
+	.datae(!\Selector3~0_combout ),
 	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
@@ -3064,14 +3061,14 @@ defparam initialized.shared_arith = "off";
 
 cyclonev_lcell_comb \Selector13~0 (
 // Equation(s):
-// \Selector13~0_combout  = ( \current_state.STATE_START~q  & ( (!\i2c|master|state.STATE_IDLE~q  & (((\current_state.STATE_IDLE~q  & \initialized~combout )) # (\current_state.STATE_STOP~q ))) # (\i2c|master|state.STATE_IDLE~q  & (\current_state.STATE_IDLE~q 
-// )) ) ) # ( !\current_state.STATE_START~q  )
+// \Selector13~0_combout  = ( \initialized~combout  & ( (!\current_state.STATE_WRITE~q  & !\current_state.STATE_READ~q ) ) ) # ( !\initialized~combout  & ( (!\current_state.STATE_WRITE~q  & (!\current_state.STATE_READ~q  & ((!\current_state.STATE_IDLE~q ) # 
+// (\i2c|master|state.STATE_IDLE~q )))) ) )
 
 	.dataa(!\current_state.STATE_IDLE~q ),
-	.datab(!\current_state.STATE_STOP~q ),
-	.datac(!\i2c|master|state.STATE_IDLE~q ),
-	.datad(!\initialized~combout ),
-	.datae(!\current_state.STATE_START~q ),
+	.datab(!\current_state.STATE_WRITE~q ),
+	.datac(!\current_state.STATE_READ~q ),
+	.datad(!\i2c|master|state.STATE_IDLE~q ),
+	.datae(!\initialized~combout ),
 	.dataf(gnd),
 	.datag(gnd),
 	.cin(gnd),
@@ -3082,36 +3079,36 @@ cyclonev_lcell_comb \Selector13~0 (
 	.shareout());
 // synopsys translate_off
 defparam \Selector13~0 .extended_lut = "off";
-defparam \Selector13~0 .lut_mask = 64'hFFFF3575FFFF3575;
+defparam \Selector13~0 .lut_mask = 64'h80C0C0C080C0C0C0;
 defparam \Selector13~0 .shared_arith = "off";
 // synopsys translate_on
 
-cyclonev_lcell_comb \next_state.STATE_IDLE_479 (
+cyclonev_lcell_comb \next_state.STATE_IDLE_474 (
 // Equation(s):
-// \next_state.STATE_IDLE_479~combout  = ( \Selector5~1_combout  & ( \sr_latch_n|output_Q~combout  & ( \next_state.STATE_IDLE_479~combout  ) ) ) # ( !\Selector5~1_combout  & ( \sr_latch_n|output_Q~combout  & ( \Selector13~0_combout  ) ) )
+// \next_state.STATE_IDLE_474~combout  = ( \Selector3~1_combout  & ( \sr_latch_n|output_Q~combout  & ( \next_state.STATE_IDLE_474~combout  ) ) ) # ( !\Selector3~1_combout  & ( \sr_latch_n|output_Q~combout  & ( \Selector13~0_combout  ) ) )
 
 	.dataa(gnd),
 	.datab(gnd),
 	.datac(!\Selector13~0_combout ),
-	.datad(!\next_state.STATE_IDLE_479~combout ),
-	.datae(!\Selector5~1_combout ),
+	.datad(!\next_state.STATE_IDLE_474~combout ),
+	.datae(!\Selector3~1_combout ),
 	.dataf(!\sr_latch_n|output_Q~combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\next_state.STATE_IDLE_479~combout ),
+	.combout(\next_state.STATE_IDLE_474~combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \next_state.STATE_IDLE_479 .extended_lut = "off";
-defparam \next_state.STATE_IDLE_479 .lut_mask = 64'h000000000F0F00FF;
-defparam \next_state.STATE_IDLE_479 .shared_arith = "off";
+defparam \next_state.STATE_IDLE_474 .extended_lut = "off";
+defparam \next_state.STATE_IDLE_474 .lut_mask = 64'h000000000F0F00FF;
+defparam \next_state.STATE_IDLE_474 .shared_arith = "off";
 // synopsys translate_on
 
 dffeas \current_state.STATE_IDLE (
 	.clk(\clk_ref~input_o ),
-	.d(\next_state.STATE_IDLE_479~combout ),
+	.d(\next_state.STATE_IDLE_474~combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -3151,32 +3148,32 @@ defparam \Selector11~0 .lut_mask = 64'h7333500073335000;
 defparam \Selector11~0 .shared_arith = "off";
 // synopsys translate_on
 
-cyclonev_lcell_comb \next_state.STATE_READ_471 (
+cyclonev_lcell_comb \next_state.STATE_READ_466 (
 // Equation(s):
-// \next_state.STATE_READ_471~combout  = ( \Selector5~1_combout  & ( \sr_latch_n|output_Q~combout  & ( \next_state.STATE_READ_471~combout  ) ) ) # ( !\Selector5~1_combout  & ( \sr_latch_n|output_Q~combout  & ( \Selector11~0_combout  ) ) )
+// \next_state.STATE_READ_466~combout  = ( \Selector3~1_combout  & ( \sr_latch_n|output_Q~combout  & ( \next_state.STATE_READ_466~combout  ) ) ) # ( !\Selector3~1_combout  & ( \sr_latch_n|output_Q~combout  & ( \Selector11~0_combout  ) ) )
 
 	.dataa(gnd),
 	.datab(gnd),
 	.datac(!\Selector11~0_combout ),
-	.datad(!\next_state.STATE_READ_471~combout ),
-	.datae(!\Selector5~1_combout ),
+	.datad(!\next_state.STATE_READ_466~combout ),
+	.datae(!\Selector3~1_combout ),
 	.dataf(!\sr_latch_n|output_Q~combout ),
 	.datag(gnd),
 	.cin(gnd),
 	.sharein(gnd),
-	.combout(\next_state.STATE_READ_471~combout ),
+	.combout(\next_state.STATE_READ_466~combout ),
 	.sumout(),
 	.cout(),
 	.shareout());
 // synopsys translate_off
-defparam \next_state.STATE_READ_471 .extended_lut = "off";
-defparam \next_state.STATE_READ_471 .lut_mask = 64'h000000000F0F00FF;
-defparam \next_state.STATE_READ_471 .shared_arith = "off";
+defparam \next_state.STATE_READ_466 .extended_lut = "off";
+defparam \next_state.STATE_READ_466 .lut_mask = 64'h000000000F0F00FF;
+defparam \next_state.STATE_READ_466 .shared_arith = "off";
 // synopsys translate_on
 
 dffeas \current_state.STATE_READ (
 	.clk(\clk_ref~input_o ),
-	.d(\next_state.STATE_READ_471~combout ),
+	.d(\next_state.STATE_READ_466~combout ),
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
@@ -5277,7 +5274,7 @@ dffeas \i2c|master|i2c_scl_enable (
 	.asdata(vcc),
 	.clrn(vcc),
 	.aload(gnd),
-	.sclr(\sr_latch_n|output_Q~combout ),
+	.sclr(!\sr_latch_n|output_Q~combout ),
 	.sload(gnd),
 	.ena(vcc),
 	.devclrn(devclrn),
