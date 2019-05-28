@@ -1,25 +1,25 @@
 # do rom_hdmi.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:55 on May 22,2019
+# Start time: 15:18:59 on May 28,2019
 # vlog -work work rom_hdmi.vo 
 # -- Compiling module rom_hdmi
 # 
 # Top level modules:
 # 	rom_hdmi
-# End time: 15:57:55 on May 22,2019, Elapsed time: 0:00:00
+# End time: 15:18:59 on May 28,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 15:57:55 on May 22,2019
+# Start time: 15:18:59 on May 28,2019
 # vlog -work work rom_check.vwf.vt 
 # -- Compiling module rom_hdmi_vlg_vec_tst
 # 
 # Top level modules:
 # 	rom_hdmi_vlg_vec_tst
-# End time: 15:57:55 on May 22,2019, Elapsed time: 0:00:00
+# End time: 15:18:59 on May 28,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.rom_hdmi_vlg_vec_tst 
-# Start time: 15:57:55 on May 22,2019
+# Start time: 15:18:59 on May 28,2019
 # Loading work.rom_hdmi_vlg_vec_tst
 # Loading work.rom_hdmi
 # Loading cyclonev_ver.cyclonev_io_obuf
@@ -35,5 +35,5 @@
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # ** Note: $finish    : rom_check.vwf.vt(46)
 #    Time: 800 ns  Iteration: 0  Instance: /rom_hdmi_vlg_vec_tst
-# End time: 15:57:55 on May 22,2019, Elapsed time: 0:00:00
+# End time: 15:18:59 on May 28,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1

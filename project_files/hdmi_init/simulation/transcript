@@ -1,0 +1,20 @@
+# Loading project hdmi_init_sim
+# Compile of hdmi_init.v was successful.
+# Compile of sr_latch.v was successful.
+# Compile of i2c_clk_divider.v was successful.
+# Compile of i2c_controller.v was successful.
+# Compile of i2c_master.v was successful.
+# Compile of rom_hdmi.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim work.rom_hdmi
+# vsim work.rom_hdmi 
+# Start time: 14:09:34 on May 28,2019
+# Loading work.rom_hdmi
+# ** Error: (vsim-3033) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v(58): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /rom_hdmi File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v
+#         Searched libraries:
+#             /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/work
+# Error loading design
+# End time: 14:09:34 on May 28,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# reading /data/Programs/Quartus/modelsim_ase/linuxaloem/../modelsim.ini

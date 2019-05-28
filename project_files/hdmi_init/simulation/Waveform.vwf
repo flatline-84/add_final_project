@@ -1,12 +1,12 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off hdmi_init -c hdmi_init --vector_source="/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/output_files/Waveform.vwf" --testbench_file="/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/qsim/output_files/Waveform.vwf.vt"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off hdmi_init -c hdmi_init --vector_source="/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/output_files/Waveform.vwf" --testbench_file="/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/qsim/output_files/Waveform.vwf.vt"</ttestbench_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off hdmi_init -c hdmi_init --vector_source="/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/Waveform.vwf" --testbench_file="/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/qsim/Waveform.vwf.vt"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off hdmi_init -c hdmi_init --vector_source="/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/Waveform.vwf" --testbench_file="/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/qsim/Waveform.vwf.vt"</ttestbench_cmd>
 <fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/qsim/" hdmi_init -c hdmi_init</fnetlist_cmd>
 <tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/qsim/" hdmi_init -c hdmi_init</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vlog -work work hdmi_init.vo
-vlog -work work output_files/Waveform.vwf.vt
+vlog -work work Waveform.vwf.vt
 vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.hdmi_init_vlg_vec_tst
 vcd file -direction hdmi_init.msim.vcd
 vcd add -internal hdmi_init_vlg_vec_tst/*
@@ -20,11 +20,12 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
 vlog -work work hdmi_init.vo
-vlog -work work output_files/Waveform.vwf.vt
+vlog -work work Waveform.vwf.vt
 vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.hdmi_init_vlg_vec_tst
 vcd file -direction hdmi_init.msim.vcd
 vcd add -internal hdmi_init_vlg_vec_tst/*
@@ -38,6 +39,7 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
+
 </modelsim_script_timing>
 <hdl_lang>verilog</hdl_lang>
 </simulation_settings>*/
@@ -68,7 +70,7 @@ HEADER
 	VERSION = 1;
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
-	DATA_DURATION = 1000.0;
+	DATA_DURATION = 30000.0;
 	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
@@ -205,6 +207,86 @@ SIGNAL("select")
 	PARENT = "";
 }
 
+SIGNAL("state")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 5;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("state[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "state";
+}
+
+SIGNAL("state[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "state";
+}
+
+SIGNAL("state[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "state";
+}
+
+SIGNAL("state[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "state";
+}
+
+SIGNAL("state[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "state";
+}
+
+SIGNAL("ready_out")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("initialized_out")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("clk_ref")
 {
 	NODE
@@ -212,7 +294,7 @@ TRANSITION_LIST("clk_ref")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 50;
+			REPEAT = 1500;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
@@ -224,7 +306,8 @@ TRANSITION_LIST("current_value[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 29.0;
+		LEVEL 0 FOR 29971.0;
 	}
 }
 
@@ -233,7 +316,8 @@ TRANSITION_LIST("current_value[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 29.0;
+		LEVEL 0 FOR 29971.0;
 	}
 }
 
@@ -242,7 +326,8 @@ TRANSITION_LIST("current_value[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 29.0;
+		LEVEL 0 FOR 29971.0;
 	}
 }
 
@@ -251,7 +336,8 @@ TRANSITION_LIST("current_value[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 29.0;
+		LEVEL 0 FOR 29971.0;
 	}
 }
 
@@ -260,7 +346,8 @@ TRANSITION_LIST("current_value[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 29.0;
+		LEVEL 0 FOR 29971.0;
 	}
 }
 
@@ -269,7 +356,8 @@ TRANSITION_LIST("current_value[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 29.0;
+		LEVEL 0 FOR 29971.0;
 	}
 }
 
@@ -278,7 +366,8 @@ TRANSITION_LIST("current_value[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 29.0;
+		LEVEL 0 FOR 29971.0;
 	}
 }
 
@@ -287,7 +376,8 @@ TRANSITION_LIST("current_value[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 29.0;
+		LEVEL 0 FOR 29971.0;
 	}
 }
 
@@ -296,7 +386,8 @@ TRANSITION_LIST("i2c_scl")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL X FOR 1000.0;
+		LEVEL X FOR 29.0;
+		LEVEL 0 FOR 29971.0;
 	}
 }
 
@@ -305,7 +396,8 @@ TRANSITION_LIST("i2c_sda")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL Z FOR 1000.0;
+		LEVEL Z FOR 29.0;
+		LEVEL 0 FOR 29971.0;
 	}
 }
 
@@ -314,8 +406,77 @@ TRANSITION_LIST("select")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 30.0;
-		LEVEL 1 FOR 970.0;
+		LEVEL 1 FOR 30000.0;
+	}
+}
+
+TRANSITION_LIST("state[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 29.0;
+		LEVEL 0 FOR 29971.0;
+	}
+}
+
+TRANSITION_LIST("state[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 29.0;
+		LEVEL 0 FOR 29971.0;
+	}
+}
+
+TRANSITION_LIST("state[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 29.0;
+		LEVEL 0 FOR 29971.0;
+	}
+}
+
+TRANSITION_LIST("state[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 29.0;
+		LEVEL 0 FOR 29971.0;
+	}
+}
+
+TRANSITION_LIST("state[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 29.0;
+		LEVEL 0 FOR 29971.0;
+	}
+}
+
+TRANSITION_LIST("ready_out")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 29.0;
+		LEVEL 0 FOR 29971.0;
+	}
+}
+
+TRANSITION_LIST("initialized_out")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 29.0;
+		LEVEL 0 FOR 29971.0;
 	}
 }
 
@@ -442,6 +603,84 @@ DISPLAY_LINE
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 12;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "state";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 13;
+	TREE_LEVEL = 0;
+	CHILDREN = 14, 15, 16, 17, 18;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "state[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 14;
+	TREE_LEVEL = 1;
+	PARENT = 13;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "state[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 15;
+	TREE_LEVEL = 1;
+	PARENT = 13;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "state[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 16;
+	TREE_LEVEL = 1;
+	PARENT = 13;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "state[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 17;
+	TREE_LEVEL = 1;
+	PARENT = 13;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "state[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 18;
+	TREE_LEVEL = 1;
+	PARENT = 13;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ready_out";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 19;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "initialized_out";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 20;
 	TREE_LEVEL = 0;
 }
 

@@ -3,6 +3,9 @@ module hdmi_init(
 	input wire select, //KEY0 -> AH17
 	// input wire reset,
 	output wire [7:0] current_value,
+	output wire [4:0] state,
+	output wire ready_out,
+	output wire initialized_out,
 //	output wire led,
 	inout wire i2c_sda, //PINOUT -> AA4 (HDMI_SDA)
 	output wire i2c_scl //PINOUT -> U10 (HDMI_SCL)
@@ -22,7 +25,7 @@ LED7 -> AA23
 wire clk_100hz;
 
 reg [7:0] count = 0;
-reg [7:0] limit = 8'd74; //75 values to be read from ROM
+reg [7:0] limit = 8'd75; //75 values to be read from ROM
 reg [1:0] three_count = 0; // For pulling three values at a time from ROM
 reg		  start 		= 0;
 
@@ -36,9 +39,12 @@ wire reset_n_n;
 reg reset_toggle = 1;
 
 reg initialized = 0;
+assign initialized_out = initialized;
 
 wire [7:0] states;
 wire ready;
+
+assign ready_out = ready;
 
 //assign led = ready;
 
@@ -54,6 +60,8 @@ localparam STATE_STOP		= 4;
 
 reg [4:0] current_state		= STATE_START;
 reg [4:0] next_state		= STATE_START;
+
+assign state = current_state;
 
 sr_latch sr_latch_n(
 	.S_n(select),
@@ -87,7 +95,7 @@ i2c_controller i2c(
 	.ready_out(ready)
 );
 
-always @(posedge(clk_100hz)) begin: state_memory
+always @(posedge(clk_ref)) begin: state_memory
 	current_state <= next_state;
 	reset_toggle = ~reset_toggle;
 end
@@ -102,8 +110,8 @@ always @(current_state or reset_n or ready) begin: next_state_logic
 		case (current_state)
 
 			STATE_START: begin
-				limit <= 8'd74;
-				count <= 0;
+				limit <= 8'd75;
+				count <= 1;
 				three_count <= 0;
 				//current_value_r <= 0;
 				current_dev_id <= 0;
@@ -163,7 +171,7 @@ always @(current_state or reset_n or ready) begin: next_state_logic
 
 			STATE_STOP: begin
 				
-				if (count >= limit) begin
+				if (count > limit) begin
 					start <= 0;
 					initialized <= 1;
 				end

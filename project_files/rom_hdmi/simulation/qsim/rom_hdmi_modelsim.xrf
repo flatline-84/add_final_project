@@ -2,6 +2,7 @@ vendor_name = ModelSim
 source_file = 1, /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/hdmi_commands.hex
 source_file = 1, /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.qip
 source_file = 1, /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/rom_hdmi.v
+source_file = 1, /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/rom_hdmi/simulation/rom_check.vwf
 source_file = 1, /data/Programs/Quartus/quartus/libraries/megafunctions/altsyncram.tdf
 source_file = 1, /data/Programs/Quartus/quartus/libraries/megafunctions/stratix_ram_block.inc
 source_file = 1, /data/Programs/Quartus/quartus/libraries/megafunctions/lpm_mux.inc
