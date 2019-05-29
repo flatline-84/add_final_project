@@ -27,7 +27,7 @@ proc runSim {} {
     # force -freeze start 1
     # run 10000
     # # force -freeze start 0
-    run 200000us
+    run 100000us
     # force -freeze start 0
 
     # force -freeze reset_n 0

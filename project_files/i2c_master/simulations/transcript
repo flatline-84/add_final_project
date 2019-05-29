@@ -9,21 +9,58 @@ project open {/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Pr
 # Compile of i2c_clk_divider.v was successful.
 # Compile of i2c_controller.v was successful.
 # Compile of i2c_master.v was successful.
-# Compile of rom_hdmi.v was successful.
-# 6 compiles, 0 failed with no errors.
+# 5 compiles, 0 failed with no errors.
 vsim work.hdmi_init
 # vsim work.hdmi_init 
-# Start time: 09:48:32 on May 29,2019
+# Start time: 13:28:14 on May 29,2019
 # Loading work.hdmi_init
-# Loading work.sr_latch
 # Loading work.i2c_clk_divider
 # Loading work.i2c_controller
 # Loading work.i2c_master
+# Loading work.sr_latch
 # WARNING: No extended dataflow license exists
 source hdmi_init.tcl
 runSim
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
+# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
+# ** Error: Cannot lock WLF file: "vsim.wlf"
+#           errno 11: Resource temporarily unavailable.
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: peter  Hostname: melchior  ProcessID: 32194
+#           Attempting to use alternate WLF file "./wlftKwP49F".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftKwP49F
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# .main_pane.wave.interior.cs.body.pw.wf
+# Compile of hdmi_init.v was successful.
+# Compile of sr_latch.v was successful.
+# Compile of i2c_clk_divider.v was successful.
+# Compile of i2c_controller.v was successful.
+# Compile of i2c_master.v was successful.
+# 5 compiles, 0 failed with no errors.
+runSim
+# Loading work.hdmi_init
+# Loading work.i2c_clk_divider
+# Loading work.i2c_controller
+# Loading work.i2c_master
+# Loading work.sr_latch
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# .main_pane.wave.interior.cs.body.pw.wf
+# Compile of hdmi_init.v was successful.
+# Compile of sr_latch.v was successful.
+# Compile of i2c_clk_divider.v was successful.
+# Compile of i2c_controller.v was successful.
+# Compile of i2c_master.v was successful.
+# 5 compiles, 0 failed with no errors.
+runSim
+# Loading work.hdmi_init
+# Loading work.i2c_clk_divider
+# Loading work.i2c_controller
+# Loading work.i2c_master
+# Loading work.sr_latch
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # Break key hit
-# Break in Module hdmi_init at /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/hdmi_init.v line 168
-# End time: 09:51:44 on May 29,2019, Elapsed time: 0:03:12
-# Errors: 0, Warnings: 2
+# Break in Module i2c_clk_divider at /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_clk_divider.v line 11
+# End time: 13:37:32 on May 29,2019, Elapsed time: 0:09:18
+# Errors: 4, Warnings: 6

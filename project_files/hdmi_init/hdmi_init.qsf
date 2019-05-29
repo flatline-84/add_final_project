@@ -59,8 +59,8 @@ set_global_assignment -name VERILOG_FILE ../i2c_master/i2c_master.v
 set_global_assignment -name VERILOG_FILE ../i2c_master/i2c_controller.v
 set_global_assignment -name VERILOG_FILE ../i2c_master/i2c_clk_divider.v
 set_location_assignment PIN_V11 -to clk_ref
-set_location_assignment PIN_W15 -to i2c_scl
-set_location_assignment PIN_AA24 -to i2c_sda
+set_location_assignment PIN_AC24 -to i2c_scl
+set_location_assignment PIN_Y15 -to i2c_sda
 set_location_assignment PIN_AH17 -to select
 set_global_assignment -name VECTOR_WAVEFORM_FILE simulation/Waveform.vwf
 set_global_assignment -name VERILOG_FILE hdmi_init.v

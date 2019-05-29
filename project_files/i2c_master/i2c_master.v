@@ -156,6 +156,7 @@ always @(posedge(clk)) begin
 
 			STATE_WACK3: begin
 				state <= STATE_PRE_STOP;
+//				state <= STATE_STOP;
 				i2c_sda_val <= 1'bz;
 				ack_check <= 0;
 			end
