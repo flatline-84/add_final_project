@@ -51,7 +51,7 @@ always @(negedge(clk)) begin
 	end
 	
 	else begin
-		if((state == STATE_IDLE) || (state == STATE_START) || (state == STATE_STOP) || (state == STATE_PRE_STOP)) begin
+		if((state == STATE_IDLE) || (state == STATE_START) || (state == STATE_STOP) ) begin // || (state == STATE_PRE_STOP)) begin
 			i2c_scl_enable <= 0;
 		end
 		else begin
@@ -164,8 +164,8 @@ always @(posedge(clk)) begin
 			end
 
 			STATE_PRE_STOP: begin
-				i2c_sda_val <= 0;
 				state <= STATE_STOP;
+				i2c_sda_val <= 0;
 			end
 
 			STATE_STOP: begin

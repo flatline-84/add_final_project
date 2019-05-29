@@ -33,3 +33,73 @@ runSim
 # Loading work.sr_latch
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # .main_pane.wave.interior.cs.body.pw.wf
+# Compile of hdmi_init.v was successful.
+# Compile of sr_latch.v was successful.
+# Compile of i2c_clk_divider.v was successful.
+# Compile of i2c_controller.v was successful.
+# Compile of i2c_master.v was successful.
+# 5 compiles, 0 failed with no errors.
+runSim
+# Loading work.hdmi_init
+# Loading work.i2c_clk_divider
+# Loading work.i2c_controller
+# Loading work.i2c_master
+# Loading work.sr_latch
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# .main_pane.wave.interior.cs.body.pw.wf
+# Compile of hdmi_init.v was successful.
+# Compile of sr_latch.v was successful.
+# Compile of i2c_clk_divider.v was successful.
+# Compile of i2c_controller.v was successful.
+# Compile of i2c_master.v was successful.
+# 5 compiles, 0 failed with no errors.
+runSim
+# Loading work.hdmi_init
+# Loading work.i2c_clk_divider
+# Loading work.i2c_controller
+# Loading work.i2c_master
+# Loading work.sr_latch
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# .main_pane.wave.interior.cs.body.pw.wf
+# Compile of hdmi_init.v was successful.
+# Compile of sr_latch.v was successful.
+# Compile of i2c_clk_divider.v was successful.
+# Compile of i2c_controller.v was successful.
+# Compile of i2c_master.v was successful.
+# 5 compiles, 0 failed with no errors.
+runSim
+# Loading work.hdmi_init
+# Loading work.i2c_clk_divider
+# Loading work.i2c_controller
+# Loading work.i2c_master
+# Loading work.sr_latch
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# .main_pane.wave.interior.cs.body.pw.wf
+# Compile of hdmi_init.v was successful.
+# Compile of sr_latch.v was successful.
+# Compile of i2c_clk_divider.v was successful.
+# Compile of i2c_controller.v was successful.
+# Compile of i2c_master.v was successful.
+# 5 compiles, 0 failed with no errors.
+runSim
+# Loading work.hdmi_init
+# Loading work.i2c_clk_divider
+# Loading work.i2c_controller
+# Loading work.i2c_master
+# Loading work.sr_latch
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# .main_pane.wave.interior.cs.body.pw.wf
+# Compile of hdmi_init.v was successful.
+# Compile of sr_latch.v was successful.
+# Compile of i2c_clk_divider.v was successful.
+# Compile of i2c_controller.v was successful.
+# Compile of i2c_master.v was successful.
+# 5 compiles, 0 failed with no errors.
+runSim
+# Loading work.hdmi_init
+# Loading work.i2c_clk_divider
+# Loading work.i2c_controller
+# Loading work.i2c_master
+# Loading work.sr_latch
+# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
+# .main_pane.wave.interior.cs.body.pw.wf
