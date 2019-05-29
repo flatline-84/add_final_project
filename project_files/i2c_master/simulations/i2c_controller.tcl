@@ -23,11 +23,24 @@ proc runSim {} {
     #0xb7
     run 10000
     force -freeze start 1
-    # run 305ns
+    run 10000
+    # force -freeze start 0
     run 20000us
-    
     force -freeze start 0
 
+    force -freeze reset_n 0
+    run 10000
+    force -freeze reset_n 1
+    force -freeze dev_addr X"39"
+    #0x72
+    force -freeze reg_addr X"88"
+    #0xa5
+    force -freeze data X"c6" 
+    run 10000
+    force -freeze start 1
+    run 10000
+    run 20000us
+    force -freeze start 0
     
     view wave
 }

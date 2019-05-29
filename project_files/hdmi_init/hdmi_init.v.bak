@@ -1,5 +1,217 @@
 module hdmi_init(
-
+	input wire clk_ref, //50MHz clock -> E11
+	input wire select, //KEY0 -> AH17
+	// input wire reset,
+	output wire [7:0] current_value,
+	output wire [4:0] state,
+	output wire [7:0] i2c_states,
+	output wire [7:0] count_out,
+	output wire ready_out,
+	output wire initialized_out,
+//	output wire led,
+	inout wire i2c_sda, //PINOUT -> AA4 (HDMI_SDA)
+	output wire i2c_scl //PINOUT -> U10 (HDMI_SCL)
 );
+
+/*
+LED0 -> W15
+LED1 -> AA24
+LED2 -> V16
+LED3 -> V15
+LED4 -> AF26
+LED5 -> AE26
+LED6 -> Y16
+LED7 -> AA23
+*/
+
+wire clk_100hz;
+
+reg		  start 		= 0;
+
+wire [7:0] current_value_r;
+reg [7:0] current_dev_id = 8'h72;
+reg [7:0] current_reg_id = 0;
+reg [7:0] current_data = 0;
+reg [15:0] LUT_DATA = 0;
+reg [7:0] count = 0;
+assign count_out = count;
+
+wire reset_n;
+wire reset_n_n;
+reg reset_toggle = 1;
+
+reg initialized = 0;
+assign initialized_out = initialized;
+
+wire [7:0] states;
+wire ready;
+
+assign ready_out = ready;
+
+//assign led = ready;
+
+assign current_value = LUT_DATA;
+
+/*** STATES ***/
+
+localparam STATE_START		= 0;
+localparam STATE_IDLE		= 1;
+localparam STATE_READ		= 2;
+localparam STATE_WRITE		= 3;
+localparam STATE_STOP		= 4;
+localparam STATE_WAIT_1		= 5;
+localparam STATE_WAIT_2		= 6;
+localparam STATE_WAIT_3		= 7;
+
+
+
+reg [5:0] current_state		= STATE_START;
+reg [5:0] next_state		= STATE_START;
+
+assign state = current_state;
+
+sr_latch sr_latch_n(
+	.S_n(select),
+	.R_n(reset_toggle),
+	.Q(reset_n),
+	.Qn(reset_n_n)
+);
+
+i2c_clk_divider clk_divider(
+	.reset_n(reset_n),
+	.ref_clk(clk_ref),
+	.i2c_clk(clk_100hz)
+);
+
+// rom_hdmi rom (
+// 	.address(count),
+// 	.clock(clk_ref),
+// 	.q(current_value_r)
+// );
+
+i2c_controller i2c(
+	.clk_in(clk_ref),
+	.reset_n(reset_n),
+	.start(start),
+	.dev_addr(current_dev_id),
+	.reg_addr(current_reg_id),
+	.data(current_data),
+	.states(i2c_states),
+	.i2c_sda(i2c_sda),
+	.i2c_scl(i2c_scl),
+	.ready_out(ready)
+);
+
+always @(posedge(clk_ref)) begin: state_memory
+	current_state <= next_state;
+//	reset_toggle = ~reset_toggle;
+end
+
+always @(current_state or reset_n) begin: next_state_logic
+	if (reset_n == 1'b0) begin
+		next_state <= STATE_START;
+	end
+
+	else begin
+		case(current_state)
+			STATE_START: begin
+				count <= 0;
+				initialized <= 0;
+			end
+
+			STATE_IDLE: begin
+
+				if (ready == 1'b1 && initialized == 1'b0) begin
+					next_state <= STATE_WRITE;
+				end
+
+				else begin
+					next_state <= STATE_IDLE;
+				end
+
+			end
+
+			STATE_WRITE: begin
+				start <= 1;
+				if (ready == 1'b1) begin
+					next_state <= STATE_STOP;
+				end
+
+				else begin
+					next_state <= STATE_WRITE;
+				end
+				
+			end
+
+			STATE_STOP: begin
+				count = count + 1;
+				if (count == 31) begin
+					initialized <= 1;
+//					LUT_DATA <= 255;
+				end
+
+				next_state <= STATE_IDLE;
+			end
+			
+			default:
+				begin
+					next_state <= STATE_IDLE;
+				end
+
+
+		endcase
+
+	end
+	
+end
+
+// always @(current_state) begin: output_logic
+	
+// end
+
+always @(*)
+begin
+	case(count)
+		
+		//	Video Config Data
+		0	:	LUT_DATA	<=	16'h9803;  //Must be set to 0x03 for proper operation
+		1	:	LUT_DATA	<=	16'h0100;  //Set 'N' value at 6144
+		2	:	LUT_DATA	<=	16'h0218;  //Set 'N' value at 6144
+		3	:	LUT_DATA	<=	16'h0300;  //Set 'N' value at 6144
+		4	:	LUT_DATA	<=	16'h1470;  // Set Ch count in the channel status to 8.
+		5	:	LUT_DATA	<=	16'h1520;  //Input 444 (RGB or YCrCb) with Separate Syncs, 48kHz fs
+		6	:	LUT_DATA	<=	16'h1630;  //Output format 444, 24-bit input
+		7	:	LUT_DATA	<=	16'h1846;  //Disable CSC
+		8	:	LUT_DATA	<=	16'h4080;  //General control packet enable
+		9	:	LUT_DATA	<=	16'h4110;  //Power down control
+		10	:	LUT_DATA	<=	16'h49A8;  //Set dither mode - 12-to-10 bit
+		11	:	LUT_DATA	<=	16'h5510;  //Set RGB in AVI infoframe
+		12	:	LUT_DATA	<=	16'h5608;  //Set active format aspect
+		13	:	LUT_DATA	<=	16'h96F6;  //Set interrup
+		14	:	LUT_DATA	<=	16'h7307;  //Info frame Ch count to 8
+		15	:	LUT_DATA	<=	16'h761f;  //Set speaker allocation for 8 channels
+		16	:	LUT_DATA	<=	16'h9803;  //Must be set to 0x03 for proper operation
+		17	:	LUT_DATA	<=	16'h9902;  //Must be set to Default Value
+		18	:	LUT_DATA	<=	16'h9ae0;  //Must be set to 0b1110000
+		19	:	LUT_DATA	<=	16'h9c30;  //PLL filter R1 value
+		20	:	LUT_DATA	<=	16'h9d61;  //Set clock divide
+		21	:	LUT_DATA	<=	16'ha2a4;  //Must be set to 0xA4 for proper operation
+		22	:	LUT_DATA	<=	16'ha3a4;  //Must be set to 0xA4 for proper operation
+		23	:	LUT_DATA	<=	16'ha504;  //Must be set to Default Value
+		24	:	LUT_DATA	<=	16'hab40;  //Must be set to Default Value
+		25	:	LUT_DATA	<=	16'haf16;  //Select HDMI mode
+		26	:	LUT_DATA	<=	16'hba60;  //No clock delay
+		27	:	LUT_DATA	<=	16'hd1ff;  //Must be set to Default Value
+		28	:	LUT_DATA	<=	16'hde10;  //Must be set to Default for proper operation
+		29	:	LUT_DATA	<=	16'he460;  //Must be set to Default Value
+		30	:	LUT_DATA	<=	16'hfa7d;  //Nbr of times to look for good phase
+
+		default:		LUT_DATA	<=	16'h9803;
+	endcase
+
+	current_reg_id 	<= LUT_DATA[15:8];
+	current_data 	<= LUT_DATA[7:0];
+	
+end
 
 endmodule

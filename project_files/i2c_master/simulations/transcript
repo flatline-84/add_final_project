@@ -1,34 +1,29 @@
 # reading modelsim.ini
 # Loading project i2c_master
-# Compile of i2c_master.v was successful.
+project open {/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation/hdmi_init_sim}
+# reading modelsim.ini
+# reading /data/Programs/Quartus/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project hdmi_init_sim
+# Compile of hdmi_init.v was successful.
+# Compile of sr_latch.v was successful.
 # Compile of i2c_clk_divider.v was successful.
 # Compile of i2c_controller.v was successful.
-# 3 compiles, 0 failed with no errors.
-vsim work.i2c_controller
-# vsim work.i2c_controller 
-# Start time: 15:31:06 on May 28,2019
-# Loading work.i2c_controller
+# Compile of i2c_master.v was successful.
+# Compile of rom_hdmi.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim work.hdmi_init
+# vsim work.hdmi_init 
+# Start time: 09:48:32 on May 29,2019
+# Loading work.hdmi_init
+# Loading work.sr_latch
 # Loading work.i2c_clk_divider
+# Loading work.i2c_controller
 # Loading work.i2c_master
 # WARNING: No extended dataflow license exists
-
-
-
-source i2c_controller.tcl
-runSim
-# ** Error (suppressible): (vsim-4008) Object 'reset_in' not found.
-# 
-run
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-run
-run
-run
-source i2c_controller.tcl
+source hdmi_init.tcl
 runSim
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-runSim
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# End time: 15:34:24 on May 28,2019, Elapsed time: 0:03:18
-# Errors: 1, Warnings: 4
+# Break key hit
+# Break in Module hdmi_init at /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/hdmi_init.v line 168
+# End time: 09:51:44 on May 29,2019, Elapsed time: 0:03:12
+# Errors: 0, Warnings: 2

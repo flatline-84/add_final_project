@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 d/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/simulations
 vi2c_clk_divider
-Z1 !s110 1559021446
+Z1 !s110 1559086879
 !i10b 1
 !s100 [>PVkEXeFZol2BMi`P71_3
 IDXf55K_d0SmNmGg2;oFFS0
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1559021446.000000
+Z4 !s108 1559086879.000000
 !s107 /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_clk_divider.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_clk_divider.v|
 !i113 1
@@ -57,7 +57,7 @@ R1
 Io0>2W^FWAHm>iD@:U]6Aa3
 R2
 R0
-w1559021438
+w1559021618
 8/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_master.v
 F/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_master.v
 L0 3

@@ -1,207 +1,99 @@
-module hdmi_init(
-	input wire clk_ref, //50MHz clock -> E11
-	input wire select, //KEY0 -> AH17
-	// input wire reset,
-	output wire [7:0] current_value,
-	output wire [4:0] state,
-	output wire ready_out,
-	output wire initialized_out,
-//	output wire led,
-	inout wire i2c_sda, //PINOUT -> AA4 (HDMI_SDA)
-	output wire i2c_scl //PINOUT -> U10 (HDMI_SCL)
+module hdmi_init (
+    input wire select,      //KEY0 -> AH17
+    input wire clk_ref,     //50MHz -> V11
+	output wire[3:0] state_out,
+    output wire i2c_sda,    //W15
+    output wire i2c_scl     //AA24
 );
 
-/*
-LED0 -> W15
-LED1 -> AA24
-LED2 -> V16
-LED3 -> V15
-LED4 -> AF26
-LED5 -> AE26
-LED6 -> Y16
-LED7 -> AA23
-*/
+localparam STATE_BEGIN      = 0;
+localparam STATE_IDLE       = 1;
+localparam STATE_WRITE      = 2;
+localparam STATE_CHECK      = 3;
+localparam STATE_STOP       = 4;
+
+reg [3:0] current_state     = STATE_BEGIN;
+assign state_out 		    = current_state;
+
+reg i2c_sda_wire;
+reg i2c_scl_wire;
+
+assign i2c_sda              = i2c_sda_wire;
+assign i2c_scl              = i2c_scl_wire;
+
+reg reset_toggle            = 1;
+wire reset;
+wire reset_n;
 
 wire clk_100hz;
 
-reg [7:0] count = 0;
-reg [7:0] limit = 8'd75; //75 values to be read from ROM
-reg [1:0] three_count = 0; // For pulling three values at a time from ROM
-reg		  start 		= 0;
-
-wire [7:0] current_value_r;
-reg [7:0] current_dev_id = 0;
-reg [7:0] current_reg_id = 0;
-reg [7:0] current_data = 0;
-
-wire reset_n;
-wire reset_n_n;
-reg reset_toggle = 1;
-
-reg initialized = 0;
-assign initialized_out = initialized;
-
-wire [7:0] states;
-wire ready;
-
-assign ready_out = ready;
-
-//assign led = ready;
-
-assign current_value = current_value_r;
-
-/*** STATES ***/
-
-localparam STATE_START		= 0;
-localparam STATE_IDLE		= 1;
-localparam STATE_READ		= 2;
-localparam STATE_WRITE		= 3;
-localparam STATE_STOP		= 4;
-localparam STATE_WAIT_1		= 5;
-localparam STATE_WAIT_2		= 6;
-localparam STATE_WAIT_3		= 7;
-
-
-
-reg [5:0] current_state		= STATE_START;
-reg [5:0] next_state		= STATE_START;
-
-assign state = current_state;
-
-sr_latch sr_latch_n(
-	.S_n(select),
-	.R_n(reset_toggle),
-	.Q(reset_n),
-	.Qn(reset_n_n)
-);
-
 i2c_clk_divider clk_divider(
-	.reset_n(reset_n),
+	.reset(reset),
 	.ref_clk(clk_ref),
 	.i2c_clk(clk_100hz)
 );
 
-rom_hdmi rom (
-	.address(count),
-	.clock(clk_ref),
-	.q(current_value_r)
+sr_latch sr_latch_n(
+	.S_n(select),
+	.R_n(reset_toggle),
+	.Q(reset),
+	.Qn(reset_n)
 );
 
-i2c_controller i2c(
-	.clk_in(clk_ref),
-	.reset_n(reset_n),
-	.start(start),
-	.dev_addr(current_dev_id),
-	.reg_addr(current_reg_id),
-	.data(current_data),
-	.states(states),
-	.i2c_sda(i2c_sda),
-	.i2c_scl(i2c_scl),
-	.ready_out(ready)
-);
-
-always @(posedge(clk_ref)) begin: state_memory
-	current_state <= next_state;
-	reset_toggle = ~reset_toggle;
+always @(negedge(clk_100hz)) begin
+    if (reset == 1'b1) begin
+        reset_toggle <= 0;
+    end
+    else begin
+        reset_toggle <= 1;
+    end
 end
 
-always @(negedge(clk_ref)) begin: next_state_logic
-	if (reset_n == 1'b0) begin
-		next_state <= STATE_START;
-	end
+always @(posedge(clk_100hz)) begin: main_state_machine_loop
 
-	else begin
+    if (reset == 1'b1) begin
+        current_state <= STATE_BEGIN;
+    end
 
-		case (current_state)
+    else begin
+            case(current_state)
+                STATE_BEGIN: begin
+                    i2c_sda_wire <= 1;
+                    i2c_scl_wire <= 1;
 
-			STATE_START: begin
-				limit <= 8'd75;
-				count <= 1;
-				three_count <= 0;
-				//current_value_r <= 0;
-				current_dev_id <= 0;
-				current_reg_id <= 0;
-				current_data <= 0;
-				initialized <= 0;
-				// reset <= 1;
+                    current_state <= STATE_IDLE;
+                end
 
-				next_state <= STATE_IDLE;
+                STATE_IDLE: begin
+                    i2c_sda_wire <= 0;
+                    i2c_scl_wire <= 1;
+                    current_state <= STATE_WRITE;
+                end
 
-			end
+                STATE_WRITE: begin
+                    i2c_sda_wire <= 0;
+                    i2c_scl_wire <= 0;
+                    current_state <= STATE_CHECK;
+                end
 
-			STATE_IDLE: begin
-				if ((ready == 1'b1) && (initialized == 1'b0)) begin
-					next_state <= STATE_READ;
-				end
-				else begin
-					next_state <= STATE_IDLE;
-				end
-			end
+                STATE_CHECK: begin
+                    i2c_sda_wire <= 1;
+                    i2c_scl_wire <= 0;
+                    current_state <= STATE_STOP;
+                end
 
-			STATE_READ: begin
-				case (three_count)
-					0:
-						begin
-							three_count <= three_count + 1;
-							current_dev_id = current_value_r;
-							count = count + 1;
-							next_state <= STATE_READ;
-						end
-					1:
-						begin
-							three_count <= three_count + 1;
-							current_reg_id = current_value_r;
-							count = count + 1;
-							next_state <= STATE_READ;
-						end
-					2:
-						begin
-							three_count <= 0;
-							current_data = current_value_r;
-							count = count + 1;
-							next_state <= STATE_WRITE;
-						end
-					default:
-						begin
-							next_state <= STATE_STOP;
-						end
-				endcase
+                STATE_STOP: begin
+                    i2c_sda_wire <= ~i2c_sda_wire;
+                    i2c_scl_wire <= ~i2c_scl_wire;
+                    current_state <= STATE_STOP;
+                end
 
-			end
+                default: begin
+                    current_state <= STATE_STOP;
+                end
 
-			STATE_WRITE: begin
-				start <= 1;
-				next_state <= STATE_STOP;
-			end
-
-			STATE_STOP: begin
-
-				start <= 0;
-				
-				if (count > limit) begin
-					// start <= 0;
-					initialized <= 1;
-					next_state <= STATE_IDLE;
-				end
-				else if (ready == 1'b0) begin
-					next_state <= STATE_STOP;
-				end
-				
-				else begin
-					next_state <= STATE_IDLE;
-				end
-				
-			end
-
-		endcase
-	end
-
-	
-	
-end
-
-always @(current_state) begin: output_logic
-	
+        endcase
+    end
 end
 
 endmodule
