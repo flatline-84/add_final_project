@@ -70,7 +70,7 @@ always @(posedge(clk)) begin
 //		i2c_scl <= 1;
 
 		// dev_id <= 7'h50;
-		count <= 8'd6;
+		count <= 8'd7;
 		// data <= 8'haa; //test send aa?
 	end
 
@@ -91,7 +91,7 @@ always @(posedge(clk)) begin
 			STATE_START: begin
 				i2c_sda_val <= 0;
 				state <= STATE_ADDR;
-				count <= 8'd6;
+				count <= 8'd7;
 			end
 
 			STATE_ADDR: begin
@@ -157,13 +157,15 @@ always @(posedge(clk)) begin
 			STATE_WACK3: begin
 				state <= STATE_PRE_STOP;
 //				state <= STATE_STOP;
+				// i2c_sda_val <= 1'bz;
 				i2c_sda_val <= 1'bz;
+
 				ack_check <= 0;
 			end
 
 			STATE_PRE_STOP: begin
-				state <= STATE_STOP;
 				i2c_sda_val <= 0;
+				state <= STATE_STOP;
 			end
 
 			STATE_STOP: begin

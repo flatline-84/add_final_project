@@ -161,7 +161,7 @@ begin
 		10	:	data	<=	16'h49A8;  //Set dither mode - 12-to-10 bit
 		11	:	data	<=	16'h5510;  //Set RGB in AVI infoframe
 		12	:	data	<=	16'h5608;  //Set active format aspect
-		13	:	data	<=	16'h96F6;  //Set interrup
+		13	:	data	<=	16'h96F6;  //Set interrupt
 		14	:	data	<=	16'h7307;  //Info frame Ch count to 8
 		15	:	data	<=	16'h761f;  //Set speaker allocation for 8 channels
 		16	:	data	<=	16'h9803;  //Must be set to 0x03 for proper operation
