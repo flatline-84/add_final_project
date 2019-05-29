@@ -179,6 +179,26 @@ SIGNAL("state_out[0]")
 	PARENT = "state_out";
 }
 
+SIGNAL("clk_100hz_out")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("ready_out")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("clk_ref")
 {
 	NODE
@@ -186,9 +206,9 @@ TRANSITION_LIST("clk_ref")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 100;
-			LEVEL 0 FOR 500.0;
-			LEVEL 1 FOR 500.0;
+			REPEAT = 5000;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
 		}
 	}
 }
@@ -216,9 +236,9 @@ TRANSITION_LIST("select")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 18240.0;
-		LEVEL 0 FOR 1920.0;
-		LEVEL 1 FOR 79840.0;
+		LEVEL 1 FOR 1920.0;
+		LEVEL 0 FOR 960.0;
+		LEVEL 1 FOR 97120.0;
 	}
 }
 
@@ -258,6 +278,24 @@ TRANSITION_LIST("state_out[0]")
 	}
 }
 
+TRANSITION_LIST("clk_100hz_out")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
+TRANSITION_LIST("ready_out")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 100000.0;
+	}
+}
+
 DISPLAY_LINE
 {
 	CHANNEL = "clk_ref";
@@ -269,7 +307,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "i2c_scl";
+	CHANNEL = "clk_100hz_out";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 1;
@@ -278,7 +316,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "i2c_sda";
+	CHANNEL = "i2c_scl";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
@@ -287,7 +325,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "select";
+	CHANNEL = "i2c_sda";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 3;
@@ -296,52 +334,70 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "state_out";
+	CHANNEL = "select";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
+	RADIX = Binary;
 	TREE_INDEX = 4;
 	TREE_LEVEL = 0;
-	CHILDREN = 5, 6, 7, 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "state_out";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 0;
+	CHILDREN = 6, 7, 8, 9;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "state_out[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
-	TREE_INDEX = 5;
+	RADIX = Binary;
+	TREE_INDEX = 6;
 	TREE_LEVEL = 1;
-	PARENT = 4;
+	PARENT = 5;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "state_out[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
-	TREE_INDEX = 6;
+	RADIX = Binary;
+	TREE_INDEX = 7;
 	TREE_LEVEL = 1;
-	PARENT = 4;
+	PARENT = 5;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "state_out[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
-	TREE_INDEX = 7;
+	RADIX = Binary;
+	TREE_INDEX = 8;
 	TREE_LEVEL = 1;
-	PARENT = 4;
+	PARENT = 5;
 }
 
 DISPLAY_LINE
 {
 	CHANNEL = "state_out[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Hexadecimal;
-	TREE_INDEX = 8;
+	RADIX = Binary;
+	TREE_INDEX = 9;
 	TREE_LEVEL = 1;
-	PARENT = 4;
+	PARENT = 5;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "ready_out";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 10;
+	TREE_LEVEL = 0;
 }
 
 TIME_BAR

@@ -1,6 +1,6 @@
 module i2c_controller(
     input wire clk_in, //50Mhz
-    input wire reset_n,
+    input wire reset,
     input wire start,
     input wire [7:0] dev_addr,
     input wire [7:0] reg_addr,
@@ -22,14 +22,14 @@ i2c_clk_divider
 // #(.DELAY(2)) // Uncomment when running sim and comment above
 clk_divider
 (
-    .reset_n(reset_n),
+    .reset(reset),
     .ref_clk(clk_in),
     .i2c_clk(clk_100hz)
 );
 
 i2c_master master (
     .clk(clk_100hz),
-    .reset_n(reset_n),
+    .reset(reset),
     .start(start),
     .dev_id(dev_addr),
     .reg_id(reg_addr),

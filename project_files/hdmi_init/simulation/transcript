@@ -1,43 +1,24 @@
 # Loading project hdmi_init_sim
-# Compile of hdmi_init.v was successful.
-# Compile of sr_latch.v was successful.
+project open {/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/simulations/i2c_master}
+# reading /data/Programs/Quartus/modelsim_ase/linuxaloem/../modelsim.ini
+# reading modelsim.ini
+# Loading project i2c_master
+# Compile of i2c_master.v was successful.
 # Compile of i2c_clk_divider.v was successful.
 # Compile of i2c_controller.v was successful.
-# Compile of i2c_master.v was successful.
-# Compile of rom_hdmi.v was successful.
-# 6 compiles, 0 failed with no errors.
-# Compile of hdmi_init.v was successful.
-# Compile of sr_latch.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# Compile of i2c_master.v was successful.
-# 5 compiles, 0 failed with no errors.
-vsim work.hdmi_init
-# vsim work.hdmi_init 
-# Start time: 11:00:13 on May 29,2019
-# Loading work.hdmi_init
-# Loading work.sr_latch
+# 3 compiles, 0 failed with no errors.
+vsim work.i2c_clk_divider
+# vsim work.i2c_clk_divider 
+# Start time: 13:05:58 on May 29,2019
 # Loading work.i2c_clk_divider
-# Loading work.i2c_controller
-# Loading work.i2c_master
 # WARNING: No extended dataflow license exists
-source hdmi_init.tcl
+source i2c_clock_divider_sim.tcl
 runSim
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 1 times, errno 11
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 2 times, errno 11
-# ** Error: Unable to lock WLF file "vsim.wlf". Retrying 3 times, errno 11
-# ** Error: Cannot lock WLF file: "vsim.wlf"
-#           errno 11: Resource temporarily unavailable.
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: peter  Hostname: melchior  ProcessID: 32194
-#           Attempting to use alternate WLF file "./wlftZK80cd".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftZK80cd
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# ** Error: (vsim-3) System call mmap() failed.
-# Operation not permitted. (errno = EPERM)
-# ** Fatal: (vsim-4) ****** Memory allocation failure. *****
-# Attempting to allocate 131072 bytes
-# Please check your system for available memory and swap space.
-# End time: 11:05:57 on May 29,2019, Elapsed time: 0:05:44
-# Errors: 6, Warnings: 3
+# .main_pane.wave.interior.cs.body.pw.wf
+run
+run
+run
+run
+# End time: 13:06:58 on May 29,2019, Elapsed time: 0:01:00
+# Errors: 0, Warnings: 2

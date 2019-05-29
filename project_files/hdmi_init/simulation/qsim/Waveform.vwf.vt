@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/29/2019 12:46:24"
+// Generated on "05/29/2019 13:26:25"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          hdmi_init
 // 
@@ -30,20 +30,24 @@ module hdmi_init_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg clk_ref;
-reg treg_i2c_sda;
 reg select;
 // wires                                               
+wire clk_100hz_out;
 wire i2c_scl;
 wire i2c_sda;
+wire [7:0] i2c_states;
+wire ready_out;
 wire [3:0] state_out;
 
 // assign statements (if any)                          
-assign i2c_sda = treg_i2c_sda;
 hdmi_init i1 (
 // port map - connection between master ports and signals/registers   
+	.clk_100hz_out(clk_100hz_out),
 	.clk_ref(clk_ref),
 	.i2c_scl(i2c_scl),
 	.i2c_sda(i2c_sda),
+	.i2c_states(i2c_states),
+	.ready_out(ready_out),
 	.select(select),
 	.state_out(state_out)
 );
@@ -56,22 +60,16 @@ end
 always
 begin
 	clk_ref = 1'b0;
-	clk_ref = #500000 1'b1;
-	#500000;
-end 
-
-// i2c_sda
-initial
-begin
-	treg_i2c_sda = 1'bZ;
+	clk_ref = #10000 1'b1;
+	#10000;
 end 
 
 // select
 initial
 begin
 	select = 1'b1;
-	select = #18240000 1'b0;
-	select = #1920000 1'b1;
+	select = #1920000 1'b0;
+	select = #960000 1'b1;
 end 
 endmodule
 
