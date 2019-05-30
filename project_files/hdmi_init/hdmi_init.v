@@ -1,14 +1,18 @@
 module hdmi_init (
     input wire select,      //KEY0 -> AH17
+	input wire reset_toggle, //KEY1 -> AH16
     input wire clk_ref,     //50MHz -> V11
+	input wire hdmi_tx_int, //PIN_AF11
 	output wire[3:0] state_out,
 	output wire clk_100hz_out,
 	output wire ready_out,
+	output wire reset_out,
     output wire[7:0] i2c_states,
     // LED4 -> AF26
     // LED5 -> AE26
     // LED6 -> Y16
     // LED7 -> AA23
+	output wire ack_out,
     inout wire i2c_sda,    //AA24
     output wire i2c_scl     //W15
      //PINOUT -> AA4 (HDMI_SDA)
@@ -29,12 +33,14 @@ localparam STATE_WRITE      = 4'b0100;
 localparam STATE_CHECK      = 4'b1000;
 localparam STATE_STOP       = 4'b1111;
 
-reg [3:0] current_state     = STATE_BEGIN;
-assign state_out 		    = current_state;
+reg [3:0] state     = STATE_BEGIN;
+assign state_out 		    = state;
 
 reg initialized             = 0;
-reg [4:0] count             = 0;
-reg [15:0] data             = 0;
+reg [5:0] count             = 0;
+reg [15:0] data             = 8'h00;
+reg [2:0] delay				= 0;
+reg [15:0] i2c_data			= 0;
 
 reg i2c_sda_wire;
 reg i2c_scl_wire;
@@ -42,22 +48,27 @@ reg i2c_scl_wire;
 //assign i2c_sda              = i2c_sda_wire;
 //assign i2c_scl              = i2c_scl_wire;
 
-reg reset_toggle            = 1;
+// reg reset_toggle            = 1;
 wire reset;
 wire reset_n;
+
+assign reset_out = reset;
 
 wire clk_100hz;
 assign clk_100hz_out = clk_100hz;
 
 reg [7:0] current_dev_id    = 8'h72;
-reg [7:0] current_reg_id    = 8'h00;
-reg [7:0] current_data      = 8'h00;
+// reg [7:0] current_reg_id    = 8'h00;
+reg [15:0] current_data      = 8'h00;
 
 reg start = 0;
 wire ready;
 assign ready_out = ready;
 
-i2c_clk_divider clk_divider(
+i2c_clk_divider 
+#(.DELAY(2000))
+clk_divider
+(
 	.reset(reset),
 	.ref_clk(clk_ref),
 	.i2c_clk(clk_100hz)
@@ -68,9 +79,9 @@ i2c_controller i2c(
 	.reset(reset),
 	.start(start),
 	.dev_addr(current_dev_id),
-	.reg_addr(current_reg_id),
-	.data(current_data),
+	.reg_data(i2c_data),
 	.states(i2c_states),
+	.ack(ack_out),
 	.i2c_sda(i2c_sda),
 	.i2c_scl(i2c_scl),
 	.ready_out(ready)
@@ -83,16 +94,67 @@ sr_latch sr_latch_n(
 	.Qn(reset_n)
 );
 
-always @(negedge(clk_ref)) begin
-    if (reset == 1'b1) begin
-        reset_toggle <= 0;
-    end
-    else begin
-        reset_toggle <= 1;
-    end
-end
 
-always @(posedge(clk_100hz)) begin: main_state_machine_loop
+always @(posedge(clk_100hz) or posedge(reset)) begin
+	if (reset) begin
+		initialized 	<= 0;
+		count			<= 0;
+		state			<= 0;
+		start			<= 0;
+	end
+	else begin
+		if (count < 31) begin
+			initialized <= 0;
+
+			case (state)
+				0: begin
+					i2c_data <= data;
+					start <= 1;
+					state <= 1;
+				end
+
+				1: begin
+					if (ready) begin
+						if (!ack_out) begin
+							state <= 2;
+						end
+
+						else begin
+							state <= 0;
+							start <= 0;
+						end
+					end
+				end
+				
+				2: begin	
+					count <= count + 1'b1;
+					state <= 0;
+				end
+			endcase
+		end
+
+		else begin
+			initialized <= 1;
+			if (!hdmi_tx_int) begin
+				count <= 0;
+			end
+			else begin
+				count <= count;
+			end
+		end
+	end
+end
+// always @(negedge(clk_100hz)) begin
+//     if (reset == 1'b1) begin
+//         reset_toggle <= 0;
+//     end
+//     else begin
+//         reset_toggle <= 1;
+//     end
+// end
+
+/*
+always @(posedge(clk_100hz) or posedge(reset)) begin: main_state_machine_loop
 
     if (reset == 1'b1) begin
         current_state <= STATE_BEGIN;
@@ -101,21 +163,29 @@ always @(posedge(clk_100hz)) begin: main_state_machine_loop
     else begin
             case(current_state)
                 STATE_BEGIN: begin //actually the reset state
-                    start <= 0;
-                    count <= 0;
-                    initialized <= 0;
-					current_state <= STATE_IDLE;
+                    start 			<= 0;
+                    count 			<= 0;
+                    initialized 	<= 0;
+					delay 			<= 0;
+					current_state 	<= STATE_IDLE;
                 end
 
                 STATE_IDLE: begin
-                    if (count == 31) begin
+					if (delay < 4) begin //stop it from cooking
+						delay = delay + 1;
+					end
+
+                    else if (count == 32) begin
                         initialized <= 1;
                         start <= 0;
                     end
 
-                    if (ready == 1'b1 && initialized == 1'b0) begin
+                    else if (ready == 1'b1 && initialized == 1'b0) begin
                         current_state <= STATE_WRITE;
                     end
+					else if (ready == 1'b1 && initialized == 1'b1) begin //just fucking spam the shit out of it
+						current_state <= STATE_BEGIN;
+					end
                     else begin
                         current_state <= STATE_IDLE;                    
                     end
@@ -123,16 +193,24 @@ always @(posedge(clk_100hz)) begin: main_state_machine_loop
 
                 STATE_WRITE: begin
                     start <= 1;
-                    current_state <= STATE_STOP;
+                    current_state <= STATE_CHECK;
                 end
 
-                STATE_CHECK: begin
+                STATE_CHECK: begin //buffer
                     current_state <= STATE_STOP;
                 end
 
                 STATE_STOP: begin
-                    count <= count + 1;
-                    current_state <= STATE_IDLE;
+                    start <= 0;
+					if (ready_out) begin
+						if (!ack_out) begin //no acknowledge from device
+							current_state <= STATE_IDLE;
+						end
+						else begin
+							current_state <= STATE_IDLE;
+							count <= count + 1;	
+						end
+					end
                 end
 
                 default: begin
@@ -142,12 +220,14 @@ always @(posedge(clk_100hz)) begin: main_state_machine_loop
         endcase
     end
 end
+*/
 
 always @(*)
 begin
 	case(count)
 		
 		//	Video Config Data
+		// 0	: 	data 	<= 16'h0000;   // This is the broken state. I can't fix shit
 		0	:	data	<=	16'h9803;  //Must be set to 0x03 for proper operation
 		1	:	data	<=	16'h0100;  //Set 'N' value at 6144
 		2	:	data	<=	16'h0218;  //Set 'N' value at 6144
@@ -161,7 +241,7 @@ begin
 		10	:	data	<=	16'h49A8;  //Set dither mode - 12-to-10 bit
 		11	:	data	<=	16'h5510;  //Set RGB in AVI infoframe
 		12	:	data	<=	16'h5608;  //Set active format aspect
-		13	:	data	<=	16'h96F6;  //Set interrupt
+		13	:	data	<=	16'h96F6;  //Set interrup
 		14	:	data	<=	16'h7307;  //Info frame Ch count to 8
 		15	:	data	<=	16'h761f;  //Set speaker allocation for 8 channels
 		16	:	data	<=	16'h9803;  //Must be set to 0x03 for proper operation
@@ -183,8 +263,8 @@ begin
 		default:		data	<=	16'h9803;
 	endcase
 
-	current_reg_id 	<= data[15:8];
-	current_data 	<= data[7:0];
+//	current_reg_id 	<= data[15:8];
+	// current_data 	<= data[15:0];
 	
 end
 

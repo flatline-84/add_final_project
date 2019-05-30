@@ -1,186 +1,154 @@
-//`default net_type none
-
-module i2c_master(
-	input wire clk,
-	input wire reset,
-	input wire start,
-	input wire [7:0] dev_id,
-	input wire [7:0] reg_id,
-	input wire [7:0] data,
-	inout wire i2c_sda,
-	output wire i2c_scl,
-	output wire ready,
-	output wire[7:0] states
+module i2c_master  (
+    input  				reset ,
+	input      		  	clk,
+	input      		  	start,
+	input      [15:0]   reg_data,
+	input      [7:0] 	dev_address,	
+	input            	sda_input,
+	output reg       	i2c_sda,
+	output reg       	i2c_scl,
+	output reg       	finish,
+	
+	//--for test 
+	output reg [7:0] 	state ,
+	output reg [7:0] 	count,
+	output reg [7:0] 	command_index,
+	output reg       	ack
+    // input      [7:0]    num_commands  // 4 : 4 byte 	
 );
 
-localparam STATE_IDLE = 0;
-localparam STATE_START = 1;
-localparam STATE_ADDR = 2;
-localparam STATE_RW = 3;
-localparam STATE_WACK = 4;
-localparam STATE_REG_ADDR = 5;
-localparam STATE_STOP = 6;
-localparam STATE_WACK2 = 7;
-localparam STATE_DATA = 8;
-localparam STATE_WACK3 = 9;
-localparam STATE_PRE_STOP = 10;
+localparam STATE_INIT       = 0;
+localparam STATE_START_1    = 1; //do start bit
+localparam STATE_START_2    = 2; //start lull (i.e SDA low)
+localparam STATE_DATA_1     = 3;
+localparam STATE_DATA_2     = 4; //scl low
+localparam STATE_WRITE_LOOP = 5;
+localparam STATE_STOP_1     = 6;
+localparam STATE_STOP_2     = 7;
+localparam STATE_STOP_3     = 8;
+localparam STATE_FIN        = 9;
+localparam STATE_START_LATCH= 10;
+localparam STATE_START_BOOT = 11;
 
-reg [7:0] state = STATE_IDLE;
-reg [7:0] count;
+reg   [8:0] current_data;
+reg   [1:0] num_commands = 2; //maybe 3?
 
-assign states = state;
+always @( posedge(reset) or posedge(clk) )begin
+    if (reset) begin
+        state <= STATE_INIT;
+    end
 
-reg [7:0] saved_dev_id;
-reg [7:0] saved_reg_id;
-reg [7:0] saved_data;
+    else begin
+        case (state)
+            STATE_INIT: begin  // INITIALIZE	      
+                i2c_sda         <= 1; 
+                i2c_scl         <= 1;
+                ack             <= 0;
+                count           <= 0;
+                finish          <= 1;
+                command_index   <= 0;
 
-reg i2c_scl_enable = 0;
-reg i2c_sda_val = 0;
-reg ack_check = 0;
+                if (start) begin
+                    state  <= STATE_START_LATCH; // inital                
+                end 
+            end
 
-assign i2c_sda = i2c_sda_val; //PERFORM ACK HERE
+            // START BIT
+            STATE_START_1: begin  //start 
+                state <= STATE_START_2; 
+                { i2c_sda,  i2c_scl } <= 2'b01; 
+                current_data <= {dev_address ,1'b1 }; //add write command to address
+            end
 
-// assign i2c_sda = ack_check ? 1'bz : i2c_sda_val; //PERFORM ACK HERE
-assign i2c_scl = (i2c_scl_enable == 0) ? 1 : ~clk;
-assign ready = ((reset == 0) && (state == STATE_IDLE)) ? 1 : 0;
+            //START LULL
+            STATE_START_2: begin  //start 
+                state <= STATE_DATA_1; 
+                { i2c_sda,  i2c_scl } <= 2'b00; 
+            end
+        
+            //DATA?
+            STATE_DATA_1: begin  
+                state <= STATE_DATA_2; 
+                { i2c_sda, current_data } <= { current_data, 1'b0 }; 
+            end
 
-// SCL Logic
-always @(negedge(clk)) begin
-	if (reset == 1'b1) begin
-		i2c_scl_enable <= 0;
-	end
-	
-	else begin
-		if((state == STATE_IDLE) || (state == STATE_START) || (state == STATE_STOP) ) begin // || (state == STATE_PRE_STOP)) begin
-			i2c_scl_enable <= 0;
-		end
-		else begin
-			i2c_scl_enable <= 1;
-		end
-	end
-end
+            STATE_DATA_2: begin  
+                state <= STATE_WRITE_LOOP; 
+                i2c_scl <= 1'b1; 
+                count <= count + 1'b1;
+            end
+        
+            STATE_WRITE_LOOP: begin  
+                i2c_scl <= 1'b0 ; 
 
-// SDA Logic
-always @(posedge(clk)) begin
-	
-	if (reset == 1'b1) begin
-		state <= STATE_IDLE;
-		i2c_sda_val <= 1;
-		ack_check <= 0;
-//		i2c_scl <= 1;
+                if (count==9) begin
 
-		// dev_id <= 7'h50;
-		count <= 8'd7;
-		// data <= 8'haa; //test send aa?
-	end
+                    if ( command_index == num_commands )  begin 
+                        state <= STATE_STOP_1;
+                    end
+                    
+                    else  begin 
+                        count <= 0; 
+                        state <= 2 ;
+                        if (command_index == 0) begin 
+                            command_index <= 1; 
+                            current_data <= {reg_data[15:8] ,1'b1 }; 
+                        end 
+                        else if ( command_index ==1 ) begin 
+                            command_index <= 2; 
+                            current_data <= {reg_data[7:0] ,1'b1 }; 
+                        end 
+                    end
 
-	else begin
-		case (state)
+                    if (sda_input) begin
+                        ack <= 1;
+                    end 
+                end
 
-			STATE_IDLE: begin
-				i2c_sda_val <= 1;
-				if ((start == 1'b1)) begin
-					state <= STATE_START;
-					saved_dev_id <= dev_id;
-					saved_reg_id <= reg_id;
-					saved_data <= data;
-				end
-				else state <= STATE_IDLE;
-			end
+                else begin
+                    state <= STATE_START_2;
+                end
+            end
 
-			STATE_START: begin
-				i2c_sda_val <= 0;
-				state <= STATE_ADDR;
-				count <= 8'd7;
-			end
+            /* STOP BITS */
+            STATE_STOP_1: begin          //stop
+                state <= STATE_STOP_2; 
+                { i2c_sda,  i2c_scl } <= 2'b00; 
+            end
 
-			STATE_ADDR: begin
-				i2c_sda_val <= saved_dev_id[count];
-				
-				if (count == 0) begin
-					// state <= STATE_RW;
-					state <= STATE_WACK;
-					ack_check <= 1;
-				end
-				else count <= count - 1;
-			end
+            STATE_STOP_2: begin          //stop
+                state <= STATE_STOP_3; 
+                { i2c_sda,  i2c_scl } <= 2'b01; 
+            end
 
-			STATE_RW: begin
-				i2c_sda_val = 1;
-				ack_check <= 1;				
-				state <= STATE_WACK;
-			end
+            STATE_STOP_3: begin          //stop
+                state <= STATE_FIN; 
+                { i2c_sda,  i2c_scl } <= 2'b11;     
+            end 
 
-			STATE_WACK: begin //needs fixing
-				// if (i2c_sda == 1'b0) begin //slave has pulled SDA low
-					i2c_sda_val <= 1'bz;
-					state <= STATE_REG_ADDR;
-					count <= 8'd7;
-					ack_check <= 0;
-				// end
-				// else begin
-				// 	state <= STATE_PRE_STOP;
-				// end
-				
-			end
+            STATE_FIN:	begin
+                state           <= STATE_INIT; 
+                i2c_sda         <= 1; 
+                i2c_scl         <= 1;
+                count           <= 0;
+                finish          <= 1;
+                command_index   <= 0;
+            end
 
-			STATE_REG_ADDR: begin
-				i2c_sda_val <= saved_reg_id[count];
-				if (count == 0) begin
-					state <= STATE_WACK2;	
-					ack_check <= 1;
-				end 
-				else count <= count - 1;
-			end
+            //--- END ---
+            STATE_START_LATCH: begin
+                if (!start) begin //START IS A TRIGGER
+                    state  <= STATE_START_BOOT;
+                end
+            end		
 
-			STATE_WACK2: begin
-				// if (i2c_sda == 1'b0) begin //slave has pulled SDA low
-					i2c_sda_val <= 1'bz;
-					state <= STATE_DATA;
-					count <= 8'd7;
-					ack_check <= 0;
-				// end
-				// else begin
-				// 	state <= STATE_PRE_STOP;
-				// end
-			end
-
-			STATE_DATA: begin
-				i2c_sda_val <= saved_data[count];
-				if (count == 0) begin
-					state <= STATE_WACK3;
-					ack_check <= 1; //unnecessary
-				end
-				else count <= count - 1;
-			end
-
-			STATE_WACK3: begin
-				state <= STATE_PRE_STOP;
-//				state <= STATE_STOP;
-				// i2c_sda_val <= 1'bz;
-				i2c_sda_val <= 1'bz;
-
-				ack_check <= 0;
-			end
-
-			STATE_PRE_STOP: begin
-				state <= STATE_STOP;
-				i2c_sda_val <= 0;
-			end
-
-			STATE_STOP: begin
-				i2c_sda_val <= 1;
-				state <= STATE_IDLE;
-			end
-
-			default: begin
-				i2c_sda_val <= 1;
-//				i2c_scl <= 1;
-				state <= STATE_START;
-			end
-		endcase
-	end
-	
+            STATE_START_BOOT: begin  //
+                finish <= 0;
+                ack <= 0;
+                state <= 1;	
+            end	
+        endcase 
+    end
 end
 
 endmodule

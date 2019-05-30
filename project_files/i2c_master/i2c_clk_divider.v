@@ -6,7 +6,7 @@ module i2c_clk_divider(
 
 parameter DELAY = 500; // CHANGE THIS FOR 100kHz from 50MHz
 
-reg [8:0] count = 0; //can go to 512 MAX
+reg [12:0] count = 0; //can go to 512 MAX
 
 always @(posedge(ref_clk)) begin
     if (reset == 1'b1) begin

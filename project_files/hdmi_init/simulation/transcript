@@ -1,105 +1,30 @@
 # Loading project hdmi_init_sim
-# Compile of hdmi_init.v was successful.
-# Compile of sr_latch.v was successful.
+project open {/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/simulations/i2c_master}
+# reading /data/Programs/Quartus/modelsim_ase/linuxaloem/../modelsim.ini
+# reading modelsim.ini
+# Loading project i2c_master
+# Compile of i2c_master.v was successful.
 # Compile of i2c_clk_divider.v was successful.
 # Compile of i2c_controller.v was successful.
-# Compile of i2c_master.v was successful.
-# 5 compiles, 0 failed with no errors.
-vsim work.hdmi_init
-# vsim work.hdmi_init 
-# Start time: 18:56:53 on May 29,2019
-# Loading work.hdmi_init
-# Loading work.i2c_clk_divider
+# 3 compiles, 0 failed with no errors.
+vsim work.i2c_controller
+# vsim work.i2c_controller 
+# Start time: 16:03:20 on May 30,2019
 # Loading work.i2c_controller
+# Loading work.i2c_clk_divider
 # Loading work.i2c_master
-# Loading work.sr_latch
+# ** Warning: (vsim-3017) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_controller.v(34): [TFMPC] - Too few port connections. Expected 13, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /i2c_controller/master File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_master.v
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_controller.v(34): [TFMPC] - Missing connection for port 'count'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_controller.v(34): [TFMPC] - Missing connection for port 'command_index'.
 # WARNING: No extended dataflow license exists
-source hdmi_init.tcl
+source i2c_controller.tcl
 runSim
+# ** Warning: (vsim-3017) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_controller.v(34): [TFMPC] - Too few port connections. Expected 13, found 11.
+#    Time: 0 ps  Iteration: 0  Instance: /i2c_controller/master File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_master.v
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_controller.v(34): [TFMPC] - Missing connection for port 'count'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_controller.v(34): [TFMPC] - Missing connection for port 'command_index'.
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # .main_pane.wave.interior.cs.body.pw.wf
-# Compile of hdmi_init.v was successful.
-# Compile of sr_latch.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# Compile of i2c_master.v was successful.
-# 5 compiles, 0 failed with no errors.
-source hdmi_init.tcl
-runSim
-# Loading work.hdmi_init
-# Loading work.i2c_clk_divider
-# Loading work.i2c_controller
-# Loading work.i2c_master
-# Loading work.sr_latch
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of hdmi_init.v was successful.
-# Compile of sr_latch.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# Compile of i2c_master.v was successful.
-# 5 compiles, 0 failed with no errors.
-runSim
-# Loading work.hdmi_init
-# Loading work.i2c_clk_divider
-# Loading work.i2c_controller
-# Loading work.i2c_master
-# Loading work.sr_latch
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of hdmi_init.v was successful.
-# Compile of sr_latch.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# Compile of i2c_master.v was successful.
-# 5 compiles, 0 failed with no errors.
-runSim
-# Loading work.hdmi_init
-# Loading work.i2c_clk_divider
-# Loading work.i2c_controller
-# Loading work.i2c_master
-# Loading work.sr_latch
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of hdmi_init.v was successful.
-# Compile of sr_latch.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# Compile of i2c_master.v was successful.
-# 5 compiles, 0 failed with no errors.
-runSim
-# Loading work.hdmi_init
-# Loading work.i2c_clk_divider
-# Loading work.i2c_controller
-# Loading work.i2c_master
-# Loading work.sr_latch
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of hdmi_init.v was successful.
-# Compile of sr_latch.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# Compile of i2c_master.v was successful.
-# 5 compiles, 0 failed with no errors.
-runSim
-# Loading work.hdmi_init
-# Loading work.i2c_clk_divider
-# Loading work.i2c_controller
-# Loading work.i2c_master
-# Loading work.sr_latch
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
-# Compile of hdmi_init.v was successful.
-# Compile of sr_latch.v was successful.
-# Compile of i2c_clk_divider.v was successful.
-# Compile of i2c_controller.v was successful.
-# Compile of i2c_master.v was successful.
-# 5 compiles, 0 failed with no errors.
-runSim
-# Loading work.hdmi_init
-# Loading work.i2c_clk_divider
-# Loading work.i2c_controller
-# Loading work.i2c_master
-# Loading work.sr_latch
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
+# End time: 16:04:28 on May 30,2019, Elapsed time: 0:01:08
+# Errors: 0, Warnings: 8
