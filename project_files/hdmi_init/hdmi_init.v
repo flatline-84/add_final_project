@@ -1,6 +1,7 @@
 module hdmi_init (
     input wire select,      //KEY0 -> AH17
 	input wire reset_toggle, //KEY1 -> AH16
+	input wire reset_not,
     input wire clk_ref,     //50MHz -> V11
 	input wire hdmi_tx_int, //PIN_AF11
 	output wire[3:0] state_out,
@@ -42,7 +43,7 @@ reg initialized             = 0;
 reg [5:0] count             = 0;
 reg [15:0] data             = 8'h00;
 reg [2:0] delay				= 0;
-reg [15:0] i2c_data			= 0;
+//reg [15:0] i2c_data			= 0;
 
 reg i2c_sda_wire;
 reg i2c_scl_wire;
@@ -64,14 +65,15 @@ assign clk_100hz_out = clk_100hz;
 
 reg [7:0] current_dev_id    = 8'h72;
 // reg [7:0] current_reg_id    = 8'h00;
-reg [15:0] current_data      = 8'h00;
+//reg [15:0] current_data      = 8'h00;
 
 reg start = 0;
 wire ready;
 assign ready_out = ready;
 
 i2c_clk_divider 
-#(.DELAY(2500))
+#(.DELAY(5000))
+// #(.DELAY(250)) //for sim
 clk_divider
 (
 	.reset(reset),
@@ -159,9 +161,9 @@ end*/
 // end
 
 
-always @(posedge(clk_100hz) or posedge(reset)) begin: main_state_machine_loop
+always @(posedge(clk_100hz) or posedge(reset) or negedge(reset_not)) begin: main_state_machine_loop
 
-    if (reset == 1'b1) begin
+    if (reset == 1'b1 || reset_not == 1'b0) begin
         state <= STATE_BEGIN;
     end
 
@@ -180,17 +182,24 @@ always @(posedge(clk_100hz) or posedge(reset)) begin: main_state_machine_loop
 						delay = delay + 1;
 					end
 
-                    else if (count == 31) begin
-                        initialized <= 1;
-                        start <= 0;
-                    end
-
-                    else if (ready == 1'b1 && initialized == 1'b0) begin
-                        state <= STATE_WRITE;
-                    end
-					else if (ready == 1'b1 && initialized == 1'b1) begin //just fucking spam the shit out of it
+					else if (initialized) begin
 						state <= STATE_BEGIN;
 					end
+
+                    else if (count == 31 && initialized == 1'b0) begin
+                        initialized <= 1;
+                        start <= 0;
+
+                    end
+
+                    else if (ready == 1'b1) begin// && initialized == 1'b0) begin
+                        state <= STATE_WRITE;
+                    end
+					
+					// else if (ready == 1'b1 && initialized == 1'b1) begin //just fucking spam the shit out of it
+					// 	state <= STATE_WRITE;
+					// end
+					
                     else begin
                         state <= STATE_IDLE;                    
                     end
@@ -207,15 +216,28 @@ always @(posedge(clk_100hz) or posedge(reset)) begin: main_state_machine_loop
 
                 STATE_STOP: begin
                     start <= 0;
+					/*if (initialized && ready_out) begin
+						state <= STATE_IDLE;
+					end*/
 					if (ready_out) begin
 						// if (!ack_out) begin //no acknowledge from device
-							// state <= STATE_IDLE;
+							// state <= STATE_BEGIN;
 						// end
 						// else begin
+							if (!initialized) begin
+								delay <= 0;
+								count <= count + 1;	
+							end
 							state <= STATE_IDLE;
-							count <= count + 1;	
+						// end
+						// else begin
+							// state <= STATE_IDLE;
 						// end
 					end
+
+					// else begin
+					// 	state <= STATE_IDLE;
+					// end
                 end
 
                 default: begin

@@ -7,7 +7,7 @@
 # 5 compiles, 0 failed with no errors.
 vsim work.hdmi_init
 # vsim work.hdmi_init 
-# Start time: 12:57:06 on May 31,2019
+# Start time: 15:34:29 on May 31,2019
 # Loading work.hdmi_init
 # Loading work.i2c_clk_divider
 # Loading work.i2c_controller
@@ -44,10 +44,5 @@ runSim
 # ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_controller.v(34): [TFMPC] - Missing connection for port 'command_index'.
 # ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
 # .main_pane.wave.interior.cs.body.pw.wf
-runSim
-# ** Warning: (vsim-3017) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_controller.v(34): [TFMPC] - Too few port connections. Expected 13, found 11.
-#    Time: 0 ns  Iteration: 0  Instance: /hdmi_init/i2c/master File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_master.v
-# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_controller.v(34): [TFMPC] - Missing connection for port 'count'.
-# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_controller.v(34): [TFMPC] - Missing connection for port 'command_index'.
-# ** Warning: (vsim-3116) Problem reading symbols from linux-gate.so.1 : can not open ELF file.
-# .main_pane.wave.interior.cs.body.pw.wf
+# End time: 16:35:40 on May 31,2019, Elapsed time: 1:01:11
+# Errors: 0, Warnings: 12

@@ -100,7 +100,7 @@ always @( posedge(reset) or posedge(clk) )begin
                         end 
                     end
 
-                    if (sda_input) begin
+                    if (sda_input == 1'b0) begin
                         ack <= 1;
                     end 
                 end
