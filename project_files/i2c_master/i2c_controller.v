@@ -21,18 +21,18 @@ wire i2c_sda_wire;
 assign i2c_sda = i2c_sda_wire ? 1'bz : 1'b0;
 
 //100KHz (clk divider automatically splits)
-i2c_clk_divider 
-#(.DELAY(2000)) 
-// #(.DELAY(2)) // Uncomment when running sim and comment above
-clk_divider
-(
-    .reset(reset),
-    .ref_clk(clk_in),
-    .i2c_clk(clk_100hz)
-);
+// i2c_clk_divider 
+// #(.DELAY(2500)) 
+// // #(.DELAY(2)) // Uncomment when running sim and comment above
+// clk_divider
+// (
+//     .reset(reset),
+//     .ref_clk(clk_in),
+//     .i2c_clk(clk_100hz)
+// );
 
 i2c_master master (
-    .clk(clk_100hz),
+    .clk(clk_in),
     .reset(reset),
     .start(start),
     .dev_address(dev_addr),
