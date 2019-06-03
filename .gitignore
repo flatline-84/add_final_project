@@ -1,0 +1,4 @@
+project_files/*/db/
+project_files/*/incremental_db/
+project_files/*/output_files/
+.vscode/

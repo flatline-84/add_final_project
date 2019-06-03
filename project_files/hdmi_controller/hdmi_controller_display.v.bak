@@ -98,10 +98,6 @@ always @(posedge(clock74) or posedge(reset)) begin
 
 end
 
-always @(posedge(clock50)) begin
-	v_clk <= ~v_clk;
-end
-
 //after front porch but before back porch
 // so front porch + sync width
 assign hsync = (res_h >= 1390) && (res_h < 1430);

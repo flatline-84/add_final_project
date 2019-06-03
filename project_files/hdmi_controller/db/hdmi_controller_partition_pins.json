@@ -12,11 +12,31 @@
 					"strict" : false
 				},
 				{
+					"name" : "v_clk",
+					"strict" : false
+				},
+				{
 					"name" : "data_enable",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "i2c_scl",
+					"strict" : false
+				},
+				{
+					"name" : "i2c_sda",
+					"strict" : false
+				},
+				{
+					"name" : "clock50",
+					"strict" : false
+				},
+				{
+					"name" : "select",
+					"strict" : false
+				},
+				{
+					"name" : "reset_toggle",
 					"strict" : false
 				}
 			]
