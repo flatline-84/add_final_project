@@ -1,8 +1,0 @@
-
-State Machine - |hdmi_init|state
-Name state.STATE_STOP state.STATE_CHECK state.STATE_WRITE state.STATE_IDLE state.STATE_BEGIN 
-state.STATE_BEGIN 0 0 0 0 0 
-state.STATE_IDLE 0 0 0 1 1 
-state.STATE_WRITE 0 0 1 0 1 
-state.STATE_CHECK 0 1 0 0 1 
-state.STATE_STOP 1 0 0 0 1 

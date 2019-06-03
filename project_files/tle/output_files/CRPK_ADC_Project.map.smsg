@@ -1,2 +1,0 @@
-Warning (10268): Verilog HDL information at i2c_master.v(68): always construct contains both blocking and non-blocking assignments File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master.v Line: 68
-Warning (10268): Verilog HDL information at i2c_master.v(74): always construct contains both blocking and non-blocking assignments File: /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master.v Line: 74
