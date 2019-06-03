@@ -1,0 +1,65 @@
+// Peter
+// https://warmcat.com/2015/10/21/hdmi-capture-and-analysis-fpga-project-2.html
+// https://timetoexplore.net/blog/video-timings-vga-720p-1080p
+
+module hdmi_controller (
+
+    input clock50,
+    input reset,
+
+    // Output wires
+    output reg hsync, //horizontal sync
+    output reg vsync, //vertical sync
+    output reg v_clk, //clock for video -> 148.5MHz for 1920x1080@60Hz
+                                            // 25MHz -> 640x480@60P
+    output reg data_enable, //activate HDMI controller
+    output wire [23:0] rgb_data //Video data bus
+);
+
+reg [10:0] res_h_limit = 640;
+reg [10:0] res_v_limit = 480;
+
+reg [10:0] res_h = 0;
+reg [10:0] res_v = 0;
+
+// Enabling Data for when we're actually transmitting stuff
+always @(posedge(clock50) or posedge(reset)) begin
+    if (reset) begin
+        data_enable <= 0;
+    end
+
+    else begin
+        //Means we're transmitting data to HDMI
+        if (res_v >= 0 && res_v < res_v_limit && res_h >= 0 && res_h < res_h_limit) begin
+            data_enable <= 1;
+        end
+
+        // No es bueno signal mama mia linguini per favore
+        else begin
+            data_enable <= 0;
+        end
+    end
+
+end 
+
+// HSync and VSync scanning
+//Should be slower clock -> 25MHz?
+always @(posedge(clock50) or posedge(reset)) begin
+    // Handle reset
+    if (reset) begin
+        hsync <= 1;
+        vsync <= 1;
+        res_h <= 0;
+        res_v <= 0;
+    end
+
+    // Do everything else (don't really need state machine but we'll see)
+    else begin
+        
+    end
+
+end
+
+
+
+endmodule

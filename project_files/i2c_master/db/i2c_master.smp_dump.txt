@@ -1,0 +1,14 @@
+
+State Machine - |i2c_controller|i2c_master:master|state
+Name state.STATE_PRE_STOP state.STATE_WACK3 state.STATE_DATA state.STATE_WACK2 state.STATE_STOP state.STATE_REG_ADDR state.STATE_WACK state.STATE_RW state.STATE_ADDR state.STATE_START state.STATE_IDLE 
+state.STATE_IDLE 0 0 0 0 0 0 0 0 0 0 0 
+state.STATE_START 0 0 0 0 0 0 0 0 0 1 1 
+state.STATE_ADDR 0 0 0 0 0 0 0 0 1 0 1 
+state.STATE_RW 0 0 0 0 0 0 0 1 0 0 1 
+state.STATE_WACK 0 0 0 0 0 0 1 0 0 0 1 
+state.STATE_REG_ADDR 0 0 0 0 0 1 0 0 0 0 1 
+state.STATE_STOP 0 0 0 0 1 0 0 0 0 0 1 
+state.STATE_WACK2 0 0 0 1 0 0 0 0 0 0 1 
+state.STATE_DATA 0 0 1 0 0 0 0 0 0 0 1 
+state.STATE_WACK3 0 1 0 0 0 0 0 0 0 0 1 
+state.STATE_PRE_STOP 1 0 0 0 0 0 0 0 0 0 1 

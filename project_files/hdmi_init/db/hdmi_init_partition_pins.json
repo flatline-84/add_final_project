@@ -1,0 +1,89 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "state_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "state_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "state_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "state_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_100hz_out",
+					"strict" : false
+				},
+				{
+					"name" : "ready_out",
+					"strict" : false
+				},
+				{
+					"name" : "reset_out",
+					"strict" : false
+				},
+				{
+					"name" : "i2c_states[0]",
+					"strict" : false
+				},
+				{
+					"name" : "i2c_states[1]",
+					"strict" : false
+				},
+				{
+					"name" : "i2c_states[2]",
+					"strict" : false
+				},
+				{
+					"name" : "i2c_states[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ack_out",
+					"strict" : false
+				},
+				{
+					"name" : "i2c_scl",
+					"strict" : false
+				},
+				{
+					"name" : "i2c_sda_test",
+					"strict" : false
+				},
+				{
+					"name" : "i2c_scl_test",
+					"strict" : false
+				},
+				{
+					"name" : "i2c_sda",
+					"strict" : false
+				},
+				{
+					"name" : "reset_not",
+					"strict" : false
+				},
+				{
+					"name" : "clk_ref",
+					"strict" : false
+				},
+				{
+					"name" : "select",
+					"strict" : false
+				},
+				{
+					"name" : "reset_toggle",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

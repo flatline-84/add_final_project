@@ -1,0 +1,145 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "states[0]",
+					"strict" : false
+				},
+				{
+					"name" : "states[1]",
+					"strict" : false
+				},
+				{
+					"name" : "states[2]",
+					"strict" : false
+				},
+				{
+					"name" : "states[3]",
+					"strict" : false
+				},
+				{
+					"name" : "i2c_scl",
+					"strict" : false
+				},
+				{
+					"name" : "ready_out",
+					"strict" : false
+				},
+				{
+					"name" : "i2c_sda",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk_in",
+					"strict" : false
+				},
+				{
+					"name" : "dev_addr[7]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_data[15]",
+					"strict" : false
+				},
+				{
+					"name" : "dev_addr[6]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_data[14]",
+					"strict" : false
+				},
+				{
+					"name" : "dev_addr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_data[13]",
+					"strict" : false
+				},
+				{
+					"name" : "dev_addr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_data[12]",
+					"strict" : false
+				},
+				{
+					"name" : "dev_addr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "dev_addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "dev_addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "dev_addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "reg_data[8]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
