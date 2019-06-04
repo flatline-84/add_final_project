@@ -410,7 +410,7 @@ proc runSim {} {
     force -freeze spi_sdo 1 
     run 250ns
     force -freeze spi_sdo 0
-    run 250ms
+    run 250ns
 
 
     # force -freeze reset_n 1

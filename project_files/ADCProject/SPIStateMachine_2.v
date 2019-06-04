@@ -71,10 +71,10 @@ module SPIStateMachine_2
 	reg [4:0] currentState = STATE_IDLE;
 	reg [4:0] nextState = STATE_IDLE;
 //b100010zzzzzz zzzzzz010001    100010
-	reg [11:0] saved_addr   = 12'bzzzzz100010;  //Make this 6 bits and read a 12 counter for SPI
-	reg [11:0] saved_addr_1 = 12'bzzzzz100110;  //Make this 6 bits and read a 12 counter for SPI
-	reg [11:0] saved_addr_2 = 12'bzzzzz110010;  //Make this 6 bits and read a 12 counter for SPI
-	reg [11:0] saved_addr_3 = 12'bzzzzz110110;  //Make this 6 bits and read a 12 counter for SPI
+	reg [11:0] saved_addr   = 12'bzzzzz100010;  //bzzzzz100010  Make this 6 bits and read a 12 counter for SPI
+	reg [11:0] saved_addr_1 = 12'bzzzzz110010;  //bzzzzz110010  Make this 6 bits and read a 12 counter for SPI
+	reg [11:0] saved_addr_2 = 12'bzzzzz100110;  //bzzzzz100110  Make this 6 bits and read a 12 counter for SPI
+	reg [11:0] saved_addr_3 = 12'bzzzzz110110;  //bzzzzz110110  Make this 6 bits and read a 12 counter for SPI
    reg [11:0] saved_data;
 	reg [11:0] saved_data_1;
 	reg [11:0] saved_data_2;
