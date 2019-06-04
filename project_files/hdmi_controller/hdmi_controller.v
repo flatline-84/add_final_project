@@ -37,6 +37,8 @@ module hdmi_controller (
 		AF9
 		AE8
 	*/
+	output wire led_reset,		// LED4 -> AF26
+	output wire led_ack,		// LED7 -> AA23
 	
 	output wire i2c_scl,      // U10 (HDMI_SCL)
 	inout wire i2c_sda        // AA4 (HDMI_SDA)
@@ -52,9 +54,12 @@ sr_latch sr_latch_n(
 	.Qn(reset_n)
 );
 
+assign led_reset = reset;
+
 hdmi_init hdmit_init_mod (
 	.reset_not(reset_n),
 	.clk_ref(clock50),
+	.ready_out(led_ack),
 	.hdmi_tx_int(hdmi_tx_int),
 	.i2c_sda(i2c_sda),
 	.i2c_scl(i2c_scl)

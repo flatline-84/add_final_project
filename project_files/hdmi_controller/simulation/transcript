@@ -1,0 +1,5 @@
+# Compile of hdmi_controller.v was successful.
+# Compile of hdmi_controller_display.v was successful.
+# Compile of pll.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui -l /dev/null work.hdmi_controller_display

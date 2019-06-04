@@ -65,7 +65,7 @@ module hdmi_controller_display (
 wire locked;
 wire clock74;
 
-pll ( //74.25MHz for 720p
+pll pll74 ( //74.25MHz for 720p
 		.refclk(clock50),   //  refclk.clk
 		.rst(reset),      //   reset.reset
 		.outclk_0(clock74), // outclk0.clk
@@ -78,8 +78,8 @@ reg [10:0] res_v_limit = 749;  //with porches: 750  ||  720 without
 // reg [
 
 // Variables
-reg [10:0] res_h = 0;
-reg [10:0] res_v = 0;
+reg [10:0] res_h = 0; //2048 limit
+reg [10:0] res_v = 0; //2048 limit
 
 always @(posedge(clock74) or posedge(reset)) begin
     
@@ -98,15 +98,15 @@ always @(posedge(clock74) or posedge(reset)) begin
 
 end
 
-always @(posedge(clock50)) begin
-	v_clk <= ~v_clk;
-end
+// always @(posedge(clock50)) begin
+// 	v_clk <= ~v_clk;
+// end
 
 //after front porch but before back porch
 // so front porch + sync width
-assign hsync = (res_h >= 1390) && (res_h < 1430);
-assign vsync = (res_v >= 725) && (res_v < 730);
-assign data_enable = (res_h < 1280) && (res_v < 720); //our valid data area
+assign hsync = (res_h >= 1389) && (res_h < 1440); // from data + front porch -> sync width -> back porch
+assign vsync = (res_v >= 724) && (res_v < 730);
+assign data_enable = (res_h <= 1279) && (res_v <= 719); //our valid data area
 
 // always @(posedge(reset)) begin
 //     // Handle reset
@@ -115,7 +115,7 @@ assign data_enable = (res_h < 1280) && (res_v < 720); //our valid data area
 
 assign rgb_data[23:16] = 8'd255; // RED channel
 assign rgb_data[15:8] = 8'd100; // BLUE channel
-assign rgb_data[7:0] = 8'd050; // RED channel
+assign rgb_data[7:0] = 8'd050; // GREEN channel
 
 
 
