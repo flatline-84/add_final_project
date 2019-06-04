@@ -55,8 +55,8 @@ assign i2c_sda_test = i2c_sda;
 //assign i2c_scl              = i2c_scl_wire;
 
 // reg reset_toggle            = 1;
-wire reset;
-wire reset_n;
+wire reset = ~reset_not;
+// wire reset_n;
 
 assign reset_out = reset;
 
@@ -94,12 +94,12 @@ i2c_controller i2c(
 	.ready_out(ready)
 );
 
-sr_latch sr_latch_n(
-	.S_n(select),
-	.R_n(reset_toggle),
-	.Q(reset),
-	.Qn(reset_n)
-);
+// sr_latch sr_latch_n(
+// 	.S_n(select),
+// 	.R_n(reset_toggle),
+// 	.Q(reset),
+// 	.Qn(reset_n)
+// );
 
 /*
 always @(posedge(clk_100hz) or posedge(reset)) begin
@@ -161,9 +161,9 @@ end*/
 // end
 
 
-always @(posedge(clk_100hz) or posedge(reset) or negedge(reset_not)) begin: main_state_machine_loop
+always @(posedge(clk_100hz) or negedge(reset_not)) begin: main_state_machine_loop
 
-    if (reset == 1'b1 || reset_not == 1'b0) begin
+    if (reset_not == 1'b0) begin
         state <= STATE_BEGIN;
     end
 

@@ -75,26 +75,31 @@ pll pll74 ( //74.25MHz for 720p
 assign v_clk = clock74;
 
 // Constants
-reg [10:0] res_h_limit = 1649; //with porches: 1650 || 1280 without
-reg [10:0] res_v_limit = 749;  //with porches: 750  ||  720 without
+reg [10:0] res_h_limit = 1650; //with porches: 1650 || 1280 without
+reg [10:0] res_v_limit = 750;  //with porches: 750  ||  720 without
 // reg [
 
 // Variables
-reg [10:0] res_h = 0; //2048 limit
-reg [10:0] res_v = 0; //2048 limit
+reg [10:0] res_h = 1; //2048 limit
+reg [10:0] res_v = 1; //2048 limit
+
+reg [10:0] de_h_min = 370;
+reg [10:0] de_h_max = 1540;
+reg [10:0] de_v_min = 25;
+reg [10:0] de_v_max = 745;
 
 always @(posedge(clock74) or posedge(reset)) begin
     
 	if (reset) begin
-        res_h <= 0;
-        res_v <= 0;
+        res_h <= 1;
+        res_v <= 1;
     end
 
     else begin
-        res_h <= (res_h == res_h_limit) ? 0 : res_h + 1;
+        res_h <= (res_h == res_h_limit) ? 1 : res_h + 1;
 
         if (res_h == res_h_limit) begin
-            res_v <= (res_v==res_v_limit) ? 0 : res_v + 1;
+            res_v <= (res_v==res_v_limit) ? 1: res_v + 1;
         end
     end
 
@@ -106,9 +111,9 @@ end
 
 //after front porch but before back porch
 // so front porch + sync width
-assign hsync = (res_h >= 1389) && (res_h < 1440); // from data + front porch -> sync width -> back porch
-assign vsync = (res_v >= 724) && (res_v < 730);
-assign data_enable = (res_h <= 1279) && (res_v <= 719); //our valid data area
+assign hsync = (res_h >= 110) && (res_h <= 150); // from data + front porch -> sync width -> back porch
+assign vsync = (res_v >= 0) && (res_v < 5);
+assign data_enable = (res_h >= de_h_min) && (res_h <= de_h_max) && (res_v >= de_v_min) && (res_v <= de_v_max); //our valid data area
 
 // always @(posedge(reset)) begin
 //     // Handle reset
@@ -116,8 +121,8 @@ assign data_enable = (res_h <= 1279) && (res_v <= 719); //our valid data area
 // end
 
 assign rgb_data[23:16] = 8'd255; // RED channel
-assign rgb_data[15:8] = 8'd100; // BLUE channel
-assign rgb_data[7:0] = 8'd050; // GREEN channel
+assign rgb_data[15:8] = 8'd100; // GREEN channel
+assign rgb_data[7:0] = 8'd050; // BLUE channel
 
 
 

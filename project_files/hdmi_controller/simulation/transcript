@@ -5,7 +5,7 @@
 # 4 compiles, 0 failed with no errors.
 vsim -gui work.hdmi_controller_display -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver
 # vsim -gui work.hdmi_controller_display -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver 
-# Start time: 12:50:55 on Jun 04,2019
+# Start time: 13:21:08 on Jun 04,2019
 # Loading work.hdmi_controller_display
 # Loading work.pll
 # Loading work.pll_0002
@@ -78,5 +78,3 @@ runSim
 # Info: output_clock_high_period = 6734.693878
 # Info: output_clock_low_period = 6734.693878
 # .main_pane.wave.interior.cs.body.pw.wf
-# End time: 12:54:06 on Jun 04,2019, Elapsed time: 0:03:11
-# Errors: 0, Warnings: 43, Suppressed Warnings: 8
