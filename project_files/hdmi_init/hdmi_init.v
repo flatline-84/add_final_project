@@ -43,6 +43,7 @@ reg initialized             = 0;
 reg [5:0] count             = 0;
 reg [15:0] data             = 8'h00;
 reg [2:0] delay				= 0;
+reg [5:0] limit				= 6'd25;
 //reg [15:0] i2c_data			= 0;
 
 reg i2c_sda_wire;
@@ -72,8 +73,8 @@ wire ready;
 assign ready_out = initialized;
 
 i2c_clk_divider 
-#(.DELAY(5000))
-// #(.DELAY(250)) //for sim
+// #(.DELAY(5000))
+#(.DELAY(250)) //for sim
 clk_divider
 (
 	.reset(reset),
@@ -186,7 +187,7 @@ always @(posedge(clk_100hz) or negedge(reset_not)) begin: main_state_machine_loo
 					// 	state <= STATE_BEGIN;
 					// end
 
-                    else if (count == 31 && initialized == 1'b0) begin
+                    else if (count == limit && initialized == 1'b0) begin
                         initialized <= 1;
                         start <= 0;
 
@@ -220,16 +221,16 @@ always @(posedge(clk_100hz) or negedge(reset_not)) begin: main_state_machine_loo
 						state <= STATE_IDLE;
 					end*/
 					if (ready_out) begin
-						if (!ack_out) begin //no acknowledge from device
-							state <= STATE_BEGIN;
-						end
-						else begin
+						// if (!ack_out) begin //no acknowledge from device
+						// 	state <= STATE_BEGIN;
+						// end
+						// else begin
 							if (!initialized) begin
 								delay <= 0;
 								count <= count + 1;	
-								state <= STATE_IDLE;
 							end
-						end
+							state <= STATE_IDLE;
+						// end
 						// else begin
 							// state <= STATE_IDLE;
 						// end
@@ -246,6 +247,41 @@ always @(posedge(clk_100hz) or negedge(reset_not)) begin: main_state_machine_loo
 
         endcase
     end
+end
+
+// From spec sheet
+always @(*) begin
+	case (count)
+		0	:	data	<=	16'h0000; 
+		1	:	data	<=	16'h0100;  //Set 'N' value at 6144
+		2	:	data	<=	16'h0218;  //Set 'N' value at 6144
+		3	:	data	<=	16'h0300;  //Set 'N' value at 6144
+		4	:	data	<=	16'h1500; 
+		5	:	data	<=	16'h1661;  
+		6	:	data	<=	16'h1846;  
+		7	:	data	<=	16'h4080;  
+		8	:	data	<=	16'h4110;  
+		9	:	data	<=	16'h4848;  
+		10	:	data	<=	16'h48a8;  
+		11	:	data	<=	16'h4c06;  
+		12	:	data	<=	16'h5500;  
+		13	:	data	<=	16'h5508;  
+		14	:	data	<=	16'h9620;  
+		15	:	data	<=	16'h9803;  
+		16	:	data	<=	16'h9802;  
+		17	:	data	<=	16'h9c30;  
+		18	:	data	<=	16'h9d61;  
+		19	:	data	<=	16'ha2a4;  
+		20	:	data	<=	16'h43a4;  
+		21	:	data	<=	16'haf16;  
+		22	:	data	<=	16'hba60;  
+		23	:	data	<=	16'hde9c;  
+		24	:	data	<=	16'he460;  
+		25	:	data	<=	16'hfa7d;  
+
+		default:
+			data <= 16'hfa7d;
+	endcase
 end
 
 /*
@@ -295,7 +331,7 @@ begin
 	
 end*/
 
-
+/*
 always @(*)
 begin
 	case(count)
@@ -341,6 +377,7 @@ begin
 	// current_data 	<= data[15:0];
 	
 end
+*/
 
 
 
