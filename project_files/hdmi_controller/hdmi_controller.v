@@ -75,8 +75,20 @@ pll pll74 ( //74.25MHz for 720p
 		.locked(locked)    //  locked.export
 );
 
+wire clock60;
+
+i2c_clk_divider 
+#(.DELAY(8333333)) //close enough to 60Hz
+clk_divider_60
+(
+	.reset(reset),
+	.ref_clk(clock50),
+	.i2c_clk(clock60)
+);
+
 top_sync_vg_pattern display (
 	.clk_in(clock74),
+	.clock60(clock60),
 	.reset(reset),
 	.hsync(hsync),
 	.vsync(vsync),

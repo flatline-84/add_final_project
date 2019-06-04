@@ -22,31 +22,40 @@ module square
 reg [4:0] size = 20; //size of rect
 reg draw_wire;
 reg which_way = 0; //spooky
-reg [X_BITS-1:0] value_reg = 0;
+// reg [X_BITS-1:0] value_reg = 0;
+// wire [X_BITS-1:0] value_wire;
+// assign value_wire = value_reg;
+
+
 
 reg [Y_BITS-1:0] y2;
 
-always @(posedge(vsync)) begin
+// always @(posedge(vsync)) begin
+// //always @(*) begin
 
-    y2 = (y1 + size);
+//     y2 = (y1 + size);
 
-	if (value_reg == 0) begin
-        which_way = 1;
-    end
-    else if (value_reg == total_active_pix) begin
-        which_way = 0;
-    end
+// 	if (value_reg == 0) begin
+//         which_way = 1;
+//     end
+//     else if (value_reg == total_active_pix) begin
+//         which_way = 0;
+//     end
     
-    if (which_way) begin
-        value_reg = value_reg + 1;
-	end
+//     if (which_way) begin
+//         value_reg = value_reg + 1;
+// 	end
 
-    else begin
-        value_reg = value_reg - 1;
-    end
+//     else begin
+//         value_reg = value_reg - 1;
+//     end
 
-    draw_wire = ( (x >= 0) && (x <= value) && (y >= y1) && (y <= y2) ); //for actual value shit
-    // draw_wire = ( (x >= 0) && (x <= value_reg) && (y >= y1) && (y <= (y1+size)) );
+//     // draw_wire = ( (x >= 0) && (x <= value) && (y >= y1) && (y <= y2) ); //for actual value shit
+//     // draw_wire = ( (x >= 0) && (x <= value_reg) && (y >= y1) && (y <= (y1+size)) );
+// end
+
+always @(*) begin
+    draw_wire = ( (x >= 0) && (x <= value) && (y >= y1) && (y <= (y1 + size)) ); //for actual value shit
 end
 
 assign draw = draw_wire;

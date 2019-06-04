@@ -8,7 +8,7 @@ module pattern_vg
 )
 
 (
-    input reset, clk_in,
+    input reset, clk_in, clock60,
     input wire [X_BITS-1:0] x,
     input wire [Y_BITS-1:0] y,
     input wire vn_in, hn_in, dn_in,
@@ -20,7 +20,7 @@ module pattern_vg
     input wire [7:0] pattern,
     input wire [B+FRACTIONAL_BITS-1:0] ramp_step
 );
-    
+
 reg [B+FRACTIONAL_BITS-1:0] ramp_values; // 12-bit fractional end for ramp values
 
 reg [X_BITS-1:0] x1 = 0;
@@ -29,6 +29,21 @@ reg [Y_BITS-1:0] y1 = 120;
 reg [Y_BITS-1:0] y2 = 240;
 reg [Y_BITS-1:0] y3 = 360;
 reg [Y_BITS-1:0] y4 = 480;
+
+reg which_way = 1;
+
+// Scale correctly here
+always @(posedge(vn_in)) begin
+    if (x2 >= total_active_pix)
+        which_way <= 0;
+    else if (x2 <= 0)
+        which_way <= 1;
+    
+    if (which_way)
+        x2 <= x2 + 1;
+    else
+        x2 <= x2 - 1;
+end
 
 
 wire square_1_draw;
@@ -39,7 +54,7 @@ wire square_4_draw;
 square square_1 (
     .value(x2),
     .y1(y1),
-    .vsync(vn_in),
+    .vsync(clock60),
     .total_active_pix(total_active_pix),
     .x(x),
     .y(y),
@@ -49,7 +64,7 @@ square square_1 (
 square square_2 (
     .value(x2),
     .y1(y2),
-    .vsync(vn_in),
+    .vsync(clock60),
     .total_active_pix(total_active_pix),
     .x(x),
     .y(y),
@@ -59,7 +74,7 @@ square square_2 (
 square square_3 (
     .value(x2),
     .y1(y3),
-    .vsync(vn_in),
+    .vsync(clock60),
     .total_active_pix(total_active_pix),
     .x(x),
     .y(y),
@@ -69,7 +84,7 @@ square square_3 (
 square square_4 (
     .value(x2),
     .y1(y4),
-    .vsync(vn_in),
+    .vsync(clock60),
     .total_active_pix(total_active_pix),
     .x(x),
     .y(y),
