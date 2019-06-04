@@ -1,8 +1,13 @@
 module top_sync_vg_pattern
 (
     input wire clk_in, //74.25MHz
-    input wire clock60, //60Hz
+    // input wire clock60, //60Hz
     input wire reset,
+    input wire[11:0] channel_1,
+    input wire[11:0] channel_2,
+    input wire[11:0] channel_3,
+    input wire[11:0] channel_4,
+
     output reg hsync,          // HS output to ADV7511
     output reg vsync,          // VS output to ADV7511
     output wire v_clk,        // ADV7511: CLK
@@ -130,12 +135,16 @@ pattern_vg #(
 pattern_vg (
     .reset(reset),
     .clk_in(clk_in),
-    .clock60(clock60),
+    // .clock60(clock60),
     .x(x_out),
     .y(y_out[11:0]),
     .vn_in(vs),
     .hn_in(hs),
     .dn_in(de),
+    .channel_1(channel_1),
+    .channel_2(channel_2),
+    .channel_3(channel_3),
+    .channel_4(channel_4),
     .r_in(8'h00), // default red channel value
     .g_in(8'h00), // default green channel value
     .b_in(8'hff), // default blue channel value

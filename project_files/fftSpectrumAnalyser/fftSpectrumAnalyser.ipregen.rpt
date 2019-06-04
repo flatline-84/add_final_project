@@ -1,0 +1,153 @@
+IP Upgrade report for fftSpectrumAnalyser
+Mon May 20 10:17:05 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. IP Upgrade Summary
+  3. Successfully Upgraded IP Components
+  4. IP Upgrade Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; IP Upgrade Summary                                                         ;
++------------------------------+---------------------------------------------+
+; IP Components Upgrade Status ; Passed - Mon May 20 10:17:05 2019           ;
+; Quartus Prime Version        ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                ; fftSpectrumAnalyser                         ;
+; Top-level Entity Name        ; fftSpectrumAnalyser                         ;
+; Family                       ; Cyclone V                                   ;
++------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Successfully Upgraded IP Components                                                                                                                     ;
++-------------+----------------+---------+---------------------------------------+----------------------+---------------------------------------+---------+
+; Entity Name ; Component Name ; Version ; Original Source File                  ; Generation File Path ; New Source File                       ; Message ;
++-------------+----------------+---------+---------------------------------------+----------------------+---------------------------------------+---------+
+; fftSpectrum ; altera_fft_ii  ; 17.0    ; fftSpectrum/synthesis/fftSpectrum.qip ; fftSpectrum.qsys     ; fftSpectrum/synthesis/fftSpectrum.qip ;         ;
++-------------+----------------+---------+---------------------------------------+----------------------+---------------------------------------+---------+
+
+
++---------------------+
+; IP Upgrade Messages ;
++---------------------+
+Info (11902): Backing up file "fftSpectrum.qsys" to "fftSpectrum.BAK.qsys"
+Info (11902): Backing up file "fftSpectrum/synthesis/fftSpectrum.v" to "fftSpectrum.BAK.v"
+Info (11837): Started upgrading IP component altera_fft_ii with file "fftSpectrum.qsys"
+Info: 2019.05.20.10:16:51 Info: Starting to upgrade the IP cores in the Platform Designer system
+Info: 2019.05.20.10:16:51 Info: Finished upgrading the ip cores
+Info: 2019.05.20.10:16:58 Info: Saving generation log to C:/scratch/fftSpectrumAnalyser/fftSpectrum
+Info: 2019.05.20.10:16:58 Info: Starting: Create simulation model
+Info: 2019.05.20.10:16:58 Info: qsys-generate C:\scratch\fftSpectrumAnalyser\fftSpectrum.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=C:\scratch\fftSpectrumAnalyser\fftSpectrum\simulation --family="Cyclone V" --part=5CSEBA6U23I7DK
+Info: 2019.05.20.10:16:58 Info: Loading fftSpectrumAnalyser
+Info: 2019.05.20.10:16:58 Info: Reading input file
+Info: 2019.05.20.10:16:58 Info: Adding fft_ii_0 [altera_fft_ii 18.1]
+Info: 2019.05.20.10:16:58 Info: Parameterizing module fft_ii_0
+Info: 2019.05.20.10:16:58 Info: Building connections
+Info: 2019.05.20.10:16:58 Info: Parameterizing connections
+Info: 2019.05.20.10:16:58 Info: Validating
+Info: 2019.05.20.10:16:58 Info: Done reading input file
+Info: 2019.05.20.10:16:58 Info: fftSpectrum.fft_ii_0: Radix-2 digit reverse implied
+Info: 2019.05.20.10:16:59 Info: fftSpectrum: Generating fftSpectrum "fftSpectrum" for SIM_VERILOG
+Info: 2019.05.20.10:16:59 Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twr1.hex
+Info: 2019.05.20.10:16:59 Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twi2.hex
+Info: 2019.05.20.10:16:59 Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twr2.hex
+Info: 2019.05.20.10:16:59 Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twi3.hex
+Info: 2019.05.20.10:16:59 Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twi4.hex
+Info: 2019.05.20.10:16:59 Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twr3.hex
+Info: 2019.05.20.10:16:59 Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twi1.hex
+Info: 2019.05.20.10:16:59 Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twr4.hex
+Info: 2019.05.20.10:17:00 Info: fft_ii_0: "fftSpectrum" instantiated altera_fft_ii "fft_ii_0"
+Info: 2019.05.20.10:17:00 Info: fftSpectrum: Done "fftSpectrum" with 2 modules, 138 files
+Info: 2019.05.20.10:17:00 Info: qsys-generate succeeded.
+Info: 2019.05.20.10:17:00 Info: Finished: Create simulation model
+Info: 2019.05.20.10:17:00 Info: Starting: Create Modelsim Project.
+Info: 2019.05.20.10:17:00 Info: sim-script-gen --spd=C:\scratch\fftSpectrumAnalyser\fftSpectrum\fftSpectrum.spd --output-directory=C:/scratch/fftSpectrumAnalyser/fftSpectrum/simulation
+Info: 2019.05.20.10:17:00 Info: Doing: ip-make-simscript --spd=C:\scratch\fftSpectrumAnalyser\fftSpectrum\fftSpectrum.spd --output-directory=C:/scratch/fftSpectrumAnalyser/fftSpectrum/simulation
+Info: 2019.05.20.10:17:02 Info: Generating the following file(s) for MODELSIM simulator in C:/scratch/fftSpectrumAnalyser/fftSpectrum/simulation
+Info: 2019.05.20.10:17:02 Info:     mentor
+Info: 2019.05.20.10:17:02 Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib
+Info: 2019.05.20.10:17:02 Info: Generating the following file(s) for VCSMX simulator in C:/scratch/fftSpectrumAnalyser/fftSpectrum/simulation
+Info: 2019.05.20.10:17:02 Info:     synopsys/vcsmx
+Info: 2019.05.20.10:17:02 Info:     synopsys/vcsmx
+Info: 2019.05.20.10:17:02 Info: Generating the following file(s) for NCSIM simulator in C:/scratch/fftSpectrumAnalyser/fftSpectrum/simulation
+Info: 2019.05.20.10:17:02 Info:     cadence
+Info: 2019.05.20.10:17:02 Info:     cadence
+Info: 2019.05.20.10:17:02 Info:     cadence
+Info: 2019.05.20.10:17:02 Info:     1 .cds.lib files in cadence/cds_libs
+Info: 2019.05.20.10:17:02 Info: Generating the following file(s) for RIVIERA simulator in C:/scratch/fftSpectrumAnalyser/fftSpectrum/simulation
+Info: 2019.05.20.10:17:02 Info:     aldec
+Info: 2019.05.20.10:17:02 Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under C:/scratch/fftSpectrumAnalyser/fftSpectrum/simulation
+Info: 2019.05.20.10:17:02 Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: 2019.05.20.10:17:02 Info: Finished: Create Modelsim Project.
+Info: 2019.05.20.10:17:02 Info: Starting: Create block symbol file (.bsf)
+Info: 2019.05.20.10:17:02 Info: qsys-generate C:\scratch\fftSpectrumAnalyser\fftSpectrum.qsys --block-symbol-file --output-directory=C:\scratch\fftSpectrumAnalyser\fftSpectrum --family="Cyclone V" --part=5CSEBA6U23I7DK
+Info: 2019.05.20.10:17:02 Info: Loading fftSpectrumAnalyser
+Info: 2019.05.20.10:17:02 Info: Reading input file
+Info: 2019.05.20.10:17:02 Info: Adding fft_ii_0 [altera_fft_ii 18.1]
+Info: 2019.05.20.10:17:02 Info: Parameterizing module fft_ii_0
+Info: 2019.05.20.10:17:02 Info: Building connections
+Info: 2019.05.20.10:17:02 Info: Parameterizing connections
+Info: 2019.05.20.10:17:02 Info: Validating
+Info: 2019.05.20.10:17:02 Info: Done reading input file
+Info: 2019.05.20.10:17:02 Info: fftSpectrum.fft_ii_0: Radix-2 digit reverse implied
+Info: 2019.05.20.10:17:03 Info: qsys-generate succeeded.
+Info: 2019.05.20.10:17:03 Info: Finished: Create block symbol file (.bsf)
+Info: 2019.05.20.10:17:03 Info:
+Info: 2019.05.20.10:17:03 Info: Starting: Create HDL design files for synthesis
+Info: 2019.05.20.10:17:03 Info: qsys-generate C:\scratch\fftSpectrumAnalyser\fftSpectrum.qsys --synthesis=VERILOG --output-directory=C:\scratch\fftSpectrumAnalyser\fftSpectrum\synthesis --family="Cyclone V" --part=5CSEBA6U23I7DK
+Info: 2019.05.20.10:17:03 Info: Loading fftSpectrumAnalyser
+Info: 2019.05.20.10:17:03 Info: Reading input file
+Info: 2019.05.20.10:17:03 Info: Adding fft_ii_0 [altera_fft_ii 18.1]
+Info: 2019.05.20.10:17:03 Info: Parameterizing module fft_ii_0
+Info: 2019.05.20.10:17:03 Info: Building connections
+Info: 2019.05.20.10:17:03 Info: Parameterizing connections
+Info: 2019.05.20.10:17:03 Info: Validating
+Info: 2019.05.20.10:17:03 Info: Done reading input file
+Info: 2019.05.20.10:17:04 Info: fftSpectrum.fft_ii_0: Radix-2 digit reverse implied
+Info: 2019.05.20.10:17:04 Info: fftSpectrum: Generating fftSpectrum "fftSpectrum" for QUARTUS_SYNTH
+Info: 2019.05.20.10:17:04 Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twr1.hex
+Info: 2019.05.20.10:17:04 Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twi2.hex
+Info: 2019.05.20.10:17:04 Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twr2.hex
+Info: 2019.05.20.10:17:04 Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twi3.hex
+Info: 2019.05.20.10:17:04 Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twi4.hex
+Info: 2019.05.20.10:17:04 Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twr3.hex
+Info: 2019.05.20.10:17:04 Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twi1.hex
+Info: 2019.05.20.10:17:04 Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twr4.hex
+Info: 2019.05.20.10:17:04 Info: fft_ii_0: "fftSpectrum" instantiated altera_fft_ii "fft_ii_0"
+Info: 2019.05.20.10:17:04 Info: fftSpectrum: Done "fftSpectrum" with 2 modules, 50 files
+Info: 2019.05.20.10:17:05 Info: qsys-generate succeeded.
+Info: 2019.05.20.10:17:05 Info: Finished: Create HDL design files for synthesis
+Info (11131): Completed upgrading IP component altera_fft_ii with file "fftSpectrum.qsys"
+Info (23030): Evaluation of Tcl script c:/intelfpga_lite/18.1/quartus/common/tcl/internal/ip_regen/ip_regen.tcl was successful
+Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 770 megabytes
+    Info: Processing ended: Mon May 20 10:17:05 2019
+    Info: Elapsed time: 00:00:34
+    Info: Total CPU time (on all processors): 00:01:42
+
+

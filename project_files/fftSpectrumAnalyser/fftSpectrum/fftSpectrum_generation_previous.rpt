@@ -1,0 +1,38 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate D:\Designs\Quartus\EEET2162\fftSpectrumAnalyser\fftSpectrum.qsys --block-symbol-file --output-directory=D:\Designs\Quartus\EEET2162\fftSpectrumAnalyser\fftSpectrum --family="Cyclone V" --part=5CSEBA6U23I7DK
+Progress: Loading fftSpectrumAnalyser/fftSpectrum.qsys
+Progress: Reading input file
+Progress: Adding fft_ii_0 [altera_fft_ii 17.0]
+Progress: Parameterizing module fft_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: fftSpectrum.fft_ii_0: Radix-2 digit reverse implied
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\Designs\Quartus\EEET2162\fftSpectrumAnalyser\fftSpectrum.qsys --synthesis=VERILOG --output-directory=D:\Designs\Quartus\EEET2162\fftSpectrumAnalyser\fftSpectrum\synthesis --family="Cyclone V" --part=5CSEBA6U23I7DK
+Progress: Loading fftSpectrumAnalyser/fftSpectrum.qsys
+Progress: Reading input file
+Progress: Adding fft_ii_0 [altera_fft_ii 17.0]
+Progress: Parameterizing module fft_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: fftSpectrum.fft_ii_0: Radix-2 digit reverse implied
+Info: fftSpectrum: Generating fftSpectrum "fftSpectrum" for QUARTUS_SYNTH
+Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twr1.hex
+Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twi2.hex
+Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twr2.hex
+Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twi3.hex
+Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twi4.hex
+Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twr3.hex
+Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twi1.hex
+Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twr4.hex
+Info: fft_ii_0: "fftSpectrum" instantiated altera_fft_ii "fft_ii_0"
+Info: fftSpectrum: Done "fftSpectrum" with 2 modules, 50 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

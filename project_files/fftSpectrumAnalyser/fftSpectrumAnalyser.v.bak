@@ -1,0 +1,13 @@
+module fftSpectrumAnalyser(
+
+
+
+)
+
+// Create an IP variation to clock the HPS-FPGA bridge at 133.33MHz.
+
+
+
+
+
+endmodule

@@ -37,9 +37,29 @@ module hdmi_controller (
 		AF9
 		AE8
 	*/
+	//Output LED shit
 	output wire led_reset,		// LED4 -> AF26
 	output wire led_ack,		// LED7 -> AA23
 	
+	// SPI shit
+	output wire spi_scl,		// PIN_AC24
+	output wire spi_sdi,		// PIN_AA15
+	output wire spi_sdo,		// PIN_AD4
+	output wire CONVST,			// PIN_Y15
+
+	output wire [7:0] leds,
+	/* LEDS(7->0)
+		AA23
+		Y16
+		AE26
+		AF26
+		V15
+		V16
+		AA24
+		W15
+	*/
+
+	// I2C Shit
 	output wire i2c_scl,      // U10 (HDMI_SCL)
 	inout wire i2c_sda        // AA4 (HDMI_SDA)
 );
@@ -77,24 +97,54 @@ pll pll74 ( //74.25MHz for 720p
 
 wire clock60;
 
-i2c_clk_divider 
-#(.DELAY(8333333)) //close enough to 60Hz
-clk_divider_60
-(
-	.reset(reset),
-	.ref_clk(clock50),
-	.i2c_clk(clock60)
-);
+// i2c_clk_divider 
+// #(.DELAY(8333333)) //close enough to 60Hz
+// clk_divider_60
+// (
+// 	.reset(reset),
+// 	.ref_clk(clock50),
+// 	.i2c_clk(clock60)
+// );
+
+//ADC Channel Reading (12 bits)
+wire [11:0] channel_1;
+wire [11:0] channel_2;
+wire [11:0] channel_3;
+wire [11:0] channel_4;
 
 top_sync_vg_pattern display (
 	.clk_in(clock74),
-	.clock60(clock60),
+	// .clock60(clock60),
 	.reset(reset),
 	.hsync(hsync),
 	.vsync(vsync),
 	.v_clk(v_clk),
+	.channel_1(channel_1),
+	.channel_2(channel_2),
+	.channel_3(channel_3),
+	.channel_4(channel_4),
 	.data_enable(data_enable),
 	.rgb_data(rgb_data)
+);
+
+
+
+SPIControlBlock spi_control_block (
+
+	.ref_clk(clock50),
+	.reset_n(reset_n),
+	.start(reset_n),
+
+	.data(channel_1), //Data from SPI to TLE
+	.data_1(channel_2), //Data from SPI to TLE
+	.data_2(channel_3), //Data from SPI to TLE
+	.data_3(channel_4), //Data from SPI to TLE
+
+	.spi_sdo(spi_sdo), // PIN_AD4
+	.spi_sdi(spi_sdi), // PIND_AC4
+	.spi_scl(spi_scl), // PIN_V10
+	.CONVST(CONVST)  // PIN_U9
+
 );
 
 // hdmi_controller_display display (

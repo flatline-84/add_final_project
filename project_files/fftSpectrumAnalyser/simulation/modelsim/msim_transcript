@@ -1,0 +1,1276 @@
+# Reading C:/intelFPGA/17.0/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do fftSpectrumAnalyser_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlib fftSpectrum
+# ** Warning: (vlib-34) Library already exists at "fftSpectrum".
+# vmap fftSpectrum fftSpectrum
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap fftSpectrum fftSpectrum 
+# Modifying modelsim.ini
+# vlog -vlog01compat -work fftSpectrum +incdir+D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis {D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/fftSpectrum.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:45:16 on May 29,2018
+# vlog -reportprogress 300 -vlog01compat -work fftSpectrum "+incdir+D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis" D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/fftSpectrum.v 
+# -- Compiling module fftSpectrum
+# 
+# Top level modules:
+# 	fftSpectrum
+# End time: 15:45:16 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser {D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrumAnalyser.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:45:17 on May 29,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser" D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrumAnalyser.v 
+# -- Compiling module fftSpectrumAnalyser
+# 
+# Top level modules:
+# 	fftSpectrumAnalyser
+# End time: 15:45:17 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work fftSpectrum +incdir+D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules {D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/fftSpectrum_fft_ii_0.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:45:17 on May 29,2018
+# vlog -reportprogress 300 -sv -work fftSpectrum "+incdir+D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules" D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/fftSpectrum_fft_ii_0.sv 
+# -- Compiling module fftSpectrum_fft_ii_0
+# 
+# Top level modules:
+# 	fftSpectrum_fft_ii_0
+# End time: 15:45:17 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work fftSpectrum {D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_text_pkg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:45:17 on May 29,2018
+# vcom -reportprogress 300 -93 -work fftSpectrum D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_text_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package auk_dspip_text_pkg
+# -- Compiling package body auk_dspip_text_pkg
+# -- Loading package auk_dspip_text_pkg
+# End time: 15:45:17 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work fftSpectrum {D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_math_pkg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:45:18 on May 29,2018
+# vcom -reportprogress 300 -93 -work fftSpectrum D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_math_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package auk_dspip_math_pkg
+# -- Compiling package body auk_dspip_math_pkg
+# -- Loading package auk_dspip_math_pkg
+# End time: 15:45:18 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work fftSpectrum {D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_lib_pkg.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:45:18 on May 29,2018
+# vcom -reportprogress 300 -93 -work fftSpectrum D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_lib_pkg.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Compiling package auk_dspip_lib_pkg
+# End time: 15:45:18 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.fftSpectrumAnalyser
+# vsim work.fftSpectrumAnalyser 
+# Start time: 15:48:45 on May 29,2018
+# Loading work.fftSpectrumAnalyser
+# ** Error: (vsim-3033) D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrumAnalyser.v(40): Instantiation of 'fftSpectrum' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /fftSpectrumAnalyser File: D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrumAnalyser.v
+#         Searched libraries:
+#             D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/simulation/modelsim/rtl_work
+# Error loading design
+# End time: 15:48:45 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# Load canceled
+source D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/testbench/mentor/msim_setup.tcl
+# [exec] file_copy
+# error copying "./../fftSpectrum_tb/simulation/submodules/fftSpectrum_fft_ii_0_opt_twr1.hex": no such file or directory
+com
+# [exec] com
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:55:13 on May 29,2018
+# vlog -reportprogress 300 -sv ./../fftSpectrum_tb/simulation/submodules/verbosity_pkg.sv -work altera_common_sv_packages 
+# ** Error: (vlog-7) Failed to open design unit file "./../fftSpectrum_tb/simulation/submodules/verbosity_pkg.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 15:55:13 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# C:/intelFPGA/17.0/modelsim_ase/win32aloem/vlog failed.
+source D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/testbench/mentor/msim_setup.tcl
+# [exec] file_copy
+# error copying "../../fftSpectrum_tb/simulation/submodules/fftSpectrum_fft_ii_0_opt_twr1.hex": no such file or directory
+pwd
+# D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/simulation/modelsim
+source D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/testbench/mentor/msim_setup.tcl
+# [exec] file_copy
+# List Of Command Line Aliases
+# 
+# file_copy                     -- Copy ROM/RAM files to simulation directory
+# 
+# dev_com                       -- Compile device library files
+# 
+# com                           -- Compile the design files in correct order
+# 
+# elab                          -- Elaborate top level design
+# 
+# elab_debug                    -- Elaborate the top level design with novopt option
+# 
+# ld                            -- Compile all the design files and elaborate the top level design
+# 
+# ld_debug                      -- Compile all the design files and elaborate the top level design with -novopt
+# 
+# 
+# 
+# List Of Variables
+# 
+# TOP_LEVEL_NAME                -- Top level module name.
+#                                  For most designs, this should be overridden
+#                                  to enable the elab/elab_debug aliases.
+# 
+# SYSTEM_INSTANCE_NAME          -- Instantiated system module name inside top level module.
+# 
+# QSYS_SIMDIR                   -- Qsys base simulation directory.
+# 
+# QUARTUS_INSTALL_DIR           -- Quartus installation directory.
+# 
+# USER_DEFINED_COMPILE_OPTIONS  -- User-defined compile options, added to com/dev_com aliases.
+# 
+# USER_DEFINED_ELAB_OPTIONS     -- User-defined elaboration options, added to elab/elab_debug aliases.
+com
+# [exec] com
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:25 on May 29,2018
+# vlog -reportprogress 300 -sv ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/verbosity_pkg.sv -work altera_common_sv_packages 
+# -- Compiling package verbosity_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:03:25 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:25 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_text_pkg.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package auk_dspip_text_pkg
+# -- Compiling package body auk_dspip_text_pkg
+# -- Loading package auk_dspip_text_pkg
+# End time: 16:03:26 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:26 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_math_pkg.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package auk_dspip_math_pkg
+# -- Compiling package body auk_dspip_math_pkg
+# -- Loading package auk_dspip_math_pkg
+# End time: 16:03:26 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:26 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_lib_pkg.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Compiling package auk_dspip_lib_pkg
+# End time: 16:03:26 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:26 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_avalon_streaming_block_sink.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Compiling entity auk_dspip_avalon_streaming_block_sink
+# -- Compiling architecture rtl of auk_dspip_avalon_streaming_block_sink
+# End time: 16:03:27 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:27 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_avalon_streaming_block_source.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Loading package altera_mf_components
+# -- Compiling entity auk_dspip_avalon_streaming_block_source
+# -- Compiling architecture rtl of auk_dspip_avalon_streaming_block_source
+# End time: 16:03:27 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:27 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_roundsat.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity auk_dspip_roundsat
+# -- Compiling architecture beh of auk_dspip_roundsat
+# End time: 16:03:27 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:27 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_can.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity apn_fft_mult_can
+# -- Compiling architecture rtl of apn_fft_mult_can
+# End time: 16:03:27 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:28 on May 29,2018
+# vlog -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_cpx_1825.v -work fft_ii_0 
+# 
+# Top level modules:
+# End time: 16:03:28 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:28 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_cpx.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity apn_fft_mult_cpx
+# -- Compiling architecture rtl of apn_fft_mult_cpx
+# End time: 16:03:28 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:29 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/hyper_opt_OFF_pkg.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package hyper_opt_pkg
+# End time: 16:03:29 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:29 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_dual_port_ram.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Loading package altera_lnsim_components
+# -- Compiling entity altera_fft_dual_port_ram
+# -- Compiling architecture rtl of altera_fft_dual_port_ram
+# End time: 16:03:29 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:29 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_dual_port_rom.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Loading package altera_lnsim_components
+# -- Compiling entity altera_fft_dual_port_rom
+# -- Compiling architecture rtl of altera_fft_dual_port_rom
+# End time: 16:03:29 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:30 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_mult_add.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity altera_fft_mult_add
+# -- Compiling architecture rtl of altera_fft_mult_add
+# -- Loading package altera_lnsim_components
+# -- Compiling entity altera_fft_mult_add_new
+# -- Compiling architecture rtl of altera_fft_mult_add_new
+# -- Loading package altera_mf_components
+# -- Compiling entity altera_fft_mult_add_old
+# -- Compiling architecture rtl of altera_fft_mult_add_old
+# End time: 16:03:30 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:30 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_single_port_rom.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Loading package altera_lnsim_components
+# -- Compiling entity altera_fft_single_port_rom
+# -- Compiling architecture rtl of altera_fft_single_port_rom
+# End time: 16:03:30 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:30 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_fft_pkg.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package auk_fft_pkg
+# -- Compiling package body auk_fft_pkg
+# -- Loading package auk_fft_pkg
+# End time: 16:03:30 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:31 on May 29,2018
+# vlog -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/hyper_pipeline_interface.v -work fft_ii_0 
+# 
+# Top level modules:
+# End time: 16:03:31 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:31 on May 29,2018
+# vlog -reportprogress 300 -sv ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/counter_module.sv -L altera_common_sv_packages -work fft_ii_0 
+# 
+# Top level modules:
+# End time: 16:03:32 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:32 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_lib_pkg.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Compiling package auk_dspip_r22sdf_lib_pkg
+# End time: 16:03:32 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:32 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_addr_control.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_bit_reverse_addr_control
+# -- Compiling architecture rtl of auk_dspip_bit_reverse_addr_control
+# End time: 16:03:32 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:33 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_core.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Loading package altera_mf_components
+# -- Compiling entity auk_dspip_bit_reverse_core
+# -- Compiling architecture rtl of auk_dspip_bit_reverse_core
+# End time: 16:03:33 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:33 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_reverse_carry_adder.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity auk_dspip_bit_reverse_reverse_carry_adder
+# -- Compiling architecture rtl of auk_dspip_bit_reverse_reverse_carry_adder
+# End time: 16:03:33 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:33 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_adder_fp.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_adder_fp
+# -- Compiling architecture rtl of auk_dspip_r22sdf_adder_fp
+# End time: 16:03:33 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:33 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_addsub.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package LPM_COMPONENTS
+# -- Loading package altera_mf_components
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_addsub
+# -- Compiling architecture rtl of auk_dspip_r22sdf_addsub
+# End time: 16:03:34 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:34 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bfi.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_bfi
+# -- Compiling architecture rtl2 of auk_dspip_r22sdf_bfi
+# End time: 16:03:34 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:34 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bfii.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_bfii
+# -- Compiling architecture rtl of auk_dspip_r22sdf_bfii
+# End time: 16:03:34 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:34 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bf_control.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_bf_control
+# -- Compiling architecture rtl of auk_dspip_r22sdf_bf_control
+# End time: 16:03:35 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:35 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_lnsim_components
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_cma
+# -- Compiling architecture rtl of auk_dspip_r22sdf_cma
+# End time: 16:03:35 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:35 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_adder_fp.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_cma_adder_fp
+# -- Compiling architecture rtl of auk_dspip_r22sdf_cma_adder_fp
+# End time: 16:03:35 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:36 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_bfi_fp.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_cma_bfi_fp
+# -- Compiling architecture rtl of auk_dspip_r22sdf_cma_bfi_fp
+# End time: 16:03:36 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:36 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_fp.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_lnsim_components
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_cma_fp
+# -- Compiling architecture rtl of auk_dspip_r22sdf_cma_fp
+# End time: 16:03:36 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:36 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_core.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_text_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_core
+# -- Compiling architecture rtl of auk_dspip_r22sdf_core
+# End time: 16:03:36 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:37 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_counter.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Compiling entity auk_dspip_r22sdf_counter
+# -- Compiling architecture rtl of auk_dspip_r22sdf_counter
+# End time: 16:03:37 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:37 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_delay.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Loading package altera_mf_components
+# -- Compiling entity auk_dspip_r22sdf_delay
+# -- Compiling architecture rtl of auk_dspip_r22sdf_delay
+# End time: 16:03:37 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:37 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_enable_control.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_enable_control
+# -- Compiling architecture rtl of auk_dspip_r22sdf_enable_control
+# End time: 16:03:37 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:38 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stage.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_stage
+# -- Compiling architecture rtl of auk_dspip_r22sdf_stage
+# End time: 16:03:38 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:38 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stg_out_pipe.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Compiling entity auk_dspip_r22sdf_stg_out_pipe
+# -- Compiling architecture rtl of auk_dspip_r22sdf_stg_out_pipe
+# End time: 16:03:38 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:38 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stg_pipe.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Compiling entity auk_dspip_r22sdf_stg_pipe
+# -- Compiling architecture rtl of auk_dspip_r22sdf_stg_pipe
+# End time: 16:03:38 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:38 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_top.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_top
+# -- Compiling architecture str of auk_dspip_r22sdf_top
+# End time: 16:03:39 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:39 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_twrom.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Loading package altera_mf_components
+# -- Compiling entity auk_dspip_r22sdf_twrom
+# -- Compiling architecture rtl of auk_dspip_r22sdf_twrom
+# End time: 16:03:39 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:39 on May 29,2018
+# vlog -reportprogress 300 -sv ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/fftSpectrum_fft_ii_0.sv -L altera_common_sv_packages -work fft_ii_0 
+# -- Compiling module fftSpectrum_fft_ii_0
+# 
+# Top level modules:
+# 	fftSpectrum_fft_ii_0
+# End time: 16:03:39 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:39 on May 29,2018
+# vlog -reportprogress 300 -sv ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/altera_avalon_reset_source.sv -L altera_common_sv_packages -work fftSpectrum_inst_rst_bfm 
+# -- Compiling module altera_avalon_reset_source
+# -- Importing package altera_common_sv_packages.verbosity_pkg
+# 
+# Top level modules:
+# 	altera_avalon_reset_source
+# End time: 16:03:40 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:40 on May 29,2018
+# vlog -reportprogress 300 -sv ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/altera_avalon_clock_source.sv -L altera_common_sv_packages -work fftSpectrum_inst_clk_bfm 
+# -- Compiling module altera_avalon_clock_source
+# -- Importing package altera_common_sv_packages.verbosity_pkg
+# 
+# Top level modules:
+# 	altera_avalon_clock_source
+# End time: 16:03:40 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:40 on May 29,2018
+# vlog -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/fftSpectrum.v -work fftSpectrum_inst 
+# -- Compiling module fftSpectrum
+# 
+# Top level modules:
+# 	fftSpectrum
+# End time: 16:03:40 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:40 on May 29,2018
+# vlog -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/fftSpectrum_tb.v 
+# -- Compiling module fftSpectrum_tb
+# 
+# Top level modules:
+# 	fftSpectrum_tb
+# End time: 16:03:40 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+dev com
+# [exec] dev_com
+# [exec] com
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:43 on May 29,2018
+# vlog -reportprogress 300 -sv ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/verbosity_pkg.sv -work altera_common_sv_packages 
+# -- Compiling package verbosity_pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 16:03:43 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:44 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_text_pkg.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package auk_dspip_text_pkg
+# -- Compiling package body auk_dspip_text_pkg
+# -- Loading package auk_dspip_text_pkg
+# End time: 16:03:44 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:44 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_math_pkg.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package auk_dspip_math_pkg
+# -- Compiling package body auk_dspip_math_pkg
+# -- Loading package auk_dspip_math_pkg
+# End time: 16:03:44 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:44 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_lib_pkg.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Compiling package auk_dspip_lib_pkg
+# End time: 16:03:44 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:45 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_avalon_streaming_block_sink.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Compiling entity auk_dspip_avalon_streaming_block_sink
+# -- Compiling architecture rtl of auk_dspip_avalon_streaming_block_sink
+# End time: 16:03:45 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:45 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_avalon_streaming_block_source.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Loading package altera_mf_components
+# -- Compiling entity auk_dspip_avalon_streaming_block_source
+# -- Compiling architecture rtl of auk_dspip_avalon_streaming_block_source
+# End time: 16:03:45 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:45 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_roundsat.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity auk_dspip_roundsat
+# -- Compiling architecture beh of auk_dspip_roundsat
+# End time: 16:03:45 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:46 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_can.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity apn_fft_mult_can
+# -- Compiling architecture rtl of apn_fft_mult_can
+# End time: 16:03:46 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:46 on May 29,2018
+# vlog -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_cpx_1825.v -work fft_ii_0 
+# 
+# Top level modules:
+# End time: 16:03:46 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:46 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_cpx.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity apn_fft_mult_cpx
+# -- Compiling architecture rtl of apn_fft_mult_cpx
+# End time: 16:03:47 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:47 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/hyper_opt_OFF_pkg.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package hyper_opt_pkg
+# End time: 16:03:47 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:47 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_dual_port_ram.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Loading package altera_lnsim_components
+# -- Compiling entity altera_fft_dual_port_ram
+# -- Compiling architecture rtl of altera_fft_dual_port_ram
+# End time: 16:03:47 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:47 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_dual_port_rom.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Loading package altera_lnsim_components
+# -- Compiling entity altera_fft_dual_port_rom
+# -- Compiling architecture rtl of altera_fft_dual_port_rom
+# End time: 16:03:48 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:48 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_mult_add.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity altera_fft_mult_add
+# -- Compiling architecture rtl of altera_fft_mult_add
+# -- Loading package altera_lnsim_components
+# -- Compiling entity altera_fft_mult_add_new
+# -- Compiling architecture rtl of altera_fft_mult_add_new
+# -- Loading package altera_mf_components
+# -- Compiling entity altera_fft_mult_add_old
+# -- Compiling architecture rtl of altera_fft_mult_add_old
+# End time: 16:03:48 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:48 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_single_port_rom.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Loading package altera_lnsim_components
+# -- Compiling entity altera_fft_single_port_rom
+# -- Compiling architecture rtl of altera_fft_single_port_rom
+# End time: 16:03:48 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:49 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_fft_pkg.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package auk_fft_pkg
+# -- Compiling package body auk_fft_pkg
+# -- Loading package auk_fft_pkg
+# End time: 16:03:49 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:49 on May 29,2018
+# vlog -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/hyper_pipeline_interface.v -work fft_ii_0 
+# 
+# Top level modules:
+# End time: 16:03:49 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:49 on May 29,2018
+# vlog -reportprogress 300 -sv ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/counter_module.sv -L altera_common_sv_packages -work fft_ii_0 
+# 
+# Top level modules:
+# End time: 16:03:50 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:50 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_lib_pkg.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Compiling package auk_dspip_r22sdf_lib_pkg
+# End time: 16:03:50 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:50 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_addr_control.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_bit_reverse_addr_control
+# -- Compiling architecture rtl of auk_dspip_bit_reverse_addr_control
+# End time: 16:03:51 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:51 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_core.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Loading package altera_mf_components
+# -- Compiling entity auk_dspip_bit_reverse_core
+# -- Compiling architecture rtl of auk_dspip_bit_reverse_core
+# End time: 16:03:51 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:51 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_reverse_carry_adder.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity auk_dspip_bit_reverse_reverse_carry_adder
+# -- Compiling architecture rtl of auk_dspip_bit_reverse_reverse_carry_adder
+# End time: 16:03:51 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:51 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_adder_fp.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_adder_fp
+# -- Compiling architecture rtl of auk_dspip_r22sdf_adder_fp
+# End time: 16:03:52 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:52 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_addsub.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package LPM_COMPONENTS
+# -- Loading package altera_mf_components
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_addsub
+# -- Compiling architecture rtl of auk_dspip_r22sdf_addsub
+# End time: 16:03:52 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:52 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bfi.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_bfi
+# -- Compiling architecture rtl2 of auk_dspip_r22sdf_bfi
+# End time: 16:03:52 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:52 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bfii.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_bfii
+# -- Compiling architecture rtl of auk_dspip_r22sdf_bfii
+# End time: 16:03:53 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:53 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bf_control.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_bf_control
+# -- Compiling architecture rtl of auk_dspip_r22sdf_bf_control
+# End time: 16:03:53 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:53 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_lnsim_components
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_cma
+# -- Compiling architecture rtl of auk_dspip_r22sdf_cma
+# End time: 16:03:53 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:53 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_adder_fp.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_cma_adder_fp
+# -- Compiling architecture rtl of auk_dspip_r22sdf_cma_adder_fp
+# End time: 16:03:54 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:54 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_bfi_fp.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_cma_bfi_fp
+# -- Compiling architecture rtl of auk_dspip_r22sdf_cma_bfi_fp
+# End time: 16:03:54 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:54 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_fp.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package altera_lnsim_components
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_cma_fp
+# -- Compiling architecture rtl of auk_dspip_r22sdf_cma_fp
+# End time: 16:03:54 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:54 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_core.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_text_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_core
+# -- Compiling architecture rtl of auk_dspip_r22sdf_core
+# End time: 16:03:55 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:55 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_counter.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Compiling entity auk_dspip_r22sdf_counter
+# -- Compiling architecture rtl of auk_dspip_r22sdf_counter
+# End time: 16:03:55 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:55 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_delay.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Loading package altera_mf_components
+# -- Compiling entity auk_dspip_r22sdf_delay
+# -- Compiling architecture rtl of auk_dspip_r22sdf_delay
+# End time: 16:03:55 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:55 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_enable_control.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_enable_control
+# -- Compiling architecture rtl of auk_dspip_r22sdf_enable_control
+# End time: 16:03:56 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:56 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stage.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_stage
+# -- Compiling architecture rtl of auk_dspip_r22sdf_stage
+# End time: 16:03:56 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:56 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stg_out_pipe.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Compiling entity auk_dspip_r22sdf_stg_out_pipe
+# -- Compiling architecture rtl of auk_dspip_r22sdf_stg_out_pipe
+# End time: 16:03:56 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:56 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stg_pipe.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Compiling entity auk_dspip_r22sdf_stg_pipe
+# -- Compiling architecture rtl of auk_dspip_r22sdf_stg_pipe
+# End time: 16:03:57 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:57 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_top.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package auk_dspip_lib_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Compiling entity auk_dspip_r22sdf_top
+# -- Compiling architecture str of auk_dspip_r22sdf_top
+# End time: 16:03:57 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:57 on May 29,2018
+# vcom -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_twrom.vhd -work fft_ii_0 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package auk_dspip_math_pkg
+# -- Loading package hyper_opt_pkg
+# -- Loading package auk_dspip_r22sdf_lib_pkg
+# -- Loading package altera_mf_components
+# -- Compiling entity auk_dspip_r22sdf_twrom
+# -- Compiling architecture rtl of auk_dspip_r22sdf_twrom
+# End time: 16:03:57 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:57 on May 29,2018
+# vlog -reportprogress 300 -sv ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/fftSpectrum_fft_ii_0.sv -L altera_common_sv_packages -work fft_ii_0 
+# -- Compiling module fftSpectrum_fft_ii_0
+# 
+# Top level modules:
+# 	fftSpectrum_fft_ii_0
+# End time: 16:03:58 on May 29,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:58 on May 29,2018
+# vlog -reportprogress 300 -sv ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/altera_avalon_reset_source.sv -L altera_common_sv_packages -work fftSpectrum_inst_rst_bfm 
+# -- Compiling module altera_avalon_reset_source
+# -- Importing package altera_common_sv_packages.verbosity_pkg
+# 
+# Top level modules:
+# 	altera_avalon_reset_source
+# End time: 16:03:58 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:58 on May 29,2018
+# vlog -reportprogress 300 -sv ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/altera_avalon_clock_source.sv -L altera_common_sv_packages -work fftSpectrum_inst_clk_bfm 
+# -- Compiling module altera_avalon_clock_source
+# -- Importing package altera_common_sv_packages.verbosity_pkg
+# 
+# Top level modules:
+# 	altera_avalon_clock_source
+# End time: 16:03:58 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:58 on May 29,2018
+# vlog -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/fftSpectrum.v -work fftSpectrum_inst 
+# -- Compiling module fftSpectrum
+# 
+# Top level modules:
+# 	fftSpectrum
+# End time: 16:03:58 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:03:59 on May 29,2018
+# vlog -reportprogress 300 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/fftSpectrum_tb.v 
+# -- Compiling module fftSpectrum_tb
+# 
+# Top level modules:
+# 	fftSpectrum_tb
+# End time: 16:03:59 on May 29,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# reading C:/intelFPGA/17.0/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project fftSpectrumAnalyser

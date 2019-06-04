@@ -1,0 +1,1774 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/simulation/modelsim
+Ealtera_fft_dual_port_ram
+Z1 w1527571278
+Z2 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 PQDYM9fR]Wek<A7X8bA8S1
+Z3 DPx9 altera_mf 20 altera_mf_components 0 22 :YRc5<ojH^WgP]^Vezi9c1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z6 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_dual_port_ram.vhd
+Z7 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_dual_port_ram.vhd
+l0
+L36
+Vj6@H@VIQ1MYbEnh8cjHUz1
+!s100 BdH<Ejoz0S=ZH<o>;hXEU3
+Z8 OV;C;10.5b;63
+32
+Z9 !s110 1527573827
+!i10b 1
+Z10 !s108 1527573827.000000
+Z11 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_dual_port_ram.vhd|-work|fft_ii_0|
+Z12 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_dual_port_ram.vhd|
+!i113 1
+Z13 o-work fft_ii_0
+Z14 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 24 altera_fft_dual_port_ram 0 22 j6@H@VIQ1MYbEnh8cjHUz1
+l71
+L58
+Vb3ia=5i3GY3OdcJRWfZOV1
+!s100 KGUN1jXAVA>R466P85aLV0
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 1
+R13
+R14
+Ealtera_fft_dual_port_rom
+R1
+R2
+R3
+R4
+R5
+R0
+Z15 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_dual_port_rom.vhd
+Z16 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_dual_port_rom.vhd
+l0
+L23
+Vk^iZF[f1FUAA9UfR9z5<l2
+!s100 H@bfF4k1@3>K]G7b8V1o31
+R8
+32
+Z17 !s110 1527573828
+!i10b 1
+R10
+Z18 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_dual_port_rom.vhd|-work|fft_ii_0|
+Z19 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_dual_port_rom.vhd|
+!i113 1
+R13
+R14
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 24 altera_fft_dual_port_rom 0 22 k^iZF[f1FUAA9UfR9z5<l2
+l55
+L43
+V9:LFNbJhnYHJ9LCLLL7HD1
+!s100 bWBXQO:ZRCU`mV^nSDi5I1
+R8
+32
+R17
+!i10b 1
+R10
+R18
+R19
+!i113 1
+R13
+R14
+Ealtera_fft_mult_add
+R1
+Z20 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z21 DPx4 ieee 16 std_logic_signed 0 22 C<aanc0R`<LWPSe[JYRP^3
+R4
+R5
+R0
+Z22 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_mult_add.vhd
+Z23 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_mult_add.vhd
+l0
+L23
+VC`Md>XXgeMW4aFaTY3@jP3
+!s100 H3ijk[GZk;X8zc0o_;TmB2
+R8
+32
+R17
+!i10b 1
+Z24 !s108 1527573828.000000
+Z25 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_mult_add.vhd|-work|fft_ii_0|
+Z26 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_mult_add.vhd|
+!i113 1
+R13
+R14
+Artl
+R20
+R21
+R4
+R5
+DEx4 work 19 altera_fft_mult_add 0 22 C`Md>XXgeMW4aFaTY3@jP3
+l89
+L42
+V78K8XCM>Q=C^7OTl^47_H1
+!s100 SQ9Z>z:EI50l=1j1f`ER53
+R8
+32
+R17
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R13
+R14
+Ealtera_fft_mult_add_new
+R1
+R2
+R20
+R21
+R4
+R5
+R0
+R22
+R23
+l0
+L139
+VLVKeN:l4fG>:i`2nnaIEL3
+!s100 Fl9;oMc3EV7BGL6g>zG_J2
+R8
+32
+R17
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R13
+R14
+Artl
+R2
+R20
+R21
+R4
+R5
+DEx4 work 23 altera_fft_mult_add_new 0 22 LVKeN:l4fG>:i`2nnaIEL3
+l159
+L158
+VPYjSP9bAX:nI_dd[hQEm03
+!s100 oK1XTGUdc@:DX?]UROI@a3
+R8
+32
+R17
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R13
+R14
+Ealtera_fft_mult_add_old
+R1
+R3
+R20
+R21
+R4
+R5
+R0
+R22
+R23
+l0
+L395
+Vz:KO:GiKJQa17Fl?4DZi]0
+!s100 cK_T8@;z9V<AGOI`ZZTo40
+R8
+32
+R17
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R13
+R14
+Artl
+R3
+R20
+R21
+R4
+R5
+DEx4 work 23 altera_fft_mult_add_old 0 22 z:KO:GiKJQa17Fl?4DZi]0
+l415
+L414
+V2`m5Ufg5JD3c<jzO4R;<O3
+!s100 6;1N<YodID?gjdT<n?7A82
+R8
+32
+R17
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R13
+R14
+Ealtera_fft_single_port_rom
+R1
+R2
+R3
+R4
+R5
+R0
+Z27 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_single_port_rom.vhd
+Z28 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_single_port_rom.vhd
+l0
+L23
+V57:TM2d^J?@^bI5`Z^=G<3
+!s100 G6:9o[WFbD2oWH;=8]nNE0
+R8
+32
+R17
+!i10b 1
+R24
+Z29 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_single_port_rom.vhd|-work|fft_ii_0|
+Z30 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/altera_fft_single_port_rom.vhd|
+!i113 1
+R13
+R14
+Artl
+R2
+R3
+R4
+R5
+DEx4 work 26 altera_fft_single_port_rom 0 22 57:TM2d^J?@^bI5`Z^=G<3
+l52
+L40
+V;[H0:KL;GOG5gVTQAcY9_1
+!s100 h3E4aL8gl9Cn;[zKd1zb>2
+R8
+32
+R17
+!i10b 1
+R24
+R29
+R30
+!i113 1
+R13
+R14
+Eapn_fft_mult_can
+R1
+Z31 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R4
+R5
+R0
+Z32 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_can.vhd
+Z33 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_can.vhd
+l0
+L21
+V<C`Yo3D1NSm06iW1<1>m13
+!s100 lEcolbV>2PX_DQRI[@?C42
+R8
+32
+Z34 !s110 1527573826
+!i10b 1
+Z35 !s108 1527573826.000000
+Z36 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_can.vhd|-work|fft_ii_0|
+Z37 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_can.vhd|
+!i113 1
+R13
+R14
+Artl
+R31
+R4
+R5
+DEx4 work 16 apn_fft_mult_can 0 22 <C`Yo3D1NSm06iW1<1>m13
+l57
+L39
+V;FNa@M7R9knXQ4WB;oRke1
+!s100 [O7jgRH:4l_8HkZSQVEIK2
+R8
+32
+R34
+!i10b 1
+R35
+R36
+R37
+!i113 1
+R13
+R14
+Eapn_fft_mult_cpx
+R1
+R31
+R4
+R5
+R0
+Z38 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_cpx.vhd
+Z39 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_cpx.vhd
+l0
+L21
+VGeh@g:m?k@zhm1;::6QV^0
+!s100 PekPO659JaXM;L7Z6KC@M3
+R8
+32
+R9
+!i10b 1
+R35
+Z40 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_cpx.vhd|-work|fft_ii_0|
+Z41 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_cpx.vhd|
+!i113 1
+R13
+R14
+Artl
+R31
+R4
+R5
+DEx4 work 16 apn_fft_mult_cpx 0 22 Geh@g:m?k@zhm1;::6QV^0
+l50
+L39
+VgS9^f9COG`EK<5:hgL@Sa2
+!s100 74f@jkKkhZ8@nLZ=>Z1LG1
+R8
+32
+R9
+!i10b 1
+R35
+R40
+R41
+!i113 1
+R13
+R14
+vA1GXmePT1E/44GoyhF3AEB7G4yhr3VTNy4yZnLvs35E=
+R34
+!i10b 0
+!s100 ROe`QZ`_O8;YRM=fJ1[]X0
+IVjjz_3ozcejFeTBQ;m_m23
+Z42 VDg1SIo80bB@j0V0VzS_@n1
+!i8a 292713376
+R0
+w1527573826
+8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_cpx_1825.v
+F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_cpx_1825.v
+Z43 L0 38
+Z44 OV;L;10.5b;63
+r1
+!s85 0
+31
+R35
+!s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_cpx_1825.v|
+!s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/apn_fft_mult_cpx_1825.v|-work|fft_ii_0|
+!i113 1
+R13
+Z45 tCvgOpt 0
+n73d7cc5
+Eauk_dspip_avalon_streaming_block_sink
+R1
+Z46 DPx4 work 18 auk_dspip_math_pkg 0 22 n?1X_^XLl;O4a:8M64kRS0
+R31
+R4
+R5
+R0
+Z47 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_avalon_streaming_block_sink.vhd
+Z48 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_avalon_streaming_block_sink.vhd
+l0
+L22
+VWW05ER=nE=[fUH26>cVX;2
+!s100 5FkmY2J9_R^OCddRZBZ_i1
+R8
+32
+Z49 !s110 1527573825
+!i10b 1
+Z50 !s108 1527573825.000000
+Z51 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_avalon_streaming_block_sink.vhd|-work|fft_ii_0|
+Z52 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_avalon_streaming_block_sink.vhd|
+!i113 1
+R13
+R14
+Artl
+R46
+R31
+R4
+R5
+DEx4 work 37 auk_dspip_avalon_streaming_block_sink 0 22 WW05ER=nE=[fUH26>cVX;2
+l142
+L59
+Vik803:S;e99?elY9o>[n11
+!s100 38QZ;1;3801MEH1PhgNl=3
+R8
+32
+R49
+!i10b 1
+R50
+R51
+R52
+!i113 1
+R13
+R14
+Eauk_dspip_avalon_streaming_block_source
+R1
+R3
+R46
+Z53 DPx4 work 17 auk_dspip_lib_pkg 0 22 [Lag;Z:I^H?=5^_LMn`Zl2
+R31
+R4
+R5
+R0
+Z54 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_avalon_streaming_block_source.vhd
+Z55 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_avalon_streaming_block_source.vhd
+l0
+L25
+Voll^MJQjIiGj;<c@0:__Z3
+!s100 PcknmbOT5fM?^3Ua7SJWA0
+R8
+32
+R49
+!i10b 1
+R50
+Z56 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_avalon_streaming_block_source.vhd|-work|fft_ii_0|
+Z57 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_avalon_streaming_block_source.vhd|
+!i113 1
+R13
+R14
+Artl
+R3
+R46
+R53
+R31
+R4
+R5
+DEx4 work 39 auk_dspip_avalon_streaming_block_source 0 22 oll^MJQjIiGj;<c@0:__Z3
+l119
+L47
+VHj>HJbQ>0aVDf5ifSaAOH2
+!s100 :k4nQbJ<X1g=i>`Jeb;XM1
+R8
+32
+R49
+!i10b 1
+R50
+R56
+R57
+!i113 1
+R13
+R14
+Eauk_dspip_bit_reverse_addr_control
+R1
+Z58 DPx4 work 13 hyper_opt_pkg 0 22 QPJ8aX04c@m]412eP]K^Q3
+Z59 DPx4 work 24 auk_dspip_r22sdf_lib_pkg 0 22 o@9e;2h4Lejo[z9N@FGmH1
+R46
+R31
+R4
+R5
+R0
+Z60 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_addr_control.vhd
+Z61 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_addr_control.vhd
+l0
+L62
+VUblab@[XM2gkQRVSg?>P=3
+!s100 TD?3f5UXQ]1<fIXnEbOB73
+R8
+32
+Z62 !s110 1527573831
+!i10b 1
+Z63 !s108 1527573830.000000
+Z64 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_addr_control.vhd|-work|fft_ii_0|
+Z65 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_addr_control.vhd|
+!i113 1
+R13
+R14
+Artl
+R58
+R59
+R46
+R31
+R4
+R5
+DEx4 work 34 auk_dspip_bit_reverse_addr_control 0 22 Ublab@[XM2gkQRVSg?>P=3
+l84
+L79
+V@KhMXIY<kYX3>23lAPYiR3
+!s100 jz;<_36f[Gc]f6C5c[>E70
+R8
+32
+R62
+!i10b 1
+R63
+R64
+R65
+!i113 1
+R13
+R14
+Eauk_dspip_bit_reverse_core
+R1
+R3
+R58
+R59
+R46
+R31
+R4
+R5
+R0
+Z66 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_core.vhd
+Z67 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_core.vhd
+l0
+L89
+VgCo6b7R64RmZ:oEFW:g`J3
+!s100 E:8jPB>@K3Zh0LR]SBIXJ3
+R8
+32
+R62
+!i10b 1
+Z68 !s108 1527573831.000000
+Z69 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_core.vhd|-work|fft_ii_0|
+Z70 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_core.vhd|
+!i113 1
+R13
+R14
+Artl
+R3
+R58
+R59
+R46
+R31
+R4
+R5
+DEx4 work 26 auk_dspip_bit_reverse_core 0 22 gCo6b7R64RmZ:oEFW:g`J3
+l129
+L111
+V?XB6;dKZiQK<<Ga[k9N270
+!s100 85:oPoe@DB85cOZCJ7VUj3
+R8
+32
+R62
+!i10b 1
+R68
+R69
+R70
+!i113 1
+R13
+R14
+Eauk_dspip_bit_reverse_reverse_carry_adder
+R1
+R31
+R4
+R5
+R0
+Z71 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_reverse_carry_adder.vhd
+Z72 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_reverse_carry_adder.vhd
+l0
+L77
+V:Xm?Fnc@J5=E3UIn91J681
+!s100 C=D<3=XEQ9Q[[d][0Rzna3
+R8
+32
+R62
+!i10b 1
+R68
+Z73 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_reverse_carry_adder.vhd|-work|fft_ii_0|
+Z74 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_bit_reverse_reverse_carry_adder.vhd|
+!i113 1
+R13
+R14
+Artl
+R31
+R4
+R5
+DEx4 work 41 auk_dspip_bit_reverse_reverse_carry_adder 0 22 :Xm?Fnc@J5=E3UIn91J681
+l92
+L89
+VEBRUGU:R;D9_Zo5ZPWKSV3
+!s100 HE4l1ankVlFQCB08jj`Sc1
+R8
+32
+R62
+!i10b 1
+R68
+R73
+R74
+!i113 1
+R13
+R14
+Pauk_dspip_lib_pkg
+R46
+R31
+R4
+R5
+R1
+R0
+8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_lib_pkg.vhd
+F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_lib_pkg.vhd
+l0
+L28
+V[Lag;Z:I^H?=5^_LMn`Zl2
+!s100 KcRlL:CTnlUz=1CF=kC_S0
+R8
+32
+Z75 !s110 1527573824
+!i10b 1
+Z76 !s108 1527573824.000000
+!s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_lib_pkg.vhd|-work|fft_ii_0|
+!s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_lib_pkg.vhd|
+!i113 1
+R13
+R14
+Pauk_dspip_math_pkg
+R31
+R4
+R5
+R1
+R0
+Z77 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_math_pkg.vhd
+Z78 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_math_pkg.vhd
+l0
+L51
+Vn?1X_^XLl;O4a:8M64kRS0
+!s100 [z_3ODE8b:W7XDJ[_]HTW0
+R8
+32
+b1
+R75
+!i10b 1
+R76
+Z79 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_math_pkg.vhd|-work|fft_ii_0|
+Z80 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_math_pkg.vhd|
+!i113 1
+R13
+R14
+Bbody
+R46
+R31
+R4
+R5
+l0
+L128
+V^H`3M4[WME?EzH^Ed7LNU1
+!s100 `941_Ff6o7=GBNnXYB1eU3
+R8
+32
+R75
+!i10b 1
+R76
+R79
+R80
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_adder_fp
+R1
+R46
+R31
+R53
+R20
+R21
+R4
+R5
+R0
+Z81 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_adder_fp.vhd
+Z82 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_adder_fp.vhd
+l0
+L55
+VnahOmW6J`B?H^IRfXJ;W?2
+!s100 Yo3Q__0aPh7U6fFQcB@>?3
+R8
+32
+Z83 !s110 1527573832
+!i10b 1
+R68
+Z84 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_adder_fp.vhd|-work|fft_ii_0|
+Z85 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_adder_fp.vhd|
+!i113 1
+R13
+R14
+Artl
+R46
+R31
+R53
+R20
+R21
+R4
+R5
+DEx4 work 25 auk_dspip_r22sdf_adder_fp 0 22 nahOmW6J`B?H^IRfXJ;W?2
+l153
+L74
+VlA_MOzE5=A[2ZKjU5<DaF3
+!s100 _ibA>^B7;FB43H707L_`a2
+R8
+32
+R83
+!i10b 1
+R68
+R84
+R85
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_addsub
+R1
+R58
+R46
+R59
+R3
+Z86 DPx3 lpm 14 lpm_components 0 22 KI__]ZC5^Q9zCzFdn3gGS0
+R31
+R4
+R5
+R0
+Z87 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_addsub.vhd
+Z88 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_addsub.vhd
+l0
+L63
+VznFI9Rj9hA:z3[BY=>U3G1
+!s100 Wa@b2dTl3XCjCR>ieDLYX3
+R8
+32
+R83
+!i10b 1
+Z89 !s108 1527573832.000000
+Z90 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_addsub.vhd|-work|fft_ii_0|
+Z91 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_addsub.vhd|
+!i113 1
+R13
+R14
+Artl
+R58
+R46
+R59
+R3
+R86
+R31
+R4
+R5
+DEx4 work 23 auk_dspip_r22sdf_addsub 0 22 znFI9Rj9hA:z3[BY=>U3G1
+l139
+L84
+VBYRmeUdfchQVTToCHni:B3
+!s100 4gAZVHed[_:Pm6CMIKNa@3
+R8
+32
+R83
+!i10b 1
+R89
+R90
+R91
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_bf_control
+R1
+R58
+R59
+R46
+R31
+R4
+R5
+R0
+Z92 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bf_control.vhd
+Z93 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bf_control.vhd
+l0
+L77
+VT:29TN7BK@Fa1JS2;J1E13
+!s100 X@fUf76EFX0K@j>dBAgo80
+R8
+32
+Z94 !s110 1527573833
+!i10b 1
+Z95 !s108 1527573833.000000
+Z96 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bf_control.vhd|-work|fft_ii_0|
+Z97 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bf_control.vhd|
+!i113 1
+R13
+R14
+Artl
+R58
+R59
+R46
+R31
+R4
+R5
+DEx4 work 27 auk_dspip_r22sdf_bf_control 0 22 T:29TN7BK@Fa1JS2;J1E13
+l113
+L106
+V0]7i04Fj^_f932BmHE<C^2
+!s100 02F^O;71eeX<cb?@1oKXO2
+R8
+32
+R94
+!i10b 1
+R95
+R96
+R97
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_bfi
+R1
+R58
+R59
+R46
+R31
+R4
+R5
+R0
+Z98 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bfi.vhd
+Z99 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bfi.vhd
+l0
+L97
+VR26nAQLPngAMVOK2EI<Ik3
+!s100 n@MIcm>W:Vm8MekgOOOK[0
+R8
+32
+R83
+!i10b 1
+R89
+Z100 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bfi.vhd|-work|fft_ii_0|
+Z101 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bfi.vhd|
+!i113 1
+R13
+R14
+Artl2
+R58
+R59
+R46
+R31
+R4
+R5
+DEx4 work 20 auk_dspip_r22sdf_bfi 0 22 R26nAQLPngAMVOK2EI<Ik3
+l188
+L149
+VSjkBI1:4ggH;1=5zidgMZ3
+!s100 CczYUGK6<hJV10P3BNXQ^2
+R8
+32
+R83
+!i10b 1
+R89
+R100
+R101
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_bfii
+R1
+R58
+R59
+R46
+R31
+R4
+R5
+R0
+Z102 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bfii.vhd
+Z103 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bfii.vhd
+l0
+L69
+VEZh43TT6AQ:4R26`6W7_P0
+!s100 f_ZCofA5^h:`Yao[1e6W60
+R8
+32
+R94
+!i10b 1
+R89
+Z104 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bfii.vhd|-work|fft_ii_0|
+Z105 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_bfii.vhd|
+!i113 1
+R13
+R14
+Artl
+R58
+R59
+R46
+R31
+R4
+R5
+DEx4 work 21 auk_dspip_r22sdf_bfii 0 22 EZh43TT6AQ:4R26`6W7_P0
+l170
+L120
+VUa`maK]bB]IY0[O`HUB=a1
+!s100 kaVbj02XNC6eCM1<Ej@Xz3
+R8
+32
+R94
+!i10b 1
+R89
+R104
+R105
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_cma
+R1
+R58
+R59
+R53
+R46
+R2
+R31
+R4
+R5
+R0
+Z106 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma.vhd
+Z107 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma.vhd
+l0
+L100
+V@GcCh=iWo0C108NDI1aah0
+!s100 >ToO>`]8PGMoBeGdl;GLi3
+R8
+32
+R94
+!i10b 1
+R95
+Z108 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma.vhd|-work|fft_ii_0|
+Z109 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma.vhd|
+!i113 1
+R13
+R14
+Artl
+R58
+R59
+R53
+R46
+R2
+R31
+R4
+R5
+DEx4 work 20 auk_dspip_r22sdf_cma 0 22 @GcCh=iWo0C108NDI1aah0
+l175
+L145
+VR^9_W@_lUBQW7FSHz?2?R0
+!s100 Gc?K]_bfnH>REFBOIXi]_3
+R8
+32
+R94
+!i10b 1
+R95
+R108
+R109
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_cma_adder_fp
+R1
+R46
+R31
+R53
+R20
+R21
+R4
+R5
+R0
+Z110 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_adder_fp.vhd
+Z111 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_adder_fp.vhd
+l0
+L66
+V3Y3^6aBMl5LHIKnCI=UHJ3
+!s100 O4S]CCg2MdLDF_OdP7ini2
+R8
+32
+Z112 !s110 1527573834
+!i10b 1
+R95
+Z113 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_adder_fp.vhd|-work|fft_ii_0|
+Z114 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_adder_fp.vhd|
+!i113 1
+R13
+R14
+Artl
+R46
+R31
+R53
+R20
+R21
+R4
+R5
+DEx4 work 29 auk_dspip_r22sdf_cma_adder_fp 0 22 3Y3^6aBMl5LHIKnCI=UHJ3
+l239
+L90
+VMdc>m=`bhgPf3FEDIiZU41
+!s100 >jTGF:71QI3jgVLZK[Pf42
+R8
+32
+R112
+!i10b 1
+R95
+R113
+R114
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_cma_bfi_fp
+R1
+R58
+R59
+R46
+R31
+R4
+R5
+R0
+Z115 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_bfi_fp.vhd
+Z116 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_bfi_fp.vhd
+l0
+L72
+V0cXSJnX4na=11IL>H9IZG1
+!s100 V_AF>B6QAL8O_FNS[l60H0
+R8
+32
+R112
+!i10b 1
+Z117 !s108 1527573834.000000
+Z118 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_bfi_fp.vhd|-work|fft_ii_0|
+Z119 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_bfi_fp.vhd|
+!i113 1
+R13
+R14
+Artl
+R58
+R59
+R46
+R31
+R4
+R5
+DEx4 work 27 auk_dspip_r22sdf_cma_bfi_fp 0 22 0cXSJnX4na=11IL>H9IZG1
+l178
+L128
+VY[5c1nNJ?ChK;fk>cLH<81
+!s100 <UhW<GMUQQZPF<dmYj1hE0
+R8
+32
+R112
+!i10b 1
+R117
+R118
+R119
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_cma_fp
+R1
+R58
+R59
+R53
+R46
+R2
+R31
+R4
+R5
+R0
+Z120 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_fp.vhd
+Z121 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_fp.vhd
+l0
+L27
+VMTZQV_eG:;VM8c[J87U@G0
+!s100 13;0QBnlEMS]i^g?k[bok3
+R8
+32
+R112
+!i10b 1
+R117
+Z122 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_fp.vhd|-work|fft_ii_0|
+Z123 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_cma_fp.vhd|
+!i113 1
+R13
+R14
+Artl
+R58
+R59
+R53
+R46
+R2
+R31
+R4
+R5
+DEx4 work 23 auk_dspip_r22sdf_cma_fp 0 22 MTZQV_eG:;VM8c[J87U@G0
+l147
+L64
+V>mJeOL:]b0=[ec=GmZzn13
+!s100 ZE1MmNJZZ41z91U7gNbDT3
+R8
+32
+R112
+!i10b 1
+R117
+R122
+R123
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_core
+R1
+R58
+R59
+Z124 DPx4 work 18 auk_dspip_text_pkg 0 22 ?9650dUc4EIVa?hL>i2Z[2
+R46
+Z125 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+R31
+R4
+R5
+R0
+Z126 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_core.vhd
+Z127 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_core.vhd
+l0
+L116
+V:ibMlafkjM12?RM21U4Jn1
+!s100 9Y>HA_TT^C7@X`h]YzUzI3
+R8
+32
+Z128 !s110 1527573835
+!i10b 1
+R117
+Z129 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_core.vhd|-work|fft_ii_0|
+Z130 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_core.vhd|
+!i113 1
+R13
+R14
+Artl
+R58
+R59
+R124
+R46
+R125
+R31
+R4
+R5
+DEx4 work 21 auk_dspip_r22sdf_core 0 22 :ibMlafkjM12?RM21U4Jn1
+l326
+L160
+V>oNShUnP7:h]C^O:cbY[I0
+!s100 KcW3`HOb]=JliOJnfHnLi2
+R8
+32
+R128
+!i10b 1
+R117
+R129
+R130
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_counter
+R1
+R46
+R31
+R4
+R5
+R0
+Z131 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_counter.vhd
+Z132 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_counter.vhd
+l0
+L80
+VDz9RRCa8]>CN2fW:>PMK61
+!s100 le]X0]gP_IVTE:jSK>z^b0
+R8
+32
+R128
+!i10b 1
+Z133 !s108 1527573835.000000
+Z134 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_counter.vhd|-work|fft_ii_0|
+Z135 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_counter.vhd|
+!i113 1
+R13
+R14
+Artl
+R46
+R31
+R4
+R5
+DEx4 work 24 auk_dspip_r22sdf_counter 0 22 Dz9RRCa8]>CN2fW:>PMK61
+l118
+L105
+V2n^;7T20gSC]C^jRZ46OV1
+!s100 V@=gI`5>>CGJI9J1XjlP=2
+R8
+32
+R128
+!i10b 1
+R133
+R134
+R135
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_delay
+R1
+R3
+R58
+R59
+R46
+R31
+R4
+R5
+R0
+Z136 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_delay.vhd
+Z137 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_delay.vhd
+l0
+L71
+VQBB5De:Ri5:8jAzMKK4Il0
+!s100 HLbRh7;nN?YO2a9a??a782
+R8
+32
+R128
+!i10b 1
+R133
+Z138 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_delay.vhd|-work|fft_ii_0|
+Z139 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_delay.vhd|
+!i113 1
+R13
+R14
+Artl
+R3
+R58
+R59
+R46
+R31
+R4
+R5
+DEx4 work 22 auk_dspip_r22sdf_delay 0 22 QBB5De:Ri5:8jAzMKK4Il0
+l98
+L92
+V7h5SQFg6^0:A9ag8o5glD2
+!s100 Cb3]N:H1@0TAUTHVShPei3
+R8
+32
+R128
+!i10b 1
+R133
+R138
+R139
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_enable_control
+R1
+R58
+R59
+R46
+R31
+R4
+R5
+R0
+Z140 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_enable_control.vhd
+Z141 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_enable_control.vhd
+l0
+L65
+Vb2Tg^AFkg<`5WBSK=97BO1
+!s100 SaQ>9QE1N@zD@C2NTzab@0
+R8
+32
+Z142 !s110 1527573836
+!i10b 1
+R133
+Z143 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_enable_control.vhd|-work|fft_ii_0|
+Z144 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_enable_control.vhd|
+!i113 1
+R13
+R14
+Artl
+R58
+R59
+R46
+R31
+R4
+R5
+DEx4 work 31 auk_dspip_r22sdf_enable_control 0 22 b2Tg^AFkg<`5WBSK=97BO1
+l100
+L90
+VPoP[KEmI[:?Q7Z9]S1YV=1
+!s100 <0cRjDMb]N9j<k;E:ZbRO0
+R8
+32
+R142
+!i10b 1
+R133
+R143
+R144
+!i113 1
+R13
+R14
+Pauk_dspip_r22sdf_lib_pkg
+R58
+R46
+R31
+R4
+R5
+R1
+R0
+8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_lib_pkg.vhd
+F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_lib_pkg.vhd
+l0
+L35
+Vo@9e;2h4Lejo[z9N@FGmH1
+!s100 Md617>0a<F8`ngOelQXZi1
+R8
+32
+Z145 !s110 1527573830
+!i10b 1
+R63
+!s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_lib_pkg.vhd|-work|fft_ii_0|
+!s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_lib_pkg.vhd|
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_stage
+R1
+R58
+R59
+R46
+R31
+R4
+R5
+R0
+Z146 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stage.vhd
+Z147 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stage.vhd
+l0
+L131
+V7b5EdlmIC0o:EN:zlLeYE3
+!s100 TQDFN=Q1Q7VTUl@ndCVHl2
+R8
+32
+R142
+!i10b 1
+Z148 !s108 1527573836.000000
+Z149 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stage.vhd|-work|fft_ii_0|
+Z150 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stage.vhd|
+!i113 1
+R13
+R14
+Artl
+R58
+R59
+R46
+R31
+R4
+R5
+DEx4 work 22 auk_dspip_r22sdf_stage 0 22 7b5EdlmIC0o:EN:zlLeYE3
+l500
+L182
+V6zX8cRz2g;:FGeUi>iMVE3
+!s100 h>CikCS5bHzc^VnV6YQFb1
+R8
+32
+R142
+!i10b 1
+R148
+R149
+R150
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_stg_out_pipe
+R1
+R31
+R46
+R4
+R5
+R0
+Z151 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stg_out_pipe.vhd
+Z152 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stg_out_pipe.vhd
+l0
+L62
+VRSPHSa2OETSlT]k0`6kAL0
+!s100 G8>n@Lmd7EQgZS05QDidb3
+R8
+32
+R142
+!i10b 1
+R148
+Z153 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stg_out_pipe.vhd|-work|fft_ii_0|
+Z154 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stg_out_pipe.vhd|
+!i113 1
+R13
+R14
+Artl
+R31
+R46
+R4
+R5
+DEx4 work 29 auk_dspip_r22sdf_stg_out_pipe 0 22 RSPHSa2OETSlT]k0`6kAL0
+l99
+L97
+V6XcB@dEmZ2bWO4Bm=28Rl1
+!s100 oBGCfLLi36LM:B]];S?[P2
+R8
+32
+R142
+!i10b 1
+R148
+R153
+R154
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_stg_pipe
+R1
+R31
+R46
+R4
+R5
+R0
+Z155 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stg_pipe.vhd
+Z156 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stg_pipe.vhd
+l0
+L59
+V6_M674f5jmj0[W>5cJmA^3
+!s100 aJmoI8HK9N`?H6b8OLS0D0
+R8
+32
+Z157 !s110 1527573837
+!i10b 1
+R148
+Z158 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stg_pipe.vhd|-work|fft_ii_0|
+Z159 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_stg_pipe.vhd|
+!i113 1
+R13
+R14
+Artl
+R31
+R46
+R4
+R5
+DEx4 work 25 auk_dspip_r22sdf_stg_pipe 0 22 6_M674f5jmj0[W>5cJmA^3
+l105
+L103
+VKR:8dcmeV26dZ<Y`TUn_=0
+!s100 =Hd2^J7QH@;YBmGjXH2`f0
+R8
+32
+R157
+!i10b 1
+R148
+R158
+R159
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_top
+R1
+R58
+R59
+R53
+R46
+R31
+R4
+R5
+R0
+Z160 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_top.vhd
+Z161 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_top.vhd
+l0
+L130
+V`Q[`o@FNASO4T@?ZMXNFn1
+!s100 @1i8VjYM7RJZX8F2:hV@C3
+R8
+32
+R157
+!i10b 1
+Z162 !s108 1527573837.000000
+Z163 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_top.vhd|-work|fft_ii_0|
+Z164 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_top.vhd|
+!i113 1
+R13
+R14
+Astr
+R58
+R59
+R53
+R46
+R31
+R4
+R5
+DEx4 work 20 auk_dspip_r22sdf_top 0 22 `Q[`o@FNASO4T@?ZMXNFn1
+l231
+L174
+VoZ@OQ;_^`gC^jK=3mZK5m2
+!s100 @OF9<3bV_Kg00cLIYnA5`3
+R8
+32
+R157
+!i10b 1
+R162
+R163
+R164
+!i113 1
+R13
+R14
+Eauk_dspip_r22sdf_twrom
+Z165 w1527571279
+R3
+R58
+R59
+R46
+R31
+R4
+R5
+R0
+Z166 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_twrom.vhd
+Z167 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_twrom.vhd
+l0
+L75
+V1215QjnD=[ARH35SGjJYi1
+!s100 amR1h6BIEjd4i=Feln6T40
+R8
+32
+R157
+!i10b 1
+R162
+Z168 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_twrom.vhd|-work|fft_ii_0|
+Z169 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_dspip_r22sdf_twrom.vhd|
+!i113 1
+R13
+R14
+Artl
+R3
+R58
+R59
+R46
+R31
+R4
+R5
+DEx4 work 22 auk_dspip_r22sdf_twrom 0 22 1215QjnD=[ARH35SGjJYi1
+l103
+L99
+VheJT`]gQ_:TnHBdj=M91k3
+!s100 D_E88Ti<`YD215R3O[cSL2
+R8
+32
+R157
+!i10b 1
+R162
+R168
+R169
+!i113 1
+R13
+R14
+Eauk_dspip_roundsat
+R1
+R31
+R4
+R5
+R0
+Z170 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_roundsat.vhd
+Z171 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_roundsat.vhd
+l0
+L45
+VB?9f2JYDRH_oj4;=FSnJ32
+!s100 :Ro[aE[BH^N6eIGEG[O?N3
+R8
+32
+R49
+!i10b 1
+R50
+Z172 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_roundsat.vhd|-work|fft_ii_0|
+Z173 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_roundsat.vhd|
+!i113 1
+R13
+R14
+Abeh
+R31
+R4
+R5
+DEx4 work 18 auk_dspip_roundsat 0 22 B?9f2JYDRH_oj4;=FSnJ32
+l63
+L61
+VXggCldKcC78L[78CV4YMB3
+!s100 ]_3I0;m7RDoiJeFA6M^`A1
+R8
+32
+R49
+!i10b 1
+R50
+R172
+R173
+!i113 1
+R13
+R14
+Pauk_dspip_text_pkg
+R31
+R4
+R5
+R1
+R0
+Z174 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_text_pkg.vhd
+Z175 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_text_pkg.vhd
+l0
+L60
+V?9650dUc4EIVa?hL>i2Z[2
+!s100 D132L>H75ieXQdW840k7O0
+R8
+32
+b1
+R75
+!i10b 1
+R76
+Z176 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_text_pkg.vhd|-work|fft_ii_0|
+Z177 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/auk_dspip_text_pkg.vhd|
+!i113 1
+R13
+R14
+Bbody
+R124
+R31
+R4
+R5
+l0
+L76
+VBMT?2FQ;8ajiSf>Kz973e3
+!s100 8<?]li33IkB>fMMF[SR`S2
+R8
+32
+R75
+!i10b 1
+R76
+R176
+R177
+!i113 1
+R13
+R14
+Pauk_fft_pkg
+R31
+R4
+R5
+R1
+R0
+Z178 8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_fft_pkg.vhd
+Z179 F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_fft_pkg.vhd
+l0
+L18
+VlGBLUAU9@>gB3fj1oZY713
+!s100 KO4z40;KgGV8e8Ta2T@QA0
+R8
+32
+b1
+Z180 !s110 1527573829
+!i10b 1
+Z181 !s108 1527573829.000000
+Z182 !s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_fft_pkg.vhd|-work|fft_ii_0|
+Z183 !s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/auk_fft_pkg.vhd|
+!i113 1
+R13
+R14
+Bbody
+DPx4 work 11 auk_fft_pkg 0 22 lGBLUAU9@>gB3fj1oZY713
+R31
+R4
+R5
+l0
+L27
+VEf7VAQOgil7[UkHS3;gdW3
+!s100 PON1X2]W1W82nXe?d6j<h2
+R8
+32
+R180
+!i10b 1
+R181
+R182
+R183
+!i113 1
+R13
+R14
+vMMt+n+8Hi114TqRTAUOiSw==
+Z184 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R145
+!i10b 0
+!s100 QdHzZ<>7ZdJ4XRAz9oZQA0
+IY4kaX>hjM3Nm[GY1bPBa^1
+R42
+!i8a 1779338928
+!s105 counter_module_sv_unit
+S1
+R0
+w1527573830
+8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/counter_module.sv
+F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/counter_module.sv
+R43
+R44
+r1
+!s85 0
+31
+R181
+!s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/counter_module.sv|
+!s90 -reportprogress|300|-sv|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/counter_module.sv|-L|altera_common_sv_packages|-work|fft_ii_0|
+!i113 1
+Z185 o-sv -L altera_common_sv_packages -work fft_ii_0
+R45
+n50012c5
+vfftSpectrum_fft_ii_0
+R184
+!s110 1527573838
+!i10b 1
+!s100 U<T<NhABl39[MNY>kbaUR2
+I16n;Lj4Pe=iXE;QzTLI7J3
+R42
+!s105 fftSpectrum_fft_ii_0_sv_unit
+S1
+R0
+R165
+8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/fftSpectrum_fft_ii_0.sv
+F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/fftSpectrum_fft_ii_0.sv
+L0 15
+R44
+r1
+!s85 0
+31
+R162
+!s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/fftSpectrum_fft_ii_0.sv|
+!s90 -reportprogress|300|-sv|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/fftSpectrum_fft_ii_0.sv|-L|altera_common_sv_packages|-work|fft_ii_0|
+!i113 1
+R185
+R45
+nfft@spectrum_fft_ii_0
+Phyper_opt_pkg
+R31
+R4
+R5
+R1
+R0
+8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/hyper_opt_OFF_pkg.vhd
+F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/hyper_opt_OFF_pkg.vhd
+l0
+L20
+VQPJ8aX04c@m]412eP]K^Q3
+!s100 oP`H]Kc3EdoO3AG?g;i3L1
+R8
+32
+R9
+!i10b 1
+R10
+!s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/hyper_opt_OFF_pkg.vhd|-work|fft_ii_0|
+!s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/hyper_opt_OFF_pkg.vhd|
+!i113 1
+R13
+R14
+v7Y3BQ+knGPFWV1YKHtBGCoFqQ/Ln0cs4T8pXx44hIiA=
+R180
+!i10b 0
+!s100 L^@BnRdg_lel_IeL9W?Th1
+Ic[e<[8m<3CRFg1ZcML>]k0
+R42
+!i8a 1538915488
+R0
+w1527573829
+8../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/hyper_pipeline_interface.v
+F../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/hyper_pipeline_interface.v
+R43
+R44
+r1
+!s85 0
+31
+R181
+!s107 ../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/hyper_pipeline_interface.v|
+!s90 -reportprogress|300|../../fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/mentor/hyper_pipeline_interface.v|-work|fft_ii_0|
+!i113 1
+R13
+R45
+n5f39f65

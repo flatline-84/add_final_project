@@ -1,0 +1,32 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/17.0
+vfftSpectrumAnalyser
+!s110 1527571379
+!i10b 1
+!s100 oDK:`J>2^MEX3G83hI<i72
+IQGeR1B1Kza_WYbRa3IcJ@1
+VDg1SIo80bB@j0V0VzS_@n1
+dD:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/simulation
+w1527570540
+8D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrumAnalyser.v
+FD:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrumAnalyser.v
+L0 6
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1527571379.000000
+!s107 D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrumAnalyser.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrumAnalyser.v|
+!i113 1
+o-work work
+tCvgOpt 0
+nfft@spectrum@analyser
