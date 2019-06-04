@@ -8,7 +8,7 @@ module hdmi_controller (
 	input wire hdmi_tx_int,   	// PIN_AF11
 	output wire hsync,			// PIN T8
 	output wire vsync,			// PIN V13
-	output wire v_clk,			// PIN AG5 //idk what this does, TMDS clock needs to 10x vid clock
+	output wire v_clk,			// PIN AG5 
 	output wire data_enable,	// PIN AD19
 	output wire [23:0] rgb_data,
 	/* DATA PINS (0->23)

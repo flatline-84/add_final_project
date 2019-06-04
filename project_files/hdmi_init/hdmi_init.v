@@ -69,7 +69,7 @@ reg [7:0] current_dev_id    = 8'h72;
 
 reg start = 0;
 wire ready;
-assign ready_out = ready;
+assign ready_out = initialized;
 
 i2c_clk_divider 
 #(.DELAY(5000))
@@ -192,7 +192,7 @@ always @(posedge(clk_100hz) or posedge(reset) or negedge(reset_not)) begin: main
 
                     end
 
-                    else if (ready == 1'b1) begin// && initialized == 1'b0) begin
+                    else if (ready == 1'b1 /*) begin*/ && initialized == 1'b0) begin
                         state <= STATE_WRITE;
                     end
 					

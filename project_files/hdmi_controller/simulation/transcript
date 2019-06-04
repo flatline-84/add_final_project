@@ -1,5 +1,82 @@
 # Compile of hdmi_controller.v was successful.
 # Compile of hdmi_controller_display.v was successful.
 # Compile of pll.v was successful.
-# 3 compiles, 0 failed with no errors.
-vsim -gui -l /dev/null work.hdmi_controller_display
+# Compile of pll_0002.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.hdmi_controller_display -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver
+# vsim -gui work.hdmi_controller_display -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver 
+# Start time: 12:50:55 on Jun 04,2019
+# Loading work.hdmi_controller_display
+# Loading work.pll
+# Loading work.pll_0002
+# Loading sv_std.std
+# Loading altera_lnsim_ver.altera_lnsim_functions
+# Loading altera_lnsim_ver.altera_pll
+# Loading altera_lnsim_ver.dps_extra_kick
+# Loading altera_lnsim_ver.dprio_init
+# Loading altera_lnsim_ver.altera_generic_pll_functions
+# Loading altera_lnsim_ver.generic_pll
+# ** Warning: (vsim-3017) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Too few port connections. Expected 26, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /hdmi_controller_display/pll74/pll_inst/altera_pll_i File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'zdbfbclk'.
+# WARNING: No extended dataflow license exists
+source hdmi_controller_display.tcl
+runSim
+# ** Warning: (vsim-3017) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Too few port connections. Expected 26, found 6.
+#    Time: 0 ps  Iteration: 0  Instance: /hdmi_controller_display/pll74/pll_inst/altera_pll_i File: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_lnsim.sv
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'refclk1'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'phase_en'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'updn'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'num_phase_shifts'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'scanclk'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'cntsel'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'reconfig_to_pll'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'extswitch'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'adjpllin'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'cclk'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'phase_done'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'reconfig_from_pll'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'activeclk'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'clkbad'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'phout'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'lvds_clk'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'loaden'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'extclk_out'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'cascade_out'.
+# ** Warning: (vsim-3722) /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v(78): [TFMPC] - Missing connection for port 'zdbfbclk'.
+# Info: hierarchical_name = hdmi_controller_display.pll74.pll_inst.altera_pll_i.new_model.gpll.no_need_to_gen
+# Adjusting output period from 13469.464723 to 13469.387755
+# Info: =================================================
+# Info:           Generic PLL Summary
+# Info: =================================================
+# Time scale of (hdmi_controller_display.pll74.pll_inst.altera_pll_i.new_model.gpll.no_need_to_gen) is  1ps /  1ps
+# Info: hierarchical_name = hdmi_controller_display.pll74.pll_inst.altera_pll_i.new_model.gpll.no_need_to_gen
+# Info: reference_clock_frequency = 50.0 MHz
+# Info: output_clock_frequency = 74.242 MHZ
+# Info: phase_shift = 0 ps
+# Info: duty_cycle = 50
+# Info: sim_additional_refclk_cycles_to_lock = 0
+# Info: output_clock_high_period = 6734.693878
+# Info: output_clock_low_period = 6734.693878
+# .main_pane.wave.interior.cs.body.pw.wf
+# End time: 12:54:06 on Jun 04,2019, Elapsed time: 0:03:11
+# Errors: 0, Warnings: 43, Suppressed Warnings: 8

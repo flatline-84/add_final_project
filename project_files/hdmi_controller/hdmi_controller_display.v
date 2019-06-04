@@ -56,7 +56,7 @@ module hdmi_controller_display (
     // Output wires
     output wire hsync, //horizontal sync
     output wire vsync, //vertical sync
-    output reg v_clk, //clock for video -> 148.5MHz for 1920x1080@60Hz
+    output wire v_clk, //clock for video -> 148.5MHz for 1920x1080@60Hz
                                             // 25MHz -> 640x480@60P
     output wire data_enable, //activate HDMI controller
     output wire [23:0] rgb_data //Video data bus
@@ -71,6 +71,8 @@ pll pll74 ( //74.25MHz for 720p
 		.outclk_0(clock74), // outclk0.clk
 		.locked(locked)    //  locked.export
 );
+
+assign v_clk = clock74;
 
 // Constants
 reg [10:0] res_h_limit = 1649; //with porches: 1650 || 1280 without

@@ -71,6 +71,7 @@ set_location_assignment PIN_U10 -to i2c_scl
 set_location_assignment PIN_AA4 -to i2c_sda
 set_location_assignment PIN_AH16 -to reset_toggle
 set_location_assignment PIN_AH17 -to select
+set_location_assignment PIN_AG5 -to v_clk
 set_location_assignment PIN_V13 -to vsync
 set_location_assignment PIN_AD12 -to rgb_data[0]
 set_location_assignment PIN_AE12 -to rgb_data[1]

@@ -9,13 +9,13 @@ z2
 cModel Technology
 d/home/peter
 vhdmi_controller
-Z0 !s110 1559614534
+Z0 !s110 1559616634
 !i10b 1
-!s100 5jBJPoC<M<@kVHm[`c]1S0
-IVm1aDeQlUCKRY391hSmX`2
+!s100 Wio^B8kzodN=if?QeZ>WV1
+IAJm;RcY:of:98R5f4Wm:k0
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 d/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/simulation
-w1559552024
+w1559616414
 8/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/hdmi_controller.v
 F/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/hdmi_controller.v
 L0 3
@@ -23,20 +23,20 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1559614534.000000
+!s108 1559616633.000000
 !s107 /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/hdmi_controller.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/hdmi_controller.v|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z4 o-work work
+Z5 tCvgOpt 0
 vhdmi_controller_display
 R0
 !i10b 1
-!s100 A=EY?6?dXF[2l`FDQdaRd0
-IQ<o[?DLB96M[5iJiHSo=m2
+!s100 T?8:_dzOk1jB2Fn^MLJaU0
+IH5<;jJC7Ya`DfkgBSo`?n2
 R1
 R2
-w1559614430
+w1559616401
 8/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/hdmi_controller_display.v
 F/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/hdmi_controller_display.v
 L0 51
@@ -44,12 +44,12 @@ R3
 r1
 !s85 0
 31
-R4
+Z6 !s108 1559616634.000000
 !s107 /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/hdmi_controller_display.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/hdmi_controller_display.v|
 !i113 1
+R4
 R5
-R6
 vpll
 R0
 !i10b 1
@@ -65,12 +65,12 @@ R3
 r1
 !s85 0
 31
-R4
+R6
 !s107 /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll.v|
 !i113 1
+R4
 R5
-R6
 vpll_0002
 R0
 !i10b 1
@@ -86,9 +86,9 @@ R3
 r1
 !s85 0
 31
-R4
+R6
 !s107 /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_controller/pll/pll_0002.v|
 !i113 1
+R4
 R5
-R6
