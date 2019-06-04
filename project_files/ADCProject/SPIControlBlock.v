@@ -64,6 +64,8 @@ SPIStateMachine_2 SPI_State_Machine
  
  
  
+ 
+ 
  wire [11:0] copy_Data = data;  
  
  reg [7:0] ScaleDown;
