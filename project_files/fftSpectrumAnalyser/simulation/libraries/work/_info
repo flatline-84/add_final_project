@@ -1,0 +1,53 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/simulation
+vfftSpectrum_tb
+!s110 1558311813
+!i10b 1
+!s100 Peh9iGl71Cm^dFPAEkHMB2
+IM;VfD_6Od@h7ancMQ;=ZF3
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dC:/scratch/fftSpectrumAnalyser/simulation
+w1558311351
+8../fftSpectrum/testbench/fftSpectrum_tb/simulation/fftSpectrum_tb.v
+F../fftSpectrum/testbench/fftSpectrum_tb/simulation/fftSpectrum_tb.v
+L0 6
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1558311813.000000
+!s107 ../fftSpectrum/testbench/fftSpectrum_tb/simulation/fftSpectrum_tb.v|
+!s90 -reportprogress|300|../fftSpectrum/testbench/fftSpectrum_tb/simulation/fftSpectrum_tb.v|
+!i113 1
+Z3 tCvgOpt 0
+nfft@spectrum_tb
+vfftSpectrumAnalyser
+!s110 1558311651
+!i10b 1
+!s100 6c9jS=5Phk3ZI2^]f[SUC3
+IP5icP?^Q<Hefn]^XWz4hQ3
+R0
+R1
+w1527575504
+8D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrumAnalyser.v
+FD:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrumAnalyser.v
+L0 6
+R2
+r1
+!s85 0
+31
+!s108 1558311650.000000
+!s107 D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrumAnalyser.v|
+!s90 -reportprogress|300|-work|work|-stats=none|D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrumAnalyser.v|
+!i113 1
+o-work work
+R3
+nfft@spectrum@analyser

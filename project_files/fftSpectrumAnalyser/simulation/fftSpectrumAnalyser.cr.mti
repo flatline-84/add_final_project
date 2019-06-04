@@ -1,0 +1,8 @@
+D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrumAnalyser.v {1 {vlog -work work -stats=none D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrumAnalyser.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module fftSpectrumAnalyser
+
+Top level modules:
+	fftSpectrumAnalyser
+
+} {} {}}

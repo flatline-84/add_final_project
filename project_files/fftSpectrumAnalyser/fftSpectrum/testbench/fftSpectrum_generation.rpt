@@ -1,0 +1,188 @@
+Info: Starting: Create testbench Qsys system
+Info: D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/testbench/fftSpectrum.ipx
+Info: qsys-generate D:\Designs\Quartus\EEET2162\fftSpectrumAnalyser\fftSpectrum.qsys --testbench=SIMPLE --output-directory=D:\Designs\Quartus\EEET2162\fftSpectrumAnalyser --family="Cyclone V" --part=5CSEBA6U23I7DK
+Progress: Loading fftSpectrumAnalyser/fftSpectrum.qsys
+Progress: Reading input file
+Progress: Adding fft_ii_0 [altera_fft_ii 17.0]
+Progress: Parameterizing module fft_ii_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: fftSpectrum.fft_ii_0: Radix-2 digit reverse implied
+Info: qsys-generate succeeded.
+Info: Loading IP catalog for testbench.
+Progress: 
+Progress: 
+Progress: 
+Progress: (2) searching C:/intelfpga/17.0/quartus/sopc_builder/bin/root_components.ipx (ipx file)
+Info: Reading index C:\intelfpga\17.0\quartus\sopc_builder\bin\root_components.ipx
+Info: C:\intelfpga\17.0\quartus\sopc_builder\bin\root_components.ipx: Loading now from components.ipx
+Info: Reading index C:\intelfpga\17.0\quartus\sopc_builder\bin\ip_component_categories.ipx
+Info: C:\intelfpga\17.0\quartus\sopc_builder\bin\ip_component_categories.ipx described 0 plugins, 0 paths, in 0.01 seconds
+Info: C:/intelfpga/17.0/quartus/sopc_builder/bin/ip_component_categories.ipx matched 1 files in 0.01 seconds
+Info: D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/testbench/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index D:\Designs\Quartus\EEET2162\fftSpectrumAnalyser\fftSpectrum\testbench\fftSpectrum.ipx
+Progress: Loading fftSpectrumAnalyser/fftSpectrum.qsys
+Info: D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/* matched 15 files in 0.00 seconds
+Info: D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/ip/**/* matched 0 files in 0.00 seconds
+Info: D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/*/* matched 424 files in 0.01 seconds
+Info: D:\Designs\Quartus\EEET2162\fftSpectrumAnalyser\fftSpectrum\testbench\fftSpectrum.ipx described 0 plugins, 3 paths, in 0.02 seconds
+Info: D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/testbench/* matched 4 files in 0.02 seconds
+Info: D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/testbench/*/* matched 0 files in 0.00 seconds
+Info: H:/.altera.quartus/ip/17.0/**/* matched 0 files in 0.00 seconds
+Info: C:/intelfpga/17.0/quartus/sopc_builder/bin/$$QUARTUS_IP_PROJECTDIR/* matched 0 files in 0.00 seconds
+Info: C:/intelfpga/17.0/quartus/sopc_builder/bin/$$QUARTUS_IP_USERDIR/* matched 0 files in 0.00 seconds
+Info: C:/intelfpga/17.0/quartus/sopc_builder/bin/$$QUARTUS_IP_GLOBALDIR/* matched 0 files in 0.00 seconds
+Info: Reading index C:\intelfpga\17.0\ip\altera\altera_components.ipx
+Info: C:\intelfpga\17.0\ip\altera\altera_components.ipx described 1996 plugins, 0 paths, in 0.25 seconds
+Info: C:/intelfpga/17.0/ip/**/* matched 138 files in 0.26 seconds
+Info: C:/intelfpga/ip/**/* matched 0 files in 0.00 seconds
+Info: Reading index C:\intelfpga\17.0\quartus\sopc_builder\builtin.ipx
+Info: C:\intelfpga\17.0\quartus\sopc_builder\builtin.ipx described 83 plugins, 0 paths, in 0.01 seconds
+Info: C:/intelfpga/17.0/quartus/sopc_builder/**/* matched 8 files in 0.01 seconds
+Info: Reading index C:\intelfpga\17.0\quartus\common\librarian\factories\index.ipx
+Info: C:\intelfpga\17.0\quartus\common\librarian\factories\index.ipx described 151 plugins, 0 paths, in 0.01 seconds
+Info: C:/intelfpga/17.0/quartus/common/librarian/factories/**/* matched 4 files in 0.01 seconds
+Info: C:/intelfpga/17.0/quartus/sopc_builder/bin/$IP_IPX_PATH matched 1 files in 0.00 seconds
+Info: C:\intelfpga\17.0\quartus\sopc_builder\bin\root_components.ipx described 0 plugins, 13 paths, in 0.31 seconds
+Info: C:/intelfpga/17.0/quartus/sopc_builder/bin/root_components.ipx matched 1 files in 0.31 seconds
+Progress: 
+Progress: 
+Progress: 
+Info: Running script C:/intelfpga/17.0/quartus/sopc_builder/bin/tbgen.tcl
+Info: send_message Info TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: TB_Gen: QSYS Testbench Generator Rev: $Revision: #1 $
+Info: get_module_property NAME
+Info: send_message Info TB_Gen: System design is: fftSpectrum
+Info: TB_Gen: System design is: fftSpectrum
+Info: get_interfaces 
+Info: get_connections 
+Info: get_interface_property clk EXPORT_OF
+Info: get_instance_property fft_ii_0 CLASS_NAME
+Info: get_instance_assignment fft_ii_0 testbench.partner.map.clk
+Info: get_interface_property rst EXPORT_OF
+Info: get_instance_property fft_ii_0 CLASS_NAME
+Info: get_instance_assignment fft_ii_0 testbench.partner.map.rst
+Info: get_interface_property sink EXPORT_OF
+Info: get_instance_property fft_ii_0 CLASS_NAME
+Info: get_instance_assignment fft_ii_0 testbench.partner.map.sink
+Info: get_interface_property source EXPORT_OF
+Info: get_instance_property fft_ii_0 CLASS_NAME
+Info: get_instance_assignment fft_ii_0 testbench.partner.map.source
+Info: send_message Info TB_Gen: Creating testbench system : fftSpectrum_tb with clock and reset BFMs
+Info: TB_Gen: Creating testbench system : fftSpectrum_tb with clock and reset BFMs
+Info: create_system fftSpectrum_tb
+Info: add_instance fftSpectrum_inst fftSpectrum 
+Info: set_use_testbench_naming_pattern true fftSpectrum
+Info: get_instance_interfaces fftSpectrum_inst
+Info: get_instance_interface_property fftSpectrum_inst clk CLASS_NAME
+Info: get_instance_interface_property fftSpectrum_inst rst CLASS_NAME
+Info: get_instance_interface_property fftSpectrum_inst sink CLASS_NAME
+Info: get_instance_interface_property fftSpectrum_inst source CLASS_NAME
+Info: get_instance_interface_property fftSpectrum_inst clk CLASS_NAME
+Info: send_message Info TB_Gen: clock_sink found: clk
+Info: TB_Gen: clock_sink found: clk
+Info: get_instance_interface_property fftSpectrum_inst clk CLASS_NAME
+Info: add_instance fftSpectrum_inst_clk_bfm altera_avalon_clock_source 
+Info: get_instance_property fftSpectrum_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value fftSpectrum_inst clk clockRate
+Info: send_message Warning TB_Gen: clockRate is less than 1Hz; setting to 50MHz
+Warning: TB_Gen: clockRate is less than 1Hz; setting to 50MHz
+Info: set_instance_parameter_value fftSpectrum_inst_clk_bfm CLOCK_RATE 50000000
+Info: set_instance_parameter_value fftSpectrum_inst_clk_bfm CLOCK_UNIT 1
+Info: get_instance_property fftSpectrum_inst_clk_bfm CLASS_NAME
+Info: get_instance_interface_property fftSpectrum_inst clk CLASS_NAME
+Info: get_instance_interfaces fftSpectrum_inst_clk_bfm
+Info: get_instance_interface_property fftSpectrum_inst_clk_bfm clk CLASS_NAME
+Info: add_connection fftSpectrum_inst_clk_bfm.clk fftSpectrum_inst.clk
+Info: get_instance_interface_property fftSpectrum_inst rst CLASS_NAME
+Info: send_message Info TB_Gen: reset_sink found: rst
+Info: TB_Gen: reset_sink found: rst
+Info: get_instance_interface_property fftSpectrum_inst rst CLASS_NAME
+Info: add_instance fftSpectrum_inst_rst_bfm altera_avalon_reset_source 
+Info: get_instance_property fftSpectrum_inst_rst_bfm CLASS_NAME
+Info: get_instance_interface_ports fftSpectrum_inst rst
+Info: get_instance_interface_port_property fftSpectrum_inst rst reset_n ROLE
+Info: get_instance_interface_port_property fftSpectrum_inst rst reset_n ROLE
+Info: set_instance_parameter_value fftSpectrum_inst_rst_bfm ASSERT_HIGH_RESET 0
+Info: set_instance_parameter_value fftSpectrum_inst_rst_bfm INITIAL_RESET_CYCLES 50
+Info: get_instance_property fftSpectrum_inst_rst_bfm CLASS_NAME
+Info: get_instance_interfaces fftSpectrum_inst_rst_bfm
+Info: get_instance_interface_property fftSpectrum_inst_rst_bfm clk CLASS_NAME
+Info: get_instance_interface_property fftSpectrum_inst_rst_bfm reset CLASS_NAME
+Info: get_instance_property fftSpectrum_inst_rst_bfm CLASS_NAME
+Info: get_instance_interface_parameter_value fftSpectrum_inst rst associatedClock
+Info: get_instance_interface_property fftSpectrum_inst clk CLASS_NAME
+Info: get_instance_interfaces fftSpectrum_inst_clk_bfm
+Info: get_instance_interface_property fftSpectrum_inst_clk_bfm clk CLASS_NAME
+Info: add_connection fftSpectrum_inst_clk_bfm.clk fftSpectrum_inst_rst_bfm.clk
+Info: get_instance_interface_property fftSpectrum_inst rst CLASS_NAME
+Info: get_instance_interfaces fftSpectrum_inst_rst_bfm
+Info: get_instance_interface_property fftSpectrum_inst_rst_bfm clk CLASS_NAME
+Info: get_instance_interface_property fftSpectrum_inst_rst_bfm reset CLASS_NAME
+Info: add_connection fftSpectrum_inst_rst_bfm.reset fftSpectrum_inst.rst
+Info: send_message Info TB_Gen: Saving testbench system: fftSpectrum_tb.qsys
+Info: TB_Gen: Saving testbench system: fftSpectrum_tb.qsys
+Info: save_system fftSpectrum_tb.qsys
+Info: send_message Info TB_Gen: TBGEN SUCCESSFUL
+Info: TB_Gen: TBGEN SUCCESSFUL
+Info: Testbench system: D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/testbench/fftSpectrum_tb.qsys
+Info: Done
+Info: qsys-generate D:\Designs\Quartus\EEET2162\fftSpectrumAnalyser\fftSpectrum.qsys --simulation=VERILOG --allow-mixed-language-simulation --testbench=SIMPLE --testbench-simulation=VERILOG --allow-mixed-language-testbench-simulation --output-directory=D:\Designs\Quartus\EEET2162\fftSpectrumAnalyser\fftSpectrum\testbench\fftSpectrum_tb\simulation --family="Cyclone V" --part=5CSEBA6U23I7DK
+Progress: Loading testbench/fftSpectrum_tb.qsys
+Progress: Reading input file
+Progress: Adding fftSpectrum_inst [fftSpectrum 1.0]
+Progress: Parameterizing module fftSpectrum_inst
+Progress: Adding fftSpectrum_inst_clk_bfm [altera_avalon_clock_source 17.0]
+Progress: Parameterizing module fftSpectrum_inst_clk_bfm
+Progress: Adding fftSpectrum_inst_rst_bfm [altera_avalon_reset_source 17.0]
+Progress: Parameterizing module fftSpectrum_inst_rst_bfm
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: fftSpectrum_tb.fftSpectrum_inst.fft_ii_0: Radix-2 digit reverse implied
+Info: fftSpectrum_tb.fftSpectrum_inst_clk_bfm: Elaborate: altera_clock_source
+Info: fftSpectrum_tb.fftSpectrum_inst_clk_bfm:            $Revision: #1 $
+Info: fftSpectrum_tb.fftSpectrum_inst_clk_bfm:            $Date: 2017/01/22 $
+Info: fftSpectrum_tb.fftSpectrum_inst_rst_bfm: Elaborate: altera_reset_source
+Info: fftSpectrum_tb.fftSpectrum_inst_rst_bfm:            $Revision: #1 $
+Info: fftSpectrum_tb.fftSpectrum_inst_rst_bfm:            $Date: 2017/01/22 $
+Info: fftSpectrum_tb.fftSpectrum_inst_rst_bfm: Reset is negatively asserted.
+Warning: fftSpectrum_tb.fftSpectrum_inst: fftSpectrum_inst.sink must be exported, or connected to a matching conduit.
+Warning: fftSpectrum_tb.fftSpectrum_inst: fftSpectrum_inst.source must be exported, or connected to a matching conduit.
+Info: fftSpectrum_tb: Generating fftSpectrum_tb "fftSpectrum_tb" for SIM_VERILOG
+Info: fftSpectrum_inst: "fftSpectrum_tb" instantiated fftSpectrum "fftSpectrum_inst"
+Info: fftSpectrum_inst_clk_bfm: "fftSpectrum_tb" instantiated altera_avalon_clock_source "fftSpectrum_inst_clk_bfm"
+Info: fftSpectrum_inst_rst_bfm: "fftSpectrum_tb" instantiated altera_avalon_reset_source "fftSpectrum_inst_rst_bfm"
+Info: Reusing file D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/testbench/fftSpectrum_tb/simulation/submodules/verbosity_pkg.sv
+Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twr1.hex
+Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twi2.hex
+Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twr2.hex
+Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twi3.hex
+Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twi4.hex
+Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twr3.hex
+Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twi1.hex
+Info: fft_ii_0: --- add file: fftSpectrum_fft_ii_0_opt_twr4.hex
+Info: fft_ii_0: "fftSpectrum_inst" instantiated altera_fft_ii "fft_ii_0"
+Info: fftSpectrum_tb: Done "fftSpectrum_tb" with 5 modules, 142 files
+Info: qsys-generate succeeded.
+Info: sim-script-gen --spd=D:\Designs\Quartus\EEET2162\fftSpectrumAnalyser\fftSpectrum_tb.spd --output-directory=D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/testbench/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=D:\Designs\Quartus\EEET2162\fftSpectrumAnalyser\fftSpectrum_tb.spd --output-directory=D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/testbench/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/testbench/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Skipping VCS script generation since VHDL file $QUARTUS_INSTALL_DIR/eda/sim_lib/altera_syn_attributes.vhd is required for simulation
+Info: Generating the following file(s) for VCSMX simulator in D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/testbench/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/testbench/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	5 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/testbench/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/testbench/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create testbench Qsys system

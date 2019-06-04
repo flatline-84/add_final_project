@@ -1,0 +1,166 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/simulation/modelsim
+Pauk_dspip_lib_pkg
+Z1 DPx4 work 18 auk_dspip_math_pkg 0 22 OQ6W=MiR52Zi7^VZ_EXeK3
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z5 w1527560222
+R0
+8D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_lib_pkg.vhd
+FD:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_lib_pkg.vhd
+l0
+L28
+VRC:XG>zVDPNnf7D4^<cCW1
+!s100 KcRlL:CTnlUz=1CF=kC_S0
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1527572718
+!i10b 1
+Z8 !s108 1527572718.000000
+!s90 -reportprogress|300|-93|-work|fftSpectrum|D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_lib_pkg.vhd|
+!s107 D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_lib_pkg.vhd|
+!i113 1
+Z9 o-93 -work fftSpectrum
+Z10 tExplicit 1 CvgOpt 0
+Pauk_dspip_math_pkg
+R2
+R3
+R4
+R5
+R0
+Z11 8D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_math_pkg.vhd
+Z12 FD:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_math_pkg.vhd
+l0
+L51
+VOQ6W=MiR52Zi7^VZ_EXeK3
+!s100 [z_3ODE8b:W7XDJ[_]HTW0
+R6
+31
+b1
+R7
+!i10b 1
+R8
+Z13 !s90 -reportprogress|300|-93|-work|fftSpectrum|D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_math_pkg.vhd|
+Z14 !s107 D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_math_pkg.vhd|
+!i113 1
+R9
+R10
+Bbody
+R1
+R2
+R3
+R4
+l0
+L128
+VOP]WSl>Bk8NNQOcCKPfAK0
+!s100 `941_Ff6o7=GBNnXYB1eU3
+R6
+31
+R7
+!i10b 1
+R8
+R13
+R14
+!i113 1
+R9
+R10
+Pauk_dspip_text_pkg
+R2
+R3
+R4
+R5
+R0
+Z15 8D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_text_pkg.vhd
+Z16 FD:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_text_pkg.vhd
+l0
+L60
+Voc4XZPN9EfYP>9[D;1KcT3
+!s100 D132L>H75ieXQdW840k7O0
+R6
+31
+b1
+Z17 !s110 1527572717
+!i10b 1
+Z18 !s108 1527572717.000000
+Z19 !s90 -reportprogress|300|-93|-work|fftSpectrum|D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_text_pkg.vhd|
+Z20 !s107 D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/auk_dspip_text_pkg.vhd|
+!i113 1
+R9
+R10
+Bbody
+DPx4 work 18 auk_dspip_text_pkg 0 22 oc4XZPN9EfYP>9[D;1KcT3
+R2
+R3
+R4
+l0
+L76
+V7^UYEoBo`:XeOn@]2W97K3
+!s100 8<?]li33IkB>fMMF[SR`S2
+R6
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R9
+R10
+vfftSpectrum
+!s110 1527572716
+!i10b 1
+!s100 5jaO>M^P5EeP?TVPISW_A0
+I0cR0HX1lF>@>4;V1FmLn`2
+Z21 VDg1SIo80bB@j0V0VzS_@n1
+R0
+R5
+8D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/fftSpectrum.v
+FD:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/fftSpectrum.v
+L0 6
+Z22 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1527572716.000000
+!s107 D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/fftSpectrum.v|
+!s90 -reportprogress|300|-vlog01compat|-work|fftSpectrum|+incdir+D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis|D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/fftSpectrum.v|
+!i113 1
+o-vlog01compat -work fftSpectrum
+!s92 -vlog01compat -work fftSpectrum +incdir+D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis
+Z23 tCvgOpt 0
+nfft@spectrum
+vfftSpectrum_fft_ii_0
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+R17
+!i10b 1
+!s100 U<T<NhABl39[MNY>kbaUR2
+IYVC7Hg_56lDh4P6kL3<iI3
+R21
+!s105 fftSpectrum_fft_ii_0_sv_unit
+S1
+R0
+R5
+8D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/fftSpectrum_fft_ii_0.sv
+FD:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/fftSpectrum_fft_ii_0.sv
+L0 15
+R22
+r1
+!s85 0
+31
+R18
+!s107 D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/fftSpectrum_fft_ii_0.sv|
+!s90 -reportprogress|300|-sv|-work|fftSpectrum|+incdir+D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules|D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules/fftSpectrum_fft_ii_0.sv|
+!i113 1
+o-sv -work fftSpectrum
+!s92 -sv -work fftSpectrum +incdir+D:/Designs/Quartus/EEET2162/fftSpectrumAnalyser/fftSpectrum/synthesis/submodules
+R23
+nfft@spectrum_fft_ii_0
