@@ -4,9 +4,4 @@
 # Compile of i2c_controller.v was successful.
 # Compile of i2c_master.v was successful.
 # 5 compiles, 0 failed with no errors.
-source hdmi_init.tcl
-runSIm
-# invalid command name "runSIm"
-runSim
-# No Design Loaded!
 vsim -gui -l /dev/null work.hdmi_init

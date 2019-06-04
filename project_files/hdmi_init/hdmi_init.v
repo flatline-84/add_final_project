@@ -73,8 +73,8 @@ wire ready;
 assign ready_out = initialized;
 
 i2c_clk_divider 
-// #(.DELAY(5000))
-#(.DELAY(250)) //for sim
+#(.DELAY(5000))
+// #(.DELAY(250)) //for sim
 clk_divider
 (
 	.reset(reset),
@@ -193,7 +193,7 @@ always @(posedge(clk_100hz) or negedge(reset_not)) begin: main_state_machine_loo
 
                     end
 
-                    else if (ready == 1'b1 /*) begin*/ && initialized == 1'b0) begin
+                    else if (ready == 1'b1 && initialized == 1'b0) begin
                         state <= STATE_WRITE;
                     end
 					
@@ -220,16 +220,17 @@ always @(posedge(clk_100hz) or negedge(reset_not)) begin: main_state_machine_loo
 					/*if (initialized && ready_out) begin
 						state <= STATE_IDLE;
 					end*/
-					if (ready_out) begin
+					if (ready) begin
 						// if (!ack_out) begin //no acknowledge from device
 						// 	state <= STATE_BEGIN;
 						// end
 						// else begin
-							if (!initialized) begin
-								delay <= 0;
-								count <= count + 1;	
-							end
-							state <= STATE_IDLE;
+						if (!initialized) begin
+							delay <= 0;
+							count <= count + 1;	
+						end
+						
+						state <= STATE_IDLE;
 						// end
 						// else begin
 							// state <= STATE_IDLE;

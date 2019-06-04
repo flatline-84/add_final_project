@@ -4,3 +4,5 @@ project_files/*/output_files/*
 .vscode/
 *.cdb
 *.hdb
+*.vo 
+*.xrf
