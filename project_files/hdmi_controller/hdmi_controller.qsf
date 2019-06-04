@@ -88,8 +88,10 @@ set_location_assignment PIN_AH6 -to rgb_data[20]
 set_location_assignment PIN_AG6 -to rgb_data[21]
 set_location_assignment PIN_AF9 -to rgb_data[22]
 set_location_assignment PIN_AE8 -to rgb_data[23]
-set_location_assignment PIN_AA23 -to led_ack
-set_location_assignment PIN_AF26 -to led_reset
+set_global_assignment -name VERILOG_FILE ../ADCProject/SPIStateMachine_2.v
+set_global_assignment -name VERILOG_FILE ../ADCProject/SPIControlBlock.v
+set_global_assignment -name VERILOG_FILE ../ADCProject/count_down.v
+set_global_assignment -name VERILOG_FILE ../ADCProject/clockDivider.v
 set_global_assignment -name VERILOG_FILE square.v
 set_global_assignment -name VERILOG_FILE top_sync_vg_pattern.v
 set_global_assignment -name VERILOG_FILE sync_vg.v
@@ -103,4 +105,16 @@ set_global_assignment -name VERILOG_FILE ../i2c_master/i2c_clk_divider.v
 set_global_assignment -name QIP_FILE pll.qip
 set_global_assignment -name SIP_FILE pll.sip
 set_global_assignment -name VERILOG_FILE hdmi_controller.v
+set_location_assignment PIN_AC24 -to spi_scl
+set_location_assignment PIN_AA15 -to spi_sdi
+set_location_assignment PIN_AD4 -to spi_sdo
+set_location_assignment PIN_Y15 -to CONVST
+set_location_assignment PIN_AA23 -to leds[7]
+set_location_assignment PIN_Y16 -to leds[6]
+set_location_assignment PIN_AE26 -to leds[5]
+set_location_assignment PIN_AF26 -to leds[4]
+set_location_assignment PIN_V15 -to leds[3]
+set_location_assignment PIN_V16 -to leds[2]
+set_location_assignment PIN_AA24 -to leds[1]
+set_location_assignment PIN_W15 -to leds[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

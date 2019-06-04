@@ -8,7 +8,7 @@ module square
 
 (
 
-    input wire [X_BITS-1:0] value,
+    input wire [11:0] value,
     input wire [Y_BITS-1:0] y1,
     input wire vsync, //will be 60Hz
 

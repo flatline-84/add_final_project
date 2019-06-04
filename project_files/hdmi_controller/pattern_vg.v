@@ -13,6 +13,12 @@ module pattern_vg
     input wire [Y_BITS-1:0] y,
     input wire vn_in, hn_in, dn_in,
     input wire [B-1:0] r_in, g_in, b_in,
+    
+    input wire[11:0] channel_1,
+    input wire[11:0] channel_2,
+    input wire[11:0] channel_3,
+    input wire[11:0] channel_4,
+    
     output reg vn_out, hn_out, den_out,
     output reg [B-1:0] r_out, g_out, b_out,
     input wire [X_BITS-1:0] total_active_pix,
@@ -34,10 +40,14 @@ reg which_way = 1;
 
 // Scale correctly here
 always @(posedge(vn_in)) begin
-    if (x2 >= total_active_pix)
+    if (x2 >= total_active_pix) begin 
         which_way <= 0;
-    else if (x2 <= 0)
+        x2 <= total_active_pix;
+    end
+    else if (x2 <= 0) begin
         which_way <= 1;
+        x2 <= 0;
+    end
     
     if (which_way)
         x2 <= x2 + 1;
@@ -45,16 +55,15 @@ always @(posedge(vn_in)) begin
         x2 <= x2 - 1;
 end
 
-
 wire square_1_draw;
 wire square_2_draw;
 wire square_3_draw;
 wire square_4_draw;
 
 square square_1 (
-    .value(x2),
+    .value(channel_1),
     .y1(y1),
-    .vsync(clock60),
+    .vsync(vn_in),
     .total_active_pix(total_active_pix),
     .x(x),
     .y(y),
@@ -62,9 +71,9 @@ square square_1 (
 );
 
 square square_2 (
-    .value(x2),
+    .value(channel_2),
     .y1(y2),
-    .vsync(clock60),
+    .vsync(vn_in),
     .total_active_pix(total_active_pix),
     .x(x),
     .y(y),
@@ -72,9 +81,9 @@ square square_2 (
 );
 
 square square_3 (
-    .value(x2),
+    .value(channel_3),
     .y1(y3),
-    .vsync(clock60),
+    .vsync(vn_in),
     .total_active_pix(total_active_pix),
     .x(x),
     .y(y),
@@ -82,9 +91,9 @@ square square_3 (
 );
 
 square square_4 (
-    .value(x2),
+    .value(channel_4),
     .y1(y4),
-    .vsync(clock60),
+    .vsync(vn_in),
     .total_active_pix(total_active_pix),
     .x(x),
     .y(y),
