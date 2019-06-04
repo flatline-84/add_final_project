@@ -6,3 +6,7 @@ project_files/*/output_files/*
 *.hdb
 *.vo 
 *.xrf
+*.qdb
+*.qpg
+*.qtl
+*.qws
