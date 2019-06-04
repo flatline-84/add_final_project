@@ -1,0 +1,283 @@
+// Lab 04 -- ADD - State Machine
+// Author: Craig Robinson - s3488614
+// Last Edit Date: 1/5/2019
+
+
+module Lab04StateMachine
+(
+	
+	input [3:0]area,
+	input armSwitch, PanicSwitch, clock_50_input, resetSimPin,
+	output [7:0] leds,
+	output [2:0] curStateOut,nextStateOut,
+	output SecondClock, 
+	output [3:0]DelayCounter, AlarmCounter 
+		
+);
+
+	//Need to latch the arm and panic buttons too... 
+
+	parameter disarmed = 3'b000; // Led 6 on
+	parameter delay = 3'b001; // 5s wait until armed
+	parameter armed = 3'b010; // Led 7 on, waiting on input
+	parameter triggered = 3'b011; // Siren on, Strobe on, LED Triggered on
+	parameter panic = 3'b100; // 10s timeout and Siren + Strobe, default disarmed and handle
+	
+	reg [2:0] currentState = disarmed;
+	reg [2:0] nextState = disarmed;
+	reg [7:0] led_out;
+	
+   parameter triggeredMax = 4'd10;
+	reg[3:0] triggeredCounter = 4'd0000;
+	parameter delayMax = 4'd5;
+	reg[3:0] delayCounter = 4'd0000;
+	reg resetCounter;
+	
+	assign curStateOut = currentState; 
+	assign nextStateOut = nextState; 
+	assign DelayCounter = delayCounter; 
+	assign AlarmCounter = triggeredCounter; 
+	
+	wire clockOutput1Second;
+	
+	
+	Lab04ClockDivide clock1Second
+	(
+		.clock_50(clock_50_input),
+		.reset_n(reset_pin),
+		.clockOutputReduced(clockOutput1Second)	
+	);
+	
+	assign SecondClock = clockOutput1Second;
+	
+	// Use the Clock 1 second divider to increment the counters
+	// Can then use the resetCounter reg to reset the counters
+	always @(posedge(clockOutput1Second), posedge(resetCounter))
+	  begin: clockCounter
+		if(resetCounter == 1'b1 )
+			begin
+				triggeredCounter = 4'b0000;
+				delayCounter = 4'b0000;
+			end
+			
+		else
+			begin
+			  triggeredCounter <= triggeredCounter + 1'b1;
+			  delayCounter <= delayCounter + 1'b1;
+			end
+	  end
+	  
+	/*
+	reg delayFinished;
+	
+	always @(posedge(clockOutput1Second), posedge(resetCounter))
+	  begin: clockCounterV2
+		if(resetCounter == 1'b1 ) //don't use delay
+			begin
+				triggeredCounter = 4'b0000;
+				delayCounter = 4'b0000;
+				delayFinished = 1'b0;
+			end
+		else if(triggerCounter == triggeredMax) //if reach max, automatically reset counter
+			begin
+				triggeredCounter = 4'b0000;
+				delayCounter = 4'b0000;
+				delayFinished = 1'b1;				
+			end
+		else //increment counter normally
+			begin
+			  triggeredCounter <= triggeredCounter + 1'b1;
+			  delayCounter <= delayCounter + 1'b1;
+			  delayFinished = 1'b0;
+			end
+	  end
+	*/
+/*      StateMemory Block            */		
+
+	always @(posedge(clock_50_input))
+	
+		begin: stateMemory
+			currentState <= nextState;
+		end
+		
+/*      Next Stage Logic Block            */		
+	always @(currentState, area, armSwitch, PanicSwitch, delayCounter,triggeredCounter)
+		begin: nextStateLogic
+			
+			case(currentState)
+				disarmed:
+					begin
+					
+					  if(PanicSwitch)
+					    begin
+						//   resetCounter = 1'b1;
+						   nextState = panic; //Panic state
+						 end
+					
+					  else if(armSwitch)
+					    begin
+						   nextState = delay; // Delay state 
+						//	resetCounter = 1'b1;
+						 end
+						 
+					  else 
+					    begin
+						//	resetCounter = 1'b0;
+						   nextState = currentState;
+						 end	
+						 
+					end
+				
+				delay:
+					begin
+				      
+					  if(PanicSwitch)
+					    begin
+						   nextState = panic; //Panic state
+					//		resetCounter = 1'b1;
+						 end
+						 
+//					  else if(delayCounter == delayMax)
+//							begin
+//							  nextState = armed;
+//					//		  resetCounter = 1'b1; 
+//							end	 
+//					
+					  else 
+					    begin
+					//	   resetCounter = 1'b0;
+						   nextState = armed;//Keep counting till 5.. 
+						 end
+					
+					end
+				
+				armed:
+					begin
+					   
+					  if(PanicSwitch)
+					    begin
+						   nextState = panic; //Panic state
+					//		resetCounter = 1'b1;
+						 end
+						 
+					  else if(armSwitch)
+					    begin
+						   nextState = disarmed; // disarmed state
+						//   resetCounter = 1'b0;	
+						 end	 
+					
+					  else if(area != 4'b0000) 
+					    begin
+						   nextState = triggered; // Triggered state 
+						//	resetCounter = 1'b1;
+						 end
+						 
+					  else 
+					    begin
+						 //  resetCounter = 1'b0;
+						   nextState = armed;
+						 end	 
+					
+					end
+				
+				triggered:
+					begin
+					  
+//					  if(triggeredCounter == triggeredMax)
+//							begin
+////							  triggeredCounter = 4'd0;
+//						//	  resetCounter = 1'b0;
+//							  nextState = armed; //Default back to armed
+//							end
+//					  else 
+//					      begin
+						//	  resetCounter = 1'b1;
+							  nextState = armed; //Keep counting till 5.. 
+//							end
+					end
+								
+				panic:
+					begin
+		
+					   
+//						if(triggeredCounter != triggeredMax)
+//							begin
+//							//  resetCounter = 1'b1;
+//							  nextState = panic;
+//							  
+//							end
+//					   else
+//						  begin
+							// resetCounter = 1'b0;
+							 nextState = disarmed; //Default back to disarmed	
+//						  end
+					
+							
+					end
+				
+				default:
+				   begin
+					  	// default incase of error
+						nextState = disarmed;
+				//		resetCounter = 1'b0;
+					end
+				
+				endcase
+		end
+		
+		
+		
+		
+/*      Output Logic Block            */		
+	always @(currentState, area, armSwitch, PanicSwitch,delayCounter,triggeredCounter)
+		begin: outputLogic
+			
+			case(currentState)
+				disarmed:
+					begin
+						led_out = 8'b00100000; // Led 6 on, rest off 
+					end
+				
+				delay:
+					begin
+						led_out = 8'b00000000; // Led off 
+					end
+				
+				armed:
+					begin
+						led_out = 8'b01000000; // Led 7 on, rest off 
+					end
+				
+				triggered:
+					begin
+					
+						led_out = 8'b01010010; // Led 7 on, Led 1 flash 1hz, Led0 on. 
+						//Then need to show what was triggered...
+//						led_out = led_out || inputTrigger;
+					
+					end
+				
+				panic:
+					begin
+					
+						led_out = 8'b0111111; // Led 7 on, Led 1 flash 1hz, Led0 on. 
+					
+					end
+				
+				default:
+					// default incase of error
+					led_out = 8'b00000000; // Led 6 on, rest off 
+					
+				endcase
+				
+		 
+		end		
+	assign leds = led_out;	
+		
+		
+		
+		
+	
+	
+		
+endmodule

@@ -1,0 +1,251 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/18.1/Lab04TLE/simulation
+vADC_FFT_Block
+Z0 !s110 1559637059
+!i10b 1
+!s100 ;R5h?1AURH=A>EJoUCeCG3
+IM?f;GdCOm`AQiCZC<^k6D1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/intelFPGA_lite/18.1/ADCProject/simulation
+w1558601575
+8C:/intelFPGA_lite/18.1/ADCProject/ADC_FFT_Block.v
+FC:/intelFPGA_lite/18.1/ADCProject/ADC_FFT_Block.v
+L0 3
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1559637059.000000
+!s107 C:/intelFPGA_lite/18.1/ADCProject/ADC_FFT_Block.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/ADCProject/ADC_FFT_Block.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@a@d@c_@f@f@t_@block
+vADCProject
+R0
+!i10b 1
+!s100 [0_b7ISAi4_T7L1Si46l`2
+I3_G[5JmgQG^eEGkz0^e_=0
+R1
+R2
+w1557734757
+8C:/intelFPGA_lite/18.1/ADCProject/ADCProject.v
+FC:/intelFPGA_lite/18.1/ADCProject/ADCProject.v
+L0 8
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/ADCProject/ADCProject.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/ADCProject/ADCProject.v|
+!i113 1
+R5
+R6
+n@a@d@c@project
+vclockDivide
+Z7 !s110 1558500035
+!i10b 1
+!s100 _^`0L]zaE6A]C^EZY6TCJ3
+IgKmNG^ln4UY6>R;Ei?iKc1
+R1
+R2
+w1558234959
+8C:/intelFPGA_lite/18.1/ADCProject/clockDivide.v
+FC:/intelFPGA_lite/18.1/ADCProject/clockDivide.v
+L0 3
+R3
+r1
+!s85 0
+31
+Z8 !s108 1558500035.000000
+!s107 C:/intelFPGA_lite/18.1/ADCProject/clockDivide.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/18.1/ADCProject/clockDivide.v|
+!i113 1
+R5
+R6
+nclock@divide
+vclockDivider
+R0
+!i10b 1
+!s100 `4Bi40?ce6jhckkR=XBY32
+Ia:dmcSe>_jgQ<z;zIZfl=2
+R1
+R2
+w1558601385
+8C:/intelFPGA_lite/18.1/ADCProject/clockDivider.v
+FC:/intelFPGA_lite/18.1/ADCProject/clockDivider.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/ADCProject/clockDivider.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/ADCProject/clockDivider.v|
+!i113 1
+R5
+R6
+nclock@divider
+vcount_down
+R0
+!i10b 1
+!s100 a?0EUIa?=QlSZ3jb^aToB3
+IIWeaJ:Z<@oNEB7i=VzT^:3
+R1
+R2
+w1558601475
+8C:/intelFPGA_lite/18.1/ADCProject/count_down.v
+FC:/intelFPGA_lite/18.1/ADCProject/count_down.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/ADCProject/count_down.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/ADCProject/count_down.v|
+!i113 1
+R5
+R6
+vdownCounter
+R7
+!i10b 1
+!s100 0Y`FJN^Tk[_4iG965Qda;3
+ITgUNE[U4B9]^mM^eP3oBF1
+R1
+R2
+w1558234221
+8C:/intelFPGA_lite/18.1/ADCProject/downCounter.v
+FC:/intelFPGA_lite/18.1/ADCProject/downCounter.v
+L0 4
+R3
+r1
+!s85 0
+31
+R8
+!s107 C:/intelFPGA_lite/18.1/ADCProject/downCounter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/18.1/ADCProject/downCounter.v|
+!i113 1
+R5
+R6
+ndown@counter
+vi2CControlBlock
+R0
+!i10b 1
+!s100 R7TY@7A5HI2aoFm`kCY5C2
+IW14J79GIS2UdljXH[]UJD2
+R1
+R2
+w1557973409
+8C:/intelFPGA_lite/18.1/ADCProject/i2CControlBlock.v
+FC:/intelFPGA_lite/18.1/ADCProject/i2CControlBlock.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/ADCProject/i2CControlBlock.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/ADCProject/i2CControlBlock.v|
+!i113 1
+R5
+R6
+ni2@c@control@block
+vi2cStateMachine
+R0
+!i10b 1
+!s100 e?N@BCZ6^[IA2R35Fi^GJ1
+I3@bjV]^eN_FJRidKeLe]F1
+R1
+R2
+w1557973633
+8C:/intelFPGA_lite/18.1/ADCProject/i2cStateMachine.v
+FC:/intelFPGA_lite/18.1/ADCProject/i2cStateMachine.v
+L0 8
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/ADCProject/i2cStateMachine.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/ADCProject/i2cStateMachine.v|
+!i113 1
+R5
+R6
+ni2c@state@machine
+vSPIControlBlock
+R0
+!i10b 1
+!s100 Umh@?I?na^3Da7HWooAoe1
+IzSDl10258<^mlMkcZj_UO0
+R1
+R2
+w1558601231
+8C:/intelFPGA_lite/18.1/ADCProject/SPIControlBlock.v
+FC:/intelFPGA_lite/18.1/ADCProject/SPIControlBlock.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/intelFPGA_lite/18.1/ADCProject/SPIControlBlock.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/ADCProject/SPIControlBlock.v|
+!i113 1
+R5
+R6
+n@s@p@i@control@block
+vSPIStateMachine
+Z9 !s110 1559637060
+!i10b 1
+!s100 ]`hngOT6`lOMia<?k@d5m1
+IVSBH<5aLk:Q5iIk@@lCH01
+R1
+R2
+w1558159179
+8C:/intelFPGA_lite/18.1/ADCProject/SPIStateMachine.v
+FC:/intelFPGA_lite/18.1/ADCProject/SPIStateMachine.v
+L0 8
+R3
+r1
+!s85 0
+31
+Z10 !s108 1559637060.000000
+!s107 C:/intelFPGA_lite/18.1/ADCProject/SPIStateMachine.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/ADCProject/SPIStateMachine.v|
+!i113 1
+R5
+R6
+n@s@p@i@state@machine
+vSPIStateMachine_2
+R9
+!i10b 1
+!s100 7NnE5_If@:Hnk=KV[WQ]@0
+IIRERT3K>4`_:mdAH7Ie5[1
+R1
+R2
+w1559637044
+8C:/intelFPGA_lite/18.1/ADCProject/SPIStateMachine_2.v
+FC:/intelFPGA_lite/18.1/ADCProject/SPIStateMachine_2.v
+L0 6
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/intelFPGA_lite/18.1/ADCProject/SPIStateMachine_2.v|
+!s90 -reportprogress|300|-work|work|C:/intelFPGA_lite/18.1/ADCProject/SPIStateMachine_2.v|
+!i113 1
+R5
+R6
+n@s@p@i@state@machine_2

@@ -1,0 +1,25 @@
+// ADC Project-- ADD - I2C Controller
+// Author: Craig Robinson - s3488614
+// 			Peter Kydas - s34xxxxx
+// Last Edit Date: 16/5/2019
+
+
+
+module i2CStateMachine
+(
+
+	input CLOCK_50, //Input Clocl
+	output [7:0] LED,
+	input [1:0] KEY,
+	input [3:0] SW,
+	
+	//I2C Bus 
+	output I2C_SCLK,
+	inout I2C_SDAT
+	
+
+ 	
+);
+
+
+endmodule 

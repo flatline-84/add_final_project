@@ -1,0 +1,128 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2018  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+# Date created = 16:00:13  May 13, 2019
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		ADCProject_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEBA6U23I7DK
+set_global_assignment -name TOP_LEVEL_ENTITY SPIControlBlock
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:00:13  MAY 13, 2019"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name VERILOG_FILE ADCProject.v
+set_global_assignment -name VERILOG_FILE i2cStateMachine.v
+set_global_assignment -name VERILOG_FILE clockDivide.v
+set_global_assignment -name VERILOG_FILE i2CControlBlock.v
+set_global_assignment -name VERILOG_FILE downCounter.v
+set_global_assignment -name VERILOG_FILE SPIControlBlock.v
+set_global_assignment -name VERILOG_FILE SPIStateMachine.v
+set_global_assignment -name VERILOG_FILE SPIStateMachine_2.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_Y15 -to CONVST
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CONVST
+set_location_assignment PIN_AH17 -to reset_n
+set_location_assignment PIN_AC24 -to spi_scl
+set_location_assignment PIN_AA15 -to spi_sdi
+set_location_assignment PIN_AD4 -to spi_sdo
+set_location_assignment PIN_AH16 -to start
+set_location_assignment PIN_V11 -to ref_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to addr[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to addr[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to addr[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to addr[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to addr[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to addr[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to addr[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data[11]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data[10]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data[9]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data[8]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to data[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to o_currentState[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to o_currentState[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to o_currentState[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to o_nextState[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to o_nextState[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to o_nextState[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ready
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ref_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to reset_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_scl
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_sdi
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_sdo
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to start
+set_location_assignment PIN_U9 -to CONVST_gpio
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to CONVST_gpio
+set_location_assignment PIN_V10 -to spi_scl_gpio
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_scl_gpio
+set_location_assignment PIN_AC4 -to spi_sdi_gpio
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_sdi_gpio
+set_location_assignment PIN_AD26 -to spi_sdo_gpio
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_sdo_gpio
+set_location_assignment PIN_W15 -to LEDs[0]
+set_location_assignment PIN_AA24 -to LEDs[1]
+set_location_assignment PIN_V16 -to LEDs[2]
+set_location_assignment PIN_V15 -to LEDs[3]
+set_location_assignment PIN_AF26 -to LEDs[4]
+set_location_assignment PIN_AE26 -to LEDs[5]
+set_location_assignment PIN_Y16 -to LEDs[6]
+set_location_assignment PIN_AA23 -to LEDs[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDs[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDs[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDs[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDs[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDs[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDs[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDs[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDs[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to LEDs
+set_global_assignment -name VERILOG_FILE ADC_FFT_Block.v
+set_global_assignment -name VERILOG_FILE clockDivider.v
+set_global_assignment -name VERILOG_FILE count_down.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,0 +1,58 @@
+module SPIControlBlock (
+
+	input  ref_clk,
+	input  reset_n,
+	input  start,
+
+	input  [6:0] addr,
+	input  [7:0] data,
+
+	output i2c_sda,
+	output i2c_scl,
+	output ready,
+
+	output [2:0] o_currentState,
+	output [2:0] o_nextState
+
+);
+
+wire       i2c_clk;
+wire [2:0] w_count_val;
+wire [2:0] w_count_from;
+wire       count_reset;
+
+clockDivide #(8, 500) SPI_clock_divider (
+	.ref_clk(ref_clk),
+	.reset_n(reset_n),
+	.out_clk(i2c_clk)
+);
+
+downCounter #(3) counter_SPI (
+	.clk(i2c_clk),
+	.reset_n(count_reset),
+	.count_from(w_count_from),
+	.count_val(w_count_val)
+);
+
+
+SPIStateMachine SPI_state_machine_inst (
+
+	.clk(i2c_clk),
+	.reset_n(reset_n),
+	.start(start),
+	.i2c_sda(i2c_sda),
+	.i2c_scl(i2c_scl),
+	.ready(ready),
+
+	.addr(addr),
+	.data(data),
+
+	.count_val(w_count_val),
+	.count_from(w_count_from),
+	.count_reset(count_reset),
+
+	.o_currentState(o_currentState),
+	.o_nextState(o_nextState)
+
+);
+endmodule

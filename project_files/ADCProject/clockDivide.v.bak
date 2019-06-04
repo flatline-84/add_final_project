@@ -1,0 +1,35 @@
+// ADC Project-- ADD - I2C Controller
+// Author: Craig Robinson - s3488614
+// 		  Peter Kydas - s34xxxxx
+// Last Edit Date: 16/5/2019
+
+
+`default_nettype none
+module clockDivide
+(
+	 input  wire  clk,
+    input  wire  reset_n,
+    input  wire  start,
+
+    // system outputs
+    output reg   i2c_sda,
+    output wire  i2c_scl,
+    output wire  ready,
+    
+    // Frame data
+    input  wire [6:0] addr,
+    input  wire [7:0] data,
+
+    // counter control
+    input  wire [2:0] count_val,
+    output reg  [2:0] count_from,
+    output wire       count_reset,
+
+    // Debug below
+    output wire [2:0] o_currentState,
+    output wire [2:0] o_nextState
+ 	
+);
+
+
+endmodule
