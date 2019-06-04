@@ -46,6 +46,7 @@ module hdmi_controller (
 
 wire reset;
 wire reset_n;
+assign led_reset = reset;
 
 sr_latch sr_latch_n(
 	.S_n(select),
@@ -54,7 +55,6 @@ sr_latch sr_latch_n(
 	.Qn(reset_n)
 );
 
-assign led_reset = reset;
 
 hdmi_init hdmit_init_mod (
 	.reset_not(reset_n),
@@ -65,19 +65,38 @@ hdmi_init hdmit_init_mod (
 	.i2c_scl(i2c_scl)
 );
 
+wire locked;
+wire clock74;
 
-hdmi_controller_display display (
-
-    .clock50(clock50),
-    .reset(reset),
-
-    // Output wires
-    .hsync(hsync), 
-    .vsync(vsync), 
-    .v_clk(v_clk), 
-    .data_enable(data_enable), 
-    .rgb_data(rgb_data) 
+pll pll74 ( //74.25MHz for 720p
+		.refclk(clock50),   //  refclk.clk
+		.rst(reset),      //   reset.reset
+		.outclk_0(clock74), // outclk0.clk
+		.locked(locked)    //  locked.export
 );
+
+top_sync_vg_pattern display (
+	.clk_in(clock74),
+	.reset(reset),
+	.hsync(hsync),
+	.vsync(vsync),
+	.v_clk(v_clk),
+	.data_enable(data_enable),
+	.rgb_data(rgb_data)
+);
+
+// hdmi_controller_display display (
+
+//     .clock50(clock50),
+//     .reset(reset),
+
+//     // Output wires
+//     .hsync(hsync), 
+//     .vsync(vsync), 
+//     .v_clk(v_clk), 
+//     .data_enable(data_enable), 
+//     .rgb_data(rgb_data) 
+// );
 
 
 endmodule

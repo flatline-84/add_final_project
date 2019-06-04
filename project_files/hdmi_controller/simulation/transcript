@@ -78,3 +78,5 @@ runSim
 # Info: output_clock_high_period = 6734.693878
 # Info: output_clock_low_period = 6734.693878
 # .main_pane.wave.interior.cs.body.pw.wf
+# End time: 14:12:51 on Jun 04,2019, Elapsed time: 0:51:43
+# Errors: 0, Warnings: 43, Suppressed Warnings: 8
