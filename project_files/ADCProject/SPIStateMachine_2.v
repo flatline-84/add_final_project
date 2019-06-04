@@ -234,7 +234,7 @@ module SPIStateMachine_2
 		  
 		  STATE_RW_Reset: 
 		  begin
-		    nextState <= STATE_CONV_1; // Read and write to the ADC		
+		    nextState <= STATE_CONV; // Read and write to the ADC		
         end
 		  
 		  

@@ -43,10 +43,10 @@ SPIStateMachine_2 SPI_State_Machine
   .CONVST(CONVST),
   
   .addr(addr),
-  .data(data),
-  .data_1(data_1),
-  .data_2(data_2),
-  .data_3(data_3)
+  .data(data)
+//  .data_1(data_1),
+//  .data_2(data_2),
+//  .data_3(data_3)
   
 );
 

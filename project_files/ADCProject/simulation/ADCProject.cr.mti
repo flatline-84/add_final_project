@@ -1,13 +1,62 @@
-C:/intelFPGA_lite/18.1/ADCProject/SPIStateMachine.v {2 {vlog -work work -stats=none {C:\intelFPGA_lite\18.1\ADCProject\SPIStateMachine.v}
+C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/SPIStateMachine.v {2 {vlog -work work -stats=none C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/SPIStateMachine.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module SPIStateMachine
-** Warning: C:\intelFPGA_lite\18.1\ADCProject\SPIStateMachine.v(122): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
-** Warning: C:\intelFPGA_lite\18.1\ADCProject\SPIStateMachine.v(147): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/SPIStateMachine.v(122): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/SPIStateMachine.v(147): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 
 Top level modules:
 	SPIStateMachine
 
+} {} {}} C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/clockDivider.v {1 {vlog -work work -stats=none C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/clockDivider.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module clockDivider
+
+Top level modules:
+	clockDivider
+
+} {} {}} C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/i2cStateMachine.v {1 {vlog -work work -stats=none C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/i2cStateMachine.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module i2cStateMachine
+
+Top level modules:
+	i2cStateMachine
+
 } {} {}} C:/intelFPGA_lite/18.1/ADCProject/i2CControlBlock.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/18.1/ADCProject/i2CControlBlock.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module i2CControlBlock
+
+Top level modules:
+	i2CControlBlock
+
+} {} {}} C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/ADCProject.v {1 {vlog -work work -stats=none C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/ADCProject.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ADCProject
+
+Top level modules:
+	ADCProject
+
+} {} {}} C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/count_down.v {1 {vlog -work work -stats=none C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/count_down.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module count_down
+
+Top level modules:
+	count_down
+
+} {} {}} C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/SPIControlBlock.v {1 {vlog -work work -stats=none C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/SPIControlBlock.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SPIControlBlock
+
+Top level modules:
+	SPIControlBlock
+
+} {} {}} C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/ADC_FFT_Block.v {1 {vlog -work work -stats=none C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/ADC_FFT_Block.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module ADC_FFT_Block
+
+Top level modules:
+	ADC_FFT_Block
+
+} {} {}} C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/i2CControlBlock.v {1 {vlog -work work -stats=none C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/i2CControlBlock.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module i2CControlBlock
 
@@ -20,6 +69,15 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 
 Top level modules:
 	ADCProject
+
+} {} {}} C:/intelFPGA_lite/18.1/ADCProject/SPIStateMachine.v {2 {vlog -work work -stats=none {C:\intelFPGA_lite\18.1\ADCProject\SPIStateMachine.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SPIStateMachine
+** Warning: C:\intelFPGA_lite\18.1\ADCProject\SPIStateMachine.v(122): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:\intelFPGA_lite\18.1\ADCProject\SPIStateMachine.v(147): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	SPIStateMachine
 
 } {} {}} C:/intelFPGA_lite/18.1/ADCProject/i2cStateMachine.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/18.1/ADCProject/i2cStateMachine.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016

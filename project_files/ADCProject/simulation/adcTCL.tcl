@@ -158,6 +158,90 @@ proc runSim {} {
     run 40ms
     force -freeze COUNT 16#000
     run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 40ms
+    force -freeze COUNT 16#FFF
+    run 40ms
+    force -freeze COUNT 16#000
+    run 4000ms
 
 
     
