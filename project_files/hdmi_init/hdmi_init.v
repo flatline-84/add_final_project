@@ -182,9 +182,9 @@ always @(posedge(clk_100hz) or posedge(reset) or negedge(reset_not)) begin: main
 						delay = delay + 1;
 					end
 
-					else if (initialized) begin
-						state <= STATE_BEGIN;
-					end
+					// else if (initialized) begin
+					// 	state <= STATE_BEGIN;
+					// end
 
                     else if (count == 31 && initialized == 1'b0) begin
                         initialized <= 1;
@@ -220,16 +220,16 @@ always @(posedge(clk_100hz) or posedge(reset) or negedge(reset_not)) begin: main
 						state <= STATE_IDLE;
 					end*/
 					if (ready_out) begin
-						// if (!ack_out) begin //no acknowledge from device
-							// state <= STATE_BEGIN;
-						// end
-						// else begin
+						if (!ack_out) begin //no acknowledge from device
+							state <= STATE_BEGIN;
+						end
+						else begin
 							if (!initialized) begin
 								delay <= 0;
 								count <= count + 1;	
+								state <= STATE_IDLE;
 							end
-							state <= STATE_IDLE;
-						// end
+						end
 						// else begin
 							// state <= STATE_IDLE;
 						// end
