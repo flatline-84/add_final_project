@@ -1,0 +1,32 @@
+module square 
+#(
+    parameter B=8, // number of bits per channel
+    X_BITS=13,
+    Y_BITS=13,
+    FRACTIONAL_BITS = 12
+)
+
+(
+
+    input wire [X_BITS:0] value,
+    input reg [Y_BITS:0] y1,
+    input wire vsync, //will be 60Hz
+
+    input wire [X_BITS:0] x,
+    input wire [Y_BITS:0] y,
+
+    output wire draw // tells the pattern_vg to draw some shit. Might need colours coming in too
+);
+
+reg y2 = (y1 + 20);
+wire draw_wire;
+
+always @(posedge(vsync)) begin
+    draw_wire = ((x >= 0) && (x <= value) && (y >= y1) && (y <= y2));
+end
+
+assign draw = draw_wire;
+
+endmodule
+
+//https://timetoexplore.net/blog/arty-fpga-vga-verilog-01

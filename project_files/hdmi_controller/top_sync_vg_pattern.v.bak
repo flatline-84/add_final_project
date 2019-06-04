@@ -75,7 +75,7 @@ parameter HV_OFFSET_0   = 12'd0;
 parameter HV_OFFSET_1   = 12'd0;
 parameter PATTERN_RAMP_STEP = 20'h0333; // 20'hFFFFF//
 // parameter PATTERN_TYPE  = 8'd1; // BORDER.
-parameter PATTERN_TYPE  = 8'd0; // custom squares
+parameter PATTERN_TYPE  = 8'd4; // RAMP
 `endif
 
 // wire reset;
@@ -87,7 +87,7 @@ wire [7:0] r_out;
 wire [7:0] g_out;
 wire [7:0] b_out;
 
-//parameter PATTERN_TYPE  = 8'd2;
+parameter PATTERN_TYPE  = 8'd2;
 
 /* ********************* */
 sync_vg #(.X_BITS(12), .Y_BITS(12)) sync_vg
@@ -134,9 +134,9 @@ pattern_vg (
     .vn_in(vs),
     .hn_in(hs),
     .dn_in(de),
-    .r_in(8'h00), // default red channel value
-    .g_in(8'h00), // default green channel value
-    .b_in(8'hff), // default blue channel value
+    .r_in(8'h0), // default red channel value
+    .g_in(8'hff), // default green channel value
+    .b_in(8'h0), // default blue channel value
     .vn_out(vs_out),
     .hn_out(hs_out),
     .den_out(de_out),
