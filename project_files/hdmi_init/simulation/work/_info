@@ -9,13 +9,13 @@ z2
 cModel Technology
 d/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/simulations
 vhdmi_init
-Z0 !s110 1559625782
+Z0 !s110 1559712487
 !i10b 1
-!s100 ]lm6Ti9>DgAFa=8dV1LUZ3
-ITna=H?JU?F>Qnc6@D?7ZH0
+!s100 YSi1H:ZYV2O@Q`nRn9ZhP1
+IS:bU5QJkUc1f;0NY?VThZ2
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 d/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/simulation
-w1559625776
+w1559626370
 8/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/hdmi_init.v
 F/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/hdmi_init.v
 L0 1
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1559625782.000000
+Z4 !s108 1559712487.000000
 !s107 /home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/hdmi_init.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/hdmi_init/hdmi_init.v|
 !i113 1
@@ -32,11 +32,11 @@ Z6 tCvgOpt 0
 vi2c_clk_divider
 R0
 !i10b 1
-!s100 hIo2?ekATg0BAeF]@_UjD0
-IiCk>b69zVS6TUPhFBET<V3
+!s100 `kln>zgg8BHeY==I_BIV51
+IKbU]DF2jh[1K^PiPZ1;D`1
 R1
 R2
-w1559197514
+w1559635562
 8/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_clk_divider.v
 F/home/peter/Documents/RMIT/2019.1/Advanced Digital Design/Final_Project/add_final_project/project_files/i2c_master/i2c_clk_divider.v
 L0 1
