@@ -69,7 +69,7 @@ module SPIStateMachine_2
 
 	
 	reg [4:0] currentState = STATE_IDLE;
-	reg [4:0] nextState = STATE_IDLE;
+	reg [4:0] nextState = STATE_IDLE;  //010001
 //b100010zzzzzz zzzzzz010001    100010
 	reg [11:0] saved_addr   = 12'bzzzzz100010;  //bzzzzz100010  Make this 6 bits and read a 12 counter for SPI
 	reg [11:0] saved_addr_1 = 12'bzzzzz110010;  //bzzzzz110010  Make this 6 bits and read a 12 counter for SPI
@@ -101,6 +101,9 @@ module SPIStateMachine_2
 										  (currentState == STATE_RW_2   ) ||
 										  (currentState == STATE_CONV_3 ) || 
 										  (currentState == STATE_RW_3   )) ? 1'b1 : 1'b0;
+										  
+										  
+										  
 	
 	count_down #(4) counter (
 		.clk(SPI_CLK),
@@ -134,7 +137,7 @@ module SPIStateMachine_2
 		end
 		
 /*      Next Stage Logic Block            */		
-	always @(currentState, spi_sdo, count_val, start )
+	always @(currentState, count_val, start )
 		begin: nextStateLogic
 			
 		case(currentState)
@@ -145,7 +148,7 @@ module SPIStateMachine_2
             if (start) 
 				  begin
 //                saved_addr <= addr;
-                saved_data <= data;
+//                saved_data <= data;
                 nextState  <= STATE_START;
               end 
 				else 
@@ -228,13 +231,14 @@ module SPIStateMachine_2
               
 				else
 				   nextState <= STATE_RW;
-					saved_data[count_val] <= spi_sdo; //Write data from the line into the reg
-					data[count_val] <= spi_sdo; 
+					
+//					data[count_val] <= spi_sdo; 
         end
 		  
 		  STATE_RW_Reset: 
 		  begin
-		    nextState <= STATE_CONV; // Read and write to the ADC		
+		    nextState <= STATE_CONV; // Read and write to the ADC
+				
         end
 		  
 		  
@@ -384,7 +388,7 @@ module SPIStateMachine_2
 		
 		
 /*      Output Logic Block            */		
-	always @(currentState, spi_sdo, count_val, start )
+	always @(currentState, count_val, start )
 		
 	
 		
@@ -395,16 +399,20 @@ module SPIStateMachine_2
 		  STATE_IDLE: 
 		  begin
             CONVST  <= 1'b0;
-				spi_sdi <= 1'b1;
+				spi_sdi <= 1'bz;
+			
 				
         end
 		  
         STATE_START: 
 		  begin
-            
 				CONVST  <= 1'b1;
-				spi_sdi <= 1'b0;
+				spi_sdi <= 1'bz;
         end
+		  STATE_START_Reset:
+		  begin
+		      spi_sdi <= 1'b1;
+		  end
 		  
         STATE_WRITE: 
 		  begin
@@ -416,17 +424,25 @@ module SPIStateMachine_2
 		  STATE_CONV: 
 		  begin
 		      CONVST  <= 1'b1;
-            spi_sdi <= 1'b0;
+            spi_sdi <= 1'bz;
 				saved_data <= 12'b000000000000;
         end
+		  STATE_CONV_Reset:
+		  begin
+		      spi_sdi <= 1'b1;
+		  end
 		  
 		  STATE_RW: 
 		  begin
             CONVST  <= 1'b0;
 				spi_sdi <= saved_addr[count_val_SPI];
+				saved_data[count_val] <= spi_sdo; //Write data from the line into the reg
         end
 		  
-
+		  STATE_RW_Reset:
+		  begin
+		     data <= saved_data;
+		  end
 		  
         
 		  STATE_CONV_1: 
@@ -476,13 +492,13 @@ module SPIStateMachine_2
         STATE_STOP: 
 		  begin
             CONVST  <= 1'b0;
-				spi_sdi <= 1'b0;
+				spi_sdi <= 1'bz;
         end
 		  
         default: 
 		  begin
             CONVST  <= 1'b0;
-				spi_sdi <= 1'b0;
+				spi_sdi <= 1'bz;
         end
     endcase
 				

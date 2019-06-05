@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/intelFPGA_lite/18.1/Lab04TLE/simulation
 vADC_FFT_Block
-Z0 !s110 1559648154
+Z0 !s110 1559701921
 !i10b 1
 !s100 ;R5h?1AURH=A>EJoUCeCG3
 ImZ>DDPOAKRZ`z7zheR3eU3
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1559648154.000000
+Z4 !s108 1559701921.000000
 !s107 C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/ADC_FFT_Block.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/ADC_FFT_Block.v|
 !i113 1
@@ -31,7 +31,7 @@ Z5 o-work work
 Z6 tCvgOpt 0
 n@a@d@c_@f@f@t_@block
 vADCProject
-Z7 !s110 1559648155
+Z7 !s110 1559701922
 !i10b 1
 !s100 [0_b7ISAi4_T7L1Si46l`2
 IC1CDocz^h`>KJOEU3]3`f1
@@ -45,7 +45,7 @@ R3
 r1
 !s85 0
 31
-R4
+Z8 !s108 1559701922.000000
 !s107 C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/ADCProject.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/ADCProject.v|
 !i113 1
@@ -53,12 +53,12 @@ R5
 R6
 n@a@d@c@project
 vclockDivide
-Z8 !s110 1558500035
+Z9 !s110 1558500035
 !i10b 1
 !s100 _^`0L]zaE6A]C^EZY6TCJ3
 IgKmNG^ln4UY6>R;Ei?iKc1
 R1
-Z9 dC:/intelFPGA_lite/18.1/ADCProject/simulation
+Z10 dC:/intelFPGA_lite/18.1/ADCProject/simulation
 w1558234959
 8C:/intelFPGA_lite/18.1/ADCProject/clockDivide.v
 FC:/intelFPGA_lite/18.1/ADCProject/clockDivide.v
@@ -67,7 +67,7 @@ R3
 r1
 !s85 0
 31
-Z10 !s108 1558500035.000000
+Z11 !s108 1558500035.000000
 !s107 C:/intelFPGA_lite/18.1/ADCProject/clockDivide.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/18.1/ADCProject/clockDivide.v|
 !i113 1
@@ -89,7 +89,7 @@ R3
 r1
 !s85 0
 31
-Z11 !s108 1559648155.000000
+R8
 !s107 C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/clockDivider.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/clockDivider.v|
 !i113 1
@@ -97,7 +97,7 @@ R5
 R6
 nclock@divider
 vcount_down
-Z12 !s110 1559648156
+R7
 !i10b 1
 !s100 a?0EUIa?=QlSZ3jb^aToB3
 IUo3nR9Ikg[f7YAlWB9b_M2
@@ -111,19 +111,19 @@ R3
 r1
 !s85 0
 31
-R11
+R8
 !s107 C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/count_down.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/count_down.v|
 !i113 1
 R5
 R6
 vdownCounter
-R8
+R9
 !i10b 1
 !s100 0Y`FJN^Tk[_4iG965Qda;3
 ITgUNE[U4B9]^mM^eP3oBF1
 R1
-R9
+R10
 w1558234221
 8C:/intelFPGA_lite/18.1/ADCProject/downCounter.v
 FC:/intelFPGA_lite/18.1/ADCProject/downCounter.v
@@ -132,7 +132,7 @@ R3
 r1
 !s85 0
 31
-R10
+R11
 !s107 C:/intelFPGA_lite/18.1/ADCProject/downCounter.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/intelFPGA_lite/18.1/ADCProject/downCounter.v|
 !i113 1
@@ -140,7 +140,7 @@ R5
 R6
 ndown@counter
 vi2CControlBlock
-R12
+R7
 !i10b 1
 !s100 R7TY@7A5HI2aoFm`kCY5C2
 I:A8MQnTlHh_m`K`JzJ6eW3
@@ -154,7 +154,7 @@ R3
 r1
 !s85 0
 31
-Z13 !s108 1559648156.000000
+R8
 !s107 C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/i2CControlBlock.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/i2CControlBlock.v|
 !i113 1
@@ -162,7 +162,7 @@ R5
 R6
 ni2@c@control@block
 vi2cStateMachine
-R12
+R7
 !i10b 1
 !s100 e?N@BCZ6^[IA2R35Fi^GJ1
 IYj]l]aGIF4QfRi^]f3C3E0
@@ -176,7 +176,7 @@ R3
 r1
 !s85 0
 31
-R13
+R8
 !s107 C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/i2cStateMachine.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/i2cStateMachine.v|
 !i113 1
@@ -184,7 +184,7 @@ R5
 R6
 ni2c@state@machine
 vSPIControlBlock
-R12
+R7
 !i10b 1
 !s100 FlToaVN[:Tl9R4XlJj2Gk0
 IJ6gXN74nHT=hG<QgEcT9P2
@@ -198,7 +198,7 @@ R3
 r1
 !s85 0
 31
-R13
+R8
 !s107 C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/SPIControlBlock.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/SPIControlBlock.v|
 !i113 1
@@ -206,7 +206,7 @@ R5
 R6
 n@s@p@i@control@block
 vSPIStateMachine
-!s110 1559648157
+R7
 !i10b 1
 !s100 ]`hngOT6`lOMia<?k@d5m1
 I:e82YnLB>?:[0OU[N4JIL3
@@ -220,7 +220,7 @@ R3
 r1
 !s85 0
 31
-!s108 1559648157.000000
+R8
 !s107 C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/SPIStateMachine.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/SPIStateMachine.v|
 !i113 1
@@ -230,11 +230,11 @@ n@s@p@i@state@machine
 vSPIStateMachine_2
 R0
 !i10b 1
-!s100 C`A@OnMSHXGT9Ca`WzR:20
-IT9;LfhDa<ZoV67H=@hXD<1
+!s100 bRGkhDQ<n=>4Sci^RdZBT0
+ImI76@OXkE;aBoTMz:kF3P1
 R1
 R2
-w1559647946
+w1559701891
 8C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/SPIStateMachine_2.v
 FC:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/SPIStateMachine_2.v
 L0 6
