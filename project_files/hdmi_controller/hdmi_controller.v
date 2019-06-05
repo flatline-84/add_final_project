@@ -42,10 +42,10 @@ module hdmi_controller (
 	output wire led_ack,		// LED7 -> AA23
 	
 	// SPI shit
-	output wire spi_scl,		// PIN_AC24
-	output wire spi_sdi,		// PIN_AA15
-	output wire spi_sdo,		// PIN_AD4
-	output wire CONVST,			// PIN_Y15
+	output wire spi_scl,		// V10 		|| PIN_AC24
+	output wire spi_sdi,		// AC4		|| PIN_AA15
+	input wire spi_sdo,		// AD4		|| PIN_AD4
+	output wire CONVST,			// U9		|| PIN_Y15
 
 	output wire [7:0] leds,
 	/* LEDS(7->0)
@@ -139,6 +139,8 @@ SPIControlBlock spi_control_block (
 	.data_1(channel_2), //Data from SPI to TLE
 	.data_2(channel_3), //Data from SPI to TLE
 	.data_3(channel_4), //Data from SPI to TLE
+
+	.LEDs(leds),
 
 	.spi_sdo(spi_sdo), // PIN_AD4
 	.spi_sdi(spi_sdi), // PIND_AC4

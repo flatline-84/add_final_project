@@ -145,9 +145,9 @@ pattern_vg (
     .channel_2(channel_2),
     .channel_3(channel_3),
     .channel_4(channel_4),
-    .r_in(8'h00), // default red channel value
-    .g_in(8'h00), // default green channel value
-    .b_in(8'hff), // default blue channel value
+    .r_in(8'd134), // default red channel value
+    .g_in(8'd137), // default green channel value
+    .b_in(8'd144), // default blue channel value
     .vn_out(vs_out),
     .hn_out(hs_out),
     .den_out(de_out),

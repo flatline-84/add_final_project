@@ -31,10 +31,10 @@ reg [B+FRACTIONAL_BITS-1:0] ramp_values; // 12-bit fractional end for ramp value
 
 reg [X_BITS-1:0] x1 = 0;
 reg [X_BITS-1:0] x2 = 1000;
-reg [Y_BITS-1:0] y1 = 120;
-reg [Y_BITS-1:0] y2 = 240;
-reg [Y_BITS-1:0] y3 = 360;
-reg [Y_BITS-1:0] y4 = 480;
+reg [Y_BITS-1:0] y1 = 144;
+reg [Y_BITS-1:0] y2 = 288;
+reg [Y_BITS-1:0] y3 = 432;
+reg [Y_BITS-1:0] y4 = 576;
 
 reg which_way = 1;
 
@@ -71,7 +71,7 @@ square square_1 (
 );
 
 square square_2 (
-    .value(channel_2),
+    .value(channel_1),
     .y1(y2),
     .vsync(vn_in),
     .total_active_pix(total_active_pix),
@@ -81,7 +81,7 @@ square square_2 (
 );
 
 square square_3 (
-    .value(channel_3),
+    .value(channel_1),
     .y1(y3),
     .vsync(vn_in),
     .total_active_pix(total_active_pix),
@@ -91,7 +91,7 @@ square square_3 (
 );
 
 square square_4 (
-    .value(channel_4),
+    .value(channel_1),
     .y1(y4),
     .vsync(vn_in),
     .total_active_pix(total_active_pix),
@@ -116,27 +116,27 @@ always @(posedge clk_in) begin
 
         if (square_draw) begin
             if (square_1_draw) begin
-                r_out <= 8'hff;
-                g_out <= 8'h00;
-                b_out <= 8'h00;
+                r_out <= 8'd255;
+                g_out <= 8'd255;
+                b_out <= 8'd128;
             end
 
             if (square_2_draw) begin
-                r_out <= 8'h00;
-                g_out <= 8'haa;
-                b_out <= 8'h00;
+                r_out <= 8'd128;
+                g_out <= 8'd128;
+                b_out <= 8'd255;
             end
 
             if (square_3_draw) begin
-                r_out <= 8'h0a;
-                g_out <= 8'hf0;
-                b_out <= 8'h0a;
+                r_out <= 8'd255;
+                g_out <= 8'd128;
+                b_out <= 8'd128;
             end
 
             if (square_4_draw) begin
-                r_out <= 8'hf0;
-                g_out <= 8'hf0;
-                b_out <= 8'h00;
+                r_out <= 8'd128;
+                g_out <= 8'd255;
+                b_out <= 8'd128;
             end
         end
 
