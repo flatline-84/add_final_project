@@ -425,7 +425,7 @@ module SPIStateMachine_2
 		  begin
 		      CONVST  <= 1'b1;
             spi_sdi <= 1'bz;
-				saved_data <= 12'b000000000000;
+//				saved_data <= 12'b000000000000;
         end
 		  STATE_CONV_Reset:
 		  begin
@@ -435,13 +435,13 @@ module SPIStateMachine_2
 		  STATE_RW: 
 		  begin
             CONVST  <= 1'b0;
-				spi_sdi <= saved_addr[count_val_SPI];
-				saved_data[count_val] <= spi_sdo; //Write data from the line into the reg
+				spi_sdi <= saved_addr[count_val_SPI];  //Write data out to chip
+//				saved_data[count_val] <= spi_sdo; //Read data from the line into the reg
         end
 		  
 		  STATE_RW_Reset:
 		  begin
-		     data <= saved_data;
+//		     data <= saved_data;
 		  end
 		  
         
@@ -504,6 +504,40 @@ module SPIStateMachine_2
 				
 	 // data = saved_data;	 
   end		
+  
+
+  
+   
+  /*      Output Logic Block      2      */		
+	always @(negedge(SPI_CLK), posedge(currentState))
+		
+		begin: outputLogic2
+			
+			case(currentState)
+		  
+		  
+			  STATE_CONV: 
+			  begin
+						
+			     saved_data <= 12'b000000000000;
+			  end
+		  
+			  STATE_RW: 
+			  begin
+			
+					saved_data[count_val] <= spi_sdo; //Read data from the line into the reg
+			  end
+		  
+			
+			  
+			  STATE_RW_Reset:
+			  begin
+				  data <= saved_data;
+			  end
+			  
+	  endcase
+		  
+	end
   
 		
 endmodule

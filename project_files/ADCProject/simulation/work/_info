@@ -9,7 +9,7 @@ z2
 cModel Technology
 dC:/intelFPGA_lite/18.1/Lab04TLE/simulation
 vADC_FFT_Block
-Z0 !s110 1559701921
+Z0 !s110 1559704534
 !i10b 1
 !s100 ;R5h?1AURH=A>EJoUCeCG3
 ImZ>DDPOAKRZ`z7zheR3eU3
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1559701921.000000
+Z4 !s108 1559704534.000000
 !s107 C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/ADC_FFT_Block.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/ADC_FFT_Block.v|
 !i113 1
@@ -31,7 +31,7 @@ Z5 o-work work
 Z6 tCvgOpt 0
 n@a@d@c_@f@f@t_@block
 vADCProject
-Z7 !s110 1559701922
+Z7 !s110 1559704535
 !i10b 1
 !s100 [0_b7ISAi4_T7L1Si46l`2
 IC1CDocz^h`>KJOEU3]3`f1
@@ -45,7 +45,7 @@ R3
 r1
 !s85 0
 31
-Z8 !s108 1559701922.000000
+Z8 !s108 1559704535.000000
 !s107 C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/ADCProject.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/ADCProject.v|
 !i113 1
@@ -230,11 +230,11 @@ n@s@p@i@state@machine
 vSPIStateMachine_2
 R0
 !i10b 1
-!s100 bRGkhDQ<n=>4Sci^RdZBT0
-ImI76@OXkE;aBoTMz:kF3P1
+!s100 ^<z^EO;zhh7F;:SlQFiJM0
+IBD;P`N0c=_@@=mUL3_R6a3
 R1
 R2
-w1559701891
+w1559704530
 8C:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/SPIStateMachine_2.v
 FC:/Users/raggy/Documents/Uni/Year_5/Semester_1_Y5/Advanced_Digital_Design/ADD_Assignment/add_final_project/project_files/ADCProject/SPIStateMachine_2.v
 L0 6
