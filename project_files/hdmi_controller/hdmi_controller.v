@@ -112,6 +112,8 @@ wire [11:0] channel_2;
 wire [11:0] channel_3;
 wire [11:0] channel_4;
 
+wire [11:0] channel_1_out; //FFT out
+
 top_sync_vg_pattern display (
 	.clk_in(clock74),
 	// .clock60(clock60),
@@ -148,6 +150,14 @@ SPIControlBlock spi_control_block (
 	.CONVST(CONVST)  // PIN_U9
 
 );
+//
+//fft_project fft(
+//	.clock50(clock50),
+//	.reset_n(reset_n),
+//	.start(CONVST),
+//	.data(channel_1),
+//	.data_out(channel_1_out)
+//);
 
 // hdmi_controller_display display (
 

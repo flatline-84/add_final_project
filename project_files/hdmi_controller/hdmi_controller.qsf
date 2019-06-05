@@ -88,23 +88,6 @@ set_location_assignment PIN_AH6 -to rgb_data[20]
 set_location_assignment PIN_AG6 -to rgb_data[21]
 set_location_assignment PIN_AF9 -to rgb_data[22]
 set_location_assignment PIN_AE8 -to rgb_data[23]
-set_global_assignment -name VERILOG_FILE ../ADCProject/SPIStateMachine_2.v
-set_global_assignment -name VERILOG_FILE ../ADCProject/SPIControlBlock.v
-set_global_assignment -name VERILOG_FILE ../ADCProject/count_down.v
-set_global_assignment -name VERILOG_FILE ../ADCProject/clockDivider.v
-set_global_assignment -name VERILOG_FILE square.v
-set_global_assignment -name VERILOG_FILE top_sync_vg_pattern.v
-set_global_assignment -name VERILOG_FILE sync_vg.v
-set_global_assignment -name VERILOG_FILE pattern_vg.v
-set_global_assignment -name VERILOG_FILE hdmi_controller_display.v
-set_global_assignment -name VERILOG_FILE ../sr_latch_n/sr_latch.v
-set_global_assignment -name VERILOG_FILE ../hdmi_init/hdmi_init.v
-set_global_assignment -name VERILOG_FILE ../i2c_master/i2c_master.v
-set_global_assignment -name VERILOG_FILE ../i2c_master/i2c_controller.v
-set_global_assignment -name VERILOG_FILE ../i2c_master/i2c_clk_divider.v
-set_global_assignment -name QIP_FILE pll.qip
-set_global_assignment -name SIP_FILE pll.sip
-set_global_assignment -name VERILOG_FILE hdmi_controller.v
 set_location_assignment PIN_V10 -to spi_scl
 set_location_assignment PIN_AC4 -to spi_sdi
 set_location_assignment PIN_AD4 -to spi_sdo
@@ -165,4 +148,21 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_sdi
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_sdo
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to v_clk
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to vsync
+set_global_assignment -name VERILOG_FILE ../ADCProject/SPIStateMachine_2.v
+set_global_assignment -name VERILOG_FILE ../ADCProject/SPIControlBlock.v
+set_global_assignment -name VERILOG_FILE ../ADCProject/count_down.v
+set_global_assignment -name VERILOG_FILE ../ADCProject/clockDivider.v
+set_global_assignment -name VERILOG_FILE square.v
+set_global_assignment -name VERILOG_FILE top_sync_vg_pattern.v
+set_global_assignment -name VERILOG_FILE sync_vg.v
+set_global_assignment -name VERILOG_FILE pattern_vg.v
+set_global_assignment -name VERILOG_FILE hdmi_controller_display.v
+set_global_assignment -name VERILOG_FILE ../sr_latch_n/sr_latch.v
+set_global_assignment -name VERILOG_FILE ../hdmi_init/hdmi_init.v
+set_global_assignment -name VERILOG_FILE ../i2c_master/i2c_master.v
+set_global_assignment -name VERILOG_FILE ../i2c_master/i2c_controller.v
+set_global_assignment -name VERILOG_FILE ../i2c_master/i2c_clk_divider.v
+set_global_assignment -name QIP_FILE pll.qip
+set_global_assignment -name SIP_FILE pll.sip
+set_global_assignment -name VERILOG_FILE hdmi_controller.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,7 +1,6 @@
 module fft_project(
 	input wire clock50,
 	input wire reset_n,
-	input wire start,
 	//uhhhhhhhh
 	input wire [11:0] data,
 	output wire [11:0] data_out
@@ -11,7 +10,7 @@ fft_add u0 (
 	.clk          (clock50),          //    clk.clk
 	.reset_n      (reset_n),      //    rst.reset_n
 	// .sink_valid   (<connected-to-sink_valid>),   //   sink.sink_valid
-	.sink_ready   (start),   //       .sink_ready
+	// .sink_ready   (<connected-to-sink_ready>),   //       .sink_ready
 	// .sink_error   (<connected-to-sink_error>),   //       .sink_error
 	// .sink_sop     (<connected-to-sink_sop>),     //       .sink_sop
 	// .sink_eop     (<connected-to-sink_eop>),     //       .sink_eop
