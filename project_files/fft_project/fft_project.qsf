@@ -49,3 +49,54 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VERILOG_FILE fft_add/synthesis/fft_add.v -library fft_add
+set_global_assignment -name QIP_FILE fft_add/synthesis/fft_add.qip
+set_global_assignment -name VERILOG_FILE fft_add/synthesis/submodules/hyper_pipeline_interface.v -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/hyper_opt_OFF_pkg.vhd -library fft_add
+set_global_assignment -name SYSTEMVERILOG_FILE fft_add/synthesis/submodules/fft_add_fft_ii_0.sv -library fft_add
+set_global_assignment -name SYSTEMVERILOG_FILE fft_add/synthesis/submodules/counter_module.sv -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_fft_pkg.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_text_pkg.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_roundsat.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_twrom.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_top.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_stg_pipe.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_stg_out_pipe.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_stage.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_lib_pkg.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_enable_control.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_delay.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_counter.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_core.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_cma_fp.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_cma_bfi_fp.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_cma_adder_fp.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_cma.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_bfii.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_bfi.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_bf_control.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_addsub.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_r22sdf_adder_fp.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_math_pkg.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_lib_pkg.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_bit_reverse_reverse_carry_adder.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_bit_reverse_core.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_bit_reverse_addr_control.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_avalon_streaming_block_source.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/auk_dspip_avalon_streaming_block_sink.vhd -library fft_add
+set_global_assignment -name VERILOG_FILE fft_add/synthesis/submodules/apn_fft_mult_cpx_1825.v -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/apn_fft_mult_cpx.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/apn_fft_mult_can.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/altera_fft_single_port_rom.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/altera_fft_mult_add.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/altera_fft_dual_port_rom.vhd -library fft_add
+set_global_assignment -name VHDL_FILE fft_add/synthesis/submodules/altera_fft_dual_port_ram.vhd -library fft_add
+set_global_assignment -name VERILOG_FILE fft_add/fft_add_inst.v
+set_global_assignment -name QSYS_FILE fft_add.qsys
+set_global_assignment -name VERILOG_FILE fft_project.v
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

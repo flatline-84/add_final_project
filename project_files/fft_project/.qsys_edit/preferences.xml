@@ -7,6 +7,7 @@
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
- <library expandedCategories="Project,Library" />
- <window width="1928" height="1056" x="-4" y="28" />
+ <library expandedCategories="Library,Project" />
+ <window width="1920" height="1056" x="0" y="28" />
+ <generation simulation="VERILOG" />
 </preferences>
